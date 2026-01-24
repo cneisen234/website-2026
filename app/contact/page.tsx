@@ -36,7 +36,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 placeholder-text">Email Me</h3>
                   <div className="placeholder-box h-12 rounded-lg flex items-center justify-center">
-                    <p className="placeholder-text">ADD LATER</p>
+                    <p className="placeholder-text">chris@kindlingdigital.org</p>
                   </div>
                 </div>
   
