@@ -1,309 +1,755 @@
 export default function Pricing() {
-    return (
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 md:py-24">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-block mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-3 fade-in-up placeholder-text">
+  return (
+    <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      {/* Hero Section */}
+      <section className="relative">
+        <div
+          className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
+            transform: 'translate(20%, -30%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.025] pointer-events-none"
+          style={{
+            backgroundImage:
+              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+        />
+
+        <div className="container mx-auto px-4 py-20 md:py-28 relative">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
+              <span
+                className="inline-block w-2 h-2 rounded-full"
+                style={{ backgroundColor: 'var(--ember-deep)' }}
+              />
+              <span
+                className="text-xs font-medium tracking-[0.2em] uppercase"
+                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
+              >
                 Pricing
-              </h1>
-              <div 
-                className="h-1.5 w-32 rounded-full fade-in-up stagger-1"
-                style={{ backgroundColor: 'var(--ember-orange)' }}
-              ></div>
+              </span>
             </div>
-            
-            <p className="text-xl md:text-2xl fade-in-up stagger-2" style={{ color: 'var(--ash-gray)', lineHeight: '1.8' }}>
-              Flexible pricing that works for your business and budget. Fair rates, clear communication, and no hidden fees.
+
+            <h1
+              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95] tracking-tight"
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+            >
+              Fair prices,
+              <br />
+              no{' '}
+              <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
+                surprises
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  height="12"
+                  viewBox="0 0 300 12"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 8 Q 75 2, 150 6 T 298 4"
+                    stroke="var(--ember-deep)"
+                    strokeWidth="2.5"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </em>
+              .
+            </h1>
+
+            <p
+              className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl mb-8"
+              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
+            >
+              Every business is different, so I don't believe in one-size-fits-all
+              packages. Below are starting prices to give you an idea. After we
+              talk, I'll give you a clear, honest quote with no hidden fees.
             </p>
-          </div>
-        </section>
-  
-        {/* Pricing Intro */}
-        <section className="py-16 md:py-24" style={{ backgroundColor: 'white' }}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 placeholder-text">
-                How Pricing Works
-              </h2>
-              <div 
-                className="h-1 w-24 rounded-full mx-auto mb-8"
-                style={{ backgroundColor: 'var(--ember-orange)' }}
-              ></div>
-              <p className="text-lg mb-8" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                Every business is different, so I don't believe in one-size-fits-all packages. Below are starting prices to give you an idea of what things cost. After we talk about what you need, I'll give you a clear, honest quote with no surprises.
-              </p>
+
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 fade-in-up stagger-3">
+              {[
+                'Honest quotes',
+                'Payment plans available',
+                'No hidden fees',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-2 text-sm"
+                  style={{ color: 'var(--stone)' }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 8l3 3 7-7"
+                      stroke="var(--ember-deep)"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
-        </section>
-  
-        {/* Pricing Categories */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-12">
-  
-              {/* Websites */}
-              <div className="bg-white rounded-2xl p-8 border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '32px' }}>🌐</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-2 placeholder-text">Websites</h3>
-                    <div 
-                      className="h-0.5 w-16 rounded-full mb-4"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="space-y-4" style={{ color: 'var(--ash-gray)' }}>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Basic Business Website (3-5 pages)</span>
-                    <span className="font-bold placeholder-text">Starting at $500</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Full Business Website (5-10 pages)</span>
-                    <span className="font-bold placeholder-text">Starting at $800</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>E-Commerce Store</span>
-                    <span className="font-bold placeholder-text">Starting at $2,000</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Additional Pages</span>
-                    <span className="font-bold placeholder-text">$75-150/page</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span>Special Features (booking systems, integrations like Calendly, custom tools, etc.)</span>
-                    <span className="font-bold placeholder-text">Custom quote</span>
-                  </div>
-                </div>
-              </div>
-  
-          {/* Social Media Management */}
-            <div className="bg-white rounded-2xl p-8 border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-            <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span style={{ color: 'var(--ember-orange)', fontSize: '32px' }}>📱</span>
-                </div>
-                <div className="flex-1">
-                <h3 className="text-3xl font-bold mb-2 placeholder-text">Social Media Management</h3>
-                <div 
-                    className="h-0.5 w-16 rounded-full mb-4"
-                    style={{ backgroundColor: 'var(--ember-orange)' }}
-                ></div>
-                </div>
-            </div>
-            <div className="space-y-4" style={{ color: 'var(--ash-gray)' }}>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span>Bi-Weekly (2 posts per month)</span>
-                <span className="font-bold placeholder-text">$50/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span>Weekly (4 posts per month)</span>
-                <span className="font-bold placeholder-text">$80/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span>Twice Weekly (8-10 posts per month)</span>
-                <span className="font-bold placeholder-text">$150/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span>Three times a week (9-12 posts per month)</span>
-                <span className="font-bold placeholder-text">$200/month</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                <span>Full Management (daily posting + comment engagement)</span>
-                <span className="font-bold placeholder-text">$400/month</span>
-                </div>
-                <div className="pt-4 text-sm">
-                <p style={{ color: 'var(--ash-gray)' }}>
-                    <strong>Platforms:</strong> Prices based on posting to 1-2 platforms (Facebook, Instagram, etc.). We'll figure out which platforms make the most sense for your business and customers. Additional platforms available for extra cost.
-                </p>
-                </div>
-            </div>
-            </div>
-  
-              {/* Video Production */}
-              <div className="bg-white rounded-2xl p-8 border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '32px' }}>🎥</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-2 placeholder-text">Video Production</h3>
-                    <div 
-                      className="h-0.5 w-16 rounded-full mb-4"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="space-y-4" style={{ color: 'var(--ash-gray)' }}>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Social Media Video (30-60 seconds)</span>
-                    <span className="font-bold placeholder-text">Starting at $200</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Promotional Video (1-3 minutes)</span>
-                    <span className="font-bold placeholder-text">Starting at $350</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span>Event Coverage</span>
-                    <span className="font-bold placeholder-text">Starting at $450</span>
-                  </div>
-                </div>
-              </div>
-  
-              {/* Maintenance & Support */}
-              <div className="bg-white rounded-2xl p-8 border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '32px' }}>🛠️</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-2 placeholder-text">Maintenance & Support</h3>
-                    <div 
-                      className="h-0.5 w-16 rounded-full mb-4"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="space-y-4" style={{ color: 'var(--ash-gray)' }}>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Basic (updates + security, includes 1 hour/month)</span>
-                    <span className="font-bold placeholder-text">$75/month</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Standard (includes content updates, 2 hours/month)</span>
-                    <span className="font-bold placeholder-text">$125/month</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>Standard (includes content updates, 4 hours/month)</span>
-                    <span className="font-bold placeholder-text">$200/month</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span>As-Needed Support</span>
-                    <span className="font-bold placeholder-text">$100/hour</span>
-                  </div>
-                  <div className="pt-4 text-sm">
-                    <p style={{ color: 'var(--ash-gray)' }}>
-                    <strong>Note:</strong> Monthly hours can be used for website updates, technical support, video editing, or any other work you need done. Unused hours don't roll over.
-                    </p>
-                    </div>
-                </div>
-              </div>
-       {/* Custom Applications */}
-       <div className="bg-white rounded-2xl p-8 border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                <div className="flex items-start gap-6 mb-6">
-                    <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '32px' }}>⚙️</span>
-                    </div>
-                    <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-2 placeholder-text">Custom Applications</h3>
-                    <div 
-                        className="h-0.5 w-16 rounded-full mb-4"
-                        style={{ backgroundColor: 'var(--ember-orange)' }}
-                    ></div>
-                    </div>
-                </div>
-                <div style={{ color: 'var(--ash-gray)' }}>
-                    <p className="mb-4" style={{ lineHeight: '1.7' }}>
-                    Custom tools and systems built specifically for your business—booking systems, inventory management, customer portals, or whatever you need.
-                    </p>
-                    <p className="font-bold placeholder-text text-lg">
-                    Let's talk about what you need
-                    </p>
-                    <p className="text-sm mt-2">
-                    Every custom application is different. We'll discuss your needs, figure out what makes sense, and I'll give you an honest quote based on the scope of work.
-                    </p>
-                </div>
-                </div>
-            </div>
-            
+        </div>
+      </section>
+
+      {/* BUILD SOMETHING NEW — DARK */}
+      <section
+        className="py-20 md:py-32 relative overflow-hidden"
+        style={{ backgroundColor: 'var(--midnight)' }}
+      >
+        <div
+          className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            transform: 'translate(-30%, -30%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full opacity-15 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            transform: 'translate(30%, 30%)',
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span
+              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
+            >
+              — Build Something New
+            </span>
+            <h2
+              className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+            >
+              One-time builds.
+            </h2>
           </div>
 
-           
-        </section>
-  
-        {/* Payment Plans */}
-        <section className="py-16 md:py-24" style={{ backgroundColor: 'white' }}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 placeholder-text">
-                  Payment Plans Available
-                </h2>
-                <div 
-                  className="h-1 w-24 rounded-full mx-auto mb-6"
-                  style={{ backgroundColor: 'var(--ember-orange)' }}
-                ></div>
-                <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                  I understand budgets can be tight. Let's work out a payment plan that makes sense for you.
+          {/* Websites */}
+          <div
+            className="mb-6 p-8 md:p-12 rounded-3xl"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.04)',
+              border: '1px solid rgba(251, 146, 60, 0.2)',
+            }}
+          >
+            <div className="grid md:grid-cols-12 gap-8 mb-10">
+              <div className="md:col-span-5">
+                <span
+                  className="text-6xl md:text-7xl leading-none block mb-4"
+                  style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                >
+                  01
+                </span>
+                <h3
+                  className="text-3xl md:text-4xl mb-4 tracking-tight"
+                  style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Websites
+                </h3>
+                <p style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
+                  Professional sites that work hard for your business — fast,
+                  mobile-friendly, and built to actually get results.
                 </p>
               </div>
-  
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 rounded-2xl border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                  <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '24px' }}>💳</span>
+
+              <div className="md:col-span-7 space-y-1">
+                {[
+                  { label: 'Basic Business Website', detail: '3–5 pages', price: '$1,500', from: true },
+                  { label: 'Full Business Website', detail: '5–10 pages', price: '$2,400', from: true },
+                  { label: 'Additional Pages', detail: 'per page', price: '$175–275' },
+                  { label: 'Special Features', detail: 'booking, integrations, custom tools', price: 'Custom' },
+                ].map((row, idx, arr) => (
+                  <div
+                    key={row.label}
+                    className="flex items-baseline justify-between gap-4 py-4"
+                    style={{
+                      borderBottom:
+                        idx < arr.length - 1
+                          ? '1px solid rgba(251, 146, 60, 0.15)'
+                          : 'none',
+                    }}
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div
+                        className="text-base md:text-lg"
+                        style={{ color: 'var(--bone)' }}
+                      >
+                        {row.label}
+                      </div>
+                      <div
+                        className="text-sm"
+                        style={{ color: 'var(--bone)', opacity: 0.55 }}
+                      >
+                        {row.detail}
+                      </div>
+                    </div>
+                    <div
+                      className="text-xl md:text-2xl whitespace-nowrap"
+                      style={{
+                        color: 'var(--ember-orange)',
+                        fontFamily: 'var(--font-heading)',
+                      }}
+                    >
+                      {row.from && (
+                        <span
+                          className="text-xs tracking-[0.15em] uppercase mr-2"
+                          style={{
+                            color: 'var(--bone)',
+                            opacity: 0.5,
+                            fontFamily: 'var(--font-body)',
+                          }}
+                        >
+                          from
+                        </span>
+                      )}
+                      {row.price}
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 placeholder-text">Split Payments</h3>
-                  <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                    Pay in installments as we hit project milestones. Typically 50% to start, 50% at completion, but we can work out a plan that fits your budget.
-                  </p>
-                </div>
-  
-                <div className="p-8 rounded-2xl border-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                  <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '24px' }}>📅</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 placeholder-text">Monthly Retainers</h3>
-                  <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                    For ongoing work like social media management, website maintenance, or regular content creation, we'll set up a simple monthly plan.
-                  </p>
-                </div>
-  
-                <div className="p-8 rounded-2xl border-2 md:col-span-2" style={{ borderColor: 'rgba(232, 105, 76, 0.2)' }}>
-                  <div className="w-12 h-12 rounded-lg mb-6 flex items-center justify-center" style={{ backgroundColor: 'rgba(232, 105, 76, 0.1)' }}>
-                    <span style={{ color: 'var(--ember-orange)', fontSize: '24px' }}>🤝</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 placeholder-text">Custom Payment Plans</h3>
-                  <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                    Need something more flexible? We can discuss custom payment arrangements that work for your specific situation. I'm here to help, not make things harder.
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-        </section>
-  
-        {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 placeholder-text">
-                Want an Exact Quote?
-              </h2>
-              <div 
-                className="h-1 w-24 rounded-full mx-auto mb-8"
-                style={{ backgroundColor: 'var(--ember-orange)' }}
-              ></div>
-              <p className="text-xl mb-12" style={{ color: 'var(--ash-gray)', lineHeight: '1.8' }}>
-                Let's talk about what you need. I'll give you a clear, honest quote with no surprises or hidden fees.
-              </p>
-              <a 
-                href="/contact" 
-                className="inline-block px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg"
-                style={{ 
-                  backgroundColor: 'var(--ember-orange)', 
-                  color: 'white',
-                }}
-              >
-                Get In Touch
-              </a>
+
+          {/* Custom Applications */}
+          <div
+            className="p-8 md:p-12 rounded-3xl"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.04)',
+              border: '1px solid rgba(251, 146, 60, 0.2)',
+            }}
+          >
+            <div className="grid md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-5">
+                <span
+                  className="text-6xl md:text-7xl leading-none block mb-4"
+                  style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                >
+                  02
+                </span>
+                <h3
+                  className="text-3xl md:text-4xl mb-4 tracking-tight"
+                  style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Custom Applications
+                </h3>
+                <p style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
+                  Custom tools built specifically for your business — booking
+                  systems, inventory management, customer portals, or whatever
+                  you need.
+                </p>
+              </div>
+
+              <div className="md:col-span-7">
+                <div
+                  className="text-xs font-medium tracking-[0.2em] uppercase mb-3"
+                  style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
+                >
+                  Pricing
+                </div>
+                <div
+                  className="text-3xl md:text-5xl mb-4 tracking-tight"
+                  style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Let's talk about what you need.
+                </div>
+                <p
+                  className="text-sm md:text-base"
+                  style={{ color: 'var(--bone)', opacity: 0.65, lineHeight: '1.7' }}
+                >
+                  Every custom application is different. We'll discuss your
+                  needs, figure out what makes sense, and I'll give you an
+                  honest quote based on the scope of work.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-    );
-  }
+        </div>
+      </section>
+
+      {/* KEEP THINGS RUNNING — CREAM */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span
+              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+              style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
+            >
+              — Keep Things Running
+            </span>
+            <h2
+              className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+            >
+              Monthly services.
+            </h2>
+          </div>
+
+          {/* Maintenance */}
+          <div
+            className="mb-6 p-8 md:p-12 rounded-3xl"
+            style={{
+              backgroundColor: 'white',
+              border: '1px solid rgba(194, 65, 12, 0.15)',
+            }}
+          >
+            <div className="grid md:grid-cols-12 gap-8 mb-6">
+              <div className="md:col-span-5">
+                <span
+                  className="text-6xl md:text-7xl leading-none block mb-4"
+                  style={{ color: 'rgba(194, 65, 12, 0.3)', fontFamily: 'var(--font-heading)' }}
+                >
+                  03
+                </span>
+                <h3
+                  className="text-3xl md:text-4xl mb-4 tracking-tight"
+                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Maintenance & Support
+                </h3>
+                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+                  Keep your site and tools running smoothly without thinking
+                  about it. Monthly hours work for updates, support, or
+                  whatever needs doing.
+                </p>
+              </div>
+
+              <div className="md:col-span-7 space-y-1">
+                {[
+                  { label: 'Basic', detail: 'Updates + security, 1 hour/month', price: '$110', unit: '/mo' },
+                  { label: 'Standard', detail: 'Content updates, 2 hours/month', price: '$165', unit: '/mo' },
+                  { label: 'Plus', detail: 'Content updates, 4 hours/month', price: '$275', unit: '/mo' },
+                  { label: 'As-Needed Support', detail: 'No commitment, billed hourly', price: '$135', unit: '/hr' },
+                ].map((row, idx, arr) => (
+                  <div
+                    key={row.label}
+                    className="flex items-baseline justify-between gap-4 py-4"
+                    style={{
+                      borderBottom:
+                        idx < arr.length - 1
+                          ? '1px solid rgba(194, 65, 12, 0.12)'
+                          : 'none',
+                    }}
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div
+                        className="text-base md:text-lg"
+                        style={{ color: 'var(--charcoal)' }}
+                      >
+                        {row.label}
+                      </div>
+                      <div
+                        className="text-sm"
+                        style={{ color: 'var(--stone)' }}
+                      >
+                        {row.detail}
+                      </div>
+                    </div>
+                    <div
+                      className="whitespace-nowrap"
+                      style={{
+                        color: 'var(--ember-deep)',
+                        fontFamily: 'var(--font-heading)',
+                      }}
+                    >
+                      <span className="text-xl md:text-2xl">{row.price}</span>
+                      <span
+                        className="text-sm ml-1"
+                        style={{ opacity: 0.7, fontFamily: 'var(--font-body)' }}
+                      >
+                        {row.unit}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p
+              className="text-sm pt-4"
+              style={{ color: 'var(--stone)', borderTop: '1px solid rgba(194, 65, 12, 0.12)' }}
+            >
+              <strong style={{ color: 'var(--charcoal)' }}>Note:</strong> Monthly
+              hours can be used for website updates, technical support, on-site tech work, or really anything else (except for social media updates). Unused hours don't roll
+              over.
+            </p>
+          </div>
+
+          {/* Social Media */}
+          <div
+            className="p-8 md:p-12 rounded-3xl"
+            style={{
+              backgroundColor: 'white',
+              border: '1px solid rgba(194, 65, 12, 0.15)',
+            }}
+          >
+            <div className="grid md:grid-cols-12 gap-8 mb-6">
+              <div className="md:col-span-5">
+                <span
+                  className="text-6xl md:text-7xl leading-none block mb-4"
+                  style={{ color: 'rgba(194, 65, 12, 0.3)', fontFamily: 'var(--font-heading)' }}
+                >
+                  04
+                </span>
+                <h3
+                  className="text-3xl md:text-4xl mb-4 tracking-tight"
+                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Social Media
+                </h3>
+                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+                  Stay active and professional online without spending your
+                  whole week on it. Pick the level that fits your business.
+                </p>
+              </div>
+
+              <div className="md:col-span-7 space-y-1">
+                {[
+                  { label: 'Bi-Weekly', detail: '2 posts per month', price: '$125', unit: '/mo' },
+                  { label: 'Weekly', detail: '4 posts per month', price: '$195', unit: '/mo' },
+                  { label: 'Twice Weekly', detail: '8–10 posts per month', price: '$295', unit: '/mo' },
+                  { label: 'Three Times a Week', detail: '9–12 posts per month', price: '$395', unit: '/mo' },
+                  { label: 'Full Management', detail: 'Daily posting + comment engagement', price: '$795', unit: '/mo' },
+                ].map((row, idx, arr) => (
+                  <div
+                    key={row.label}
+                    className="flex items-baseline justify-between gap-4 py-4"
+                    style={{
+                      borderBottom:
+                        idx < arr.length - 1
+                          ? '1px solid rgba(194, 65, 12, 0.12)'
+                          : 'none',
+                    }}
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div
+                        className="text-base md:text-lg"
+                        style={{ color: 'var(--charcoal)' }}
+                      >
+                        {row.label}
+                      </div>
+                      <div
+                        className="text-sm"
+                        style={{ color: 'var(--stone)' }}
+                      >
+                        {row.detail}
+                      </div>
+                    </div>
+                    <div
+                      className="whitespace-nowrap"
+                      style={{
+                        color: 'var(--ember-deep)',
+                        fontFamily: 'var(--font-heading)',
+                      }}
+                    >
+                      <span className="text-xl md:text-2xl">{row.price}</span>
+                      <span
+                        className="text-sm ml-1"
+                        style={{ opacity: 0.7, fontFamily: 'var(--font-body)' }}
+                      >
+                        {row.unit}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p
+              className="text-sm pt-4"
+              style={{ color: 'var(--stone)', borderTop: '1px solid rgba(194, 65, 12, 0.12)' }}
+            >
+              <strong style={{ color: 'var(--charcoal)' }}>Platforms:</strong>{' '}
+              Prices based on posting to 1–2 platforms (Facebook, Instagram,
+              etc.). We'll figure out which platforms make the most sense for
+              your business. Additional platforms available for extra cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ONE-OFF HELP — DARK */}
+      <section
+        className="py-20 md:py-32 relative overflow-hidden"
+        style={{ backgroundColor: 'var(--midnight)' }}
+      >
+        <div
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            transform: 'translate(30%, -20%)',
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span
+              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
+            >
+              — One-Off Help
+            </span>
+            <h2
+              className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+            >
+              When you just need a hand.
+            </h2>
+          </div>
+
+          <div
+            className="p-8 md:p-12 rounded-3xl"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.04)',
+              border: '1px solid rgba(251, 146, 60, 0.2)',
+            }}
+          >
+            <div className="grid md:grid-cols-12 gap-8 mb-6">
+              <div className="md:col-span-5">
+                <span
+                  className="text-6xl md:text-7xl leading-none block mb-4"
+                  style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                >
+                  05
+                </span>
+                <h3
+                  className="text-3xl md:text-4xl mb-4 tracking-tight"
+                  style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+                >
+                  Tech Services
+                </h3>
+                <p style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
+                  On-site visits, remote help, equipment setup, training —
+                  whatever tech problem needs solving.
+                </p>
+              </div>
+
+              <div className="md:col-span-7 space-y-1">
+                {[
+                  { label: 'On-Site Tech Help', detail: 'First hour, per visit', price: '$135' },
+                  { label: 'Additional On-Site Hours', detail: 'After the first hour', price: '$105', unit: '/hr' },
+                  { label: 'Remote Tech Support', detail: 'Video call or screen share', price: '$105', unit: '/hr' },
+                  { label: 'Larger Projects', detail: 'Setup, migrations, etc.', price: 'Custom' },
+                ].map((row, idx, arr) => (
+                  <div
+                    key={row.label}
+                    className="flex items-baseline justify-between gap-4 py-4"
+                    style={{
+                      borderBottom:
+                        idx < arr.length - 1
+                          ? '1px solid rgba(251, 146, 60, 0.15)'
+                          : 'none',
+                    }}
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div
+                        className="text-base md:text-lg"
+                        style={{ color: 'var(--bone)' }}
+                      >
+                        {row.label}
+                      </div>
+                      <div
+                        className="text-sm"
+                        style={{ color: 'var(--bone)', opacity: 0.55 }}
+                      >
+                        {row.detail}
+                      </div>
+                    </div>
+                    <div
+                      className="whitespace-nowrap"
+                      style={{
+                        color: 'var(--ember-orange)',
+                        fontFamily: 'var(--font-heading)',
+                      }}
+                    >
+                      <span className="text-xl md:text-2xl">{row.price}</span>
+                      {row.unit && (
+                        <span
+                          className="text-sm ml-1"
+                          style={{ opacity: 0.7, fontFamily: 'var(--font-body)' }}
+                        >
+                          {row.unit}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p
+              className="text-sm pt-4"
+              style={{ color: 'var(--bone)', opacity: 0.6, borderTop: '1px solid rgba(251, 146, 60, 0.15)' }}
+            >
+              <strong style={{ color: 'var(--bone)', opacity: 1 }}>Includes:</strong>{' '}
+              troubleshooting, equipment setup, Wi-Fi and networking, software
+              help, system migrations, and one-on-one training. Travel fees may
+              apply for clients outside the local area.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment Plans + CTA — CREAM */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute top-0 left-1/2 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
+            transform: 'translate(-50%, -30%)',
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-5xl mx-auto">
+            <div className="max-w-3xl mb-12">
+              <span
+                className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
+              >
+                — Payment Plans
+              </span>
+              <h2
+                className="text-4xl md:text-5xl leading-[1.05] tracking-tight mb-6"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                Budgets can be tight. Let's work something out.
+              </h2>
+              <p
+                className="text-lg"
+                style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
+              >
+                I'd rather help you find a way to make it work than lose the
+                opportunity to help. Here are the most common arrangements —
+                we'll figure out what fits.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-16">
+              {[
+                {
+                  title: 'Split payments',
+                  body: 'Pay in installments as we hit project milestones. Typically 50% to start, 50% at completion.',
+                },
+                {
+                  title: 'Monthly retainers',
+                  body: 'For ongoing work like social media or maintenance, a simple monthly plan keeps things predictable.',
+                },
+                {
+                  title: 'Custom arrangements',
+                  body: 'Need something more flexible? We can discuss a payment plan that works for your specific situation.',
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="p-6 rounded-2xl"
+                  style={{
+                    backgroundColor: 'white',
+                    border: '1px solid rgba(194, 65, 12, 0.12)',
+                  }}
+                >
+                  <h3
+                    className="text-xl mb-3"
+                    style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-sm"
+                    style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
+                  >
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA — DARK */}
+      <section
+        className="relative overflow-hidden py-24 md:py-32"
+        style={{ backgroundColor: 'var(--midnight)' }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 w-[800px] h-[800px] rounded-full opacity-25 blur-3xl pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <span
+              className="text-xs font-medium tracking-[0.2em] uppercase mb-6 block"
+              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
+            >
+              — Want An Exact Quote
+            </span>
+            <h2
+              className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+            >
+              Let's talk numbers.
+            </h2>
+            <p
+              className="text-xl mb-12 max-w-2xl mx-auto"
+              style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
+            >
+              Tell me what you're trying to do and I'll give you a clear,
+              honest quote — no hidden fees, no pressure to commit.
+            </p>
+            <a
+              href="/contact"
+              className="group inline-flex items-center gap-2 px-10 py-5 rounded-full font-medium text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5"
+              style={{
+                backgroundColor: 'var(--ember-orange)',
+                color: 'var(--midnight)',
+                boxShadow: '0 10px 40px -10px rgba(251, 146, 60, 0.5)',
+              }}
+            >
+              Get In Touch
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                className="transition-transform group-hover:translate-x-0.5"
+              >
+                <path
+                  d="M4 10h12m0 0l-4-4m4 4l-4 4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

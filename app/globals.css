@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F4F1E8;
-  --foreground: #2D3142;
-  --ember-orange: #E8694C;
-  --charcoal: #2D3142;
-  --warm-cream: #F4F1E8;
-  --ash-gray: #9DA3A8;
-  --forest-green: #3A5A40;
-  --honey-gold: #D4A574;
+  /* Core surfaces */
+  --background: #F5F1EB;        /* warm cream — main page background */
+  --foreground: #1C1917;        /* charcoal — main text on light bg */
+
+  /* Backgrounds */
+  --warm-cream: #F5F1EB;        /* same as background; kept for explicit naming */
+  --paper: #FAF7F2;             /* slightly lighter cream for alt sections */
+  --midnight: #0F1419;          /* deep navy-black for CTA/footer */
+
+  /* Text */
+  --charcoal: #1C1917;          /* headlines on light bg */
+  --ash-gray: #44403C;          /* body text on light bg */
+  --stone: #78716C;             /* muted/secondary text, labels */
+  --bone: #F5F1EB;              /* text on dark backgrounds */
+
+  /* Accent — two-orange system */
+  --ember-orange: #FB923C;      /* bright ember — glows on dark backgrounds */
+  --ember-deep: #C2410C;        /* deep burnt orange — for use on light backgrounds */
+
+  /* Supporting accents (kept from your palette) */
+  --forest-green: #5FA777;
+  --honey-gold: #F0B949;
 }
 
 @theme inline {
@@ -18,22 +32,29 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2D3142;
-    --foreground: #F4F1E8;
+    --background: #0F1419;      /* midnight */
+    --foreground: #F5F1EB;      /* bone */
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;             /* Instrument Serif is designed for 400, not bold */
   letter-spacing: -0.02em;
+}
+
+/* Italic Instrument Serif for editorial emphasis */
+em {
+  font-style: italic;
+  font-family: var(--font-heading), Georgia, serif;
 }
 
 /* Animations */
@@ -58,14 +79,3 @@ h1, h2, h3, h4, h5, h6 {
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
-
-/* Placeholder styling */
-.placeholder-box {
-  border: 2px dashed var(--ash-gray);
-  background: rgba(157, 163, 168, 0.05);
-}
-
-.placeholder-text {
-  color: var(--ash-gray);
-  font-weight: 500;
-}
