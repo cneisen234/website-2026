@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
@@ -67,9 +69,8 @@ export default function About() {
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              Your area's local web and tech expert. I build websites and tools
-              that don't just sit there — they work for you, save you time, and
-              help your business grow.
+              Local web and tech help for the businesses that keep small-town
+              Michigan running.
             </p>
           </div>
         </div>
@@ -99,83 +100,37 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative">
           <div className="grid md:grid-cols-12 gap-12 items-start">
-            {/* Photo placeholder */}
-            <div className="md:col-span-5">
-              <div className="relative">
-                {/* Decorative orange offset frame behind photo */}
-                <div
-                  className="absolute -inset-3 rounded-3xl"
-                  style={{
-                    border: '1px solid rgba(251, 146, 60, 0.4)',
-                    transform: 'translate(12px, 12px)',
-                  }}
-                />
-
-                {/*
-                  PHOTO PLACEHOLDER
-                  ─────────────────
-                  To swap in your real photo:
-                  1. Replace the inner <div> below with an <Image> component
-                  2. Recommended dimensions: 800x1000 (4:5 portrait)
-                  3. Keep the outer rounded-3xl wrapper for the styled frame
-                */}
-                <div
-                  className="relative aspect-[4/5] rounded-3xl overflow-hidden flex items-center justify-center"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                    border: '1px solid rgba(251, 146, 60, 0.2)',
-                  }}
-                >
-                  {/* Subtle ember glow inside placeholder */}
+            {/* Photo */}
+              <div className="md:col-span-5">
+                <div className="relative">
+                  
+                  {/* Decorative orange offset frame */}
                   <div
-                    className="absolute inset-0 opacity-30"
+                    className="absolute -inset-[0.2px] rounded-[25px]"   // Slightly larger than the photo
                     style={{
-                      background:
-                        'radial-gradient(circle at 50% 40%, rgba(251, 146, 60, 0.15) 0%, transparent 60%)',
+                      border: '1px solid rgba(251, 146, 60, 0.35)',
+                      background: 'transparent',
                     }}
                   />
 
-                  {/* Placeholder icon */}
-                  <div className="relative text-center">
-                    <svg
-                      width="80"
-                      height="80"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      className="mx-auto mb-4 opacity-40"
-                    >
-                      <circle
-                        cx="40"
-                        cy="30"
-                        r="14"
-                        stroke="var(--ember-orange)"
-                        strokeWidth="1.5"
-                        fill="none"
-                      />
-                      <path
-                        d="M14 68 C 14 54, 26 48, 40 48 C 54 48, 66 54, 66 68"
-                        stroke="var(--ember-orange)"
-                        strokeWidth="1.5"
-                        fill="none"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <p
-                      className="text-xs tracking-[0.2em] uppercase opacity-50"
-                      style={{ color: 'var(--bone)', fontFamily: 'var(--font-body)' }}
-                    >
-                      Photo of Chris
-                    </p>
-                    <p
-                      className="text-xs mt-1 opacity-30"
-                      style={{ color: 'var(--bone)', fontFamily: 'var(--font-body)' }}
-                    >
-                      coming soon
-                    </p>
+                  {/* Main photo container */}
+                  <div
+                    className="relative aspect-[4/5] rounded-3xl overflow-hidden"
+                    style={{
+                      border: '1px solid rgba(251, 146, 60, 0.2)',
+                    }}
+                  >
+                    <Image
+                      src="/chris.png"
+                      alt="Chris, founder of Kindling Digital"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
-            </div>
 
             {/* Story text */}
             <div className="md:col-span-7">
@@ -194,34 +149,34 @@ export default function About() {
 
               <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
-                  I'm the person behind Kindling Digital. I've spent over 5
-                  years building websites, custom applications, and the kind of
-                  behind-the-scenes tech that helps businesses run better.
+                  I've spent the last six years building websites, custom tools,
+                  and behind-the-scenes tech for small businesses — the kind of
+                  work that helps a shop owner stop dreading their inventory
+                  spreadsheet, or lets a service business take bookings without
+                  playing phone tag all day.
                 </p>
 
                 <p>
-                  The tech side? I know it inside and out. But that's not really
-                  the point. The point is helping local businesses do more with
-                  less effort — websites that take bookings while you sleep,
-                  tools that handle the busywork, smart automation that does the
-                  things you don't have time for.
+                  Most of that time has been spent on the same kinds of problems
+                  I help with now: websites that bring in customers, automations
+                  that handle the repetitive stuff, and getting the right tools
+                  in the right hands. I've worked with startups, established
+                  shops, and everything in between, and I've seen what actually
+                  moves the needle for a small business — and what's just
+                  expensive distraction.
                 </p>
 
                 <p>
-                  Maybe you've thought about getting a real website — or
-                  upgrading the one you have — but weren't sure where to start.
-                  Maybe you've wondered if there's a better way to handle
-                  bookings, customer questions, or the same repetitive tasks
-                  eating up your week. Maybe you're just tired of doing things
-                  the hard way.
+                  Kindling Digital is my way of bringing that work closer to
+                  home. I live and work right here in small-town Michigan, and
+                  I started this because too many local businesses are stuck
+                  choosing between cookie-cutter templates that don't fit them
+                  and big-city agencies that charge like it's New York.
                 </p>
 
                 <p>
-                  That's where I come in. I help local businesses with websites
-                  that bring in customers, custom tools that save you time, and
-                  the kind of smart integrations — booking systems, automated
-                  follow-ups, whatever fits — that make your business run
-                  smoother.
+                  Neither option is right for the businesses around here. So I
+                  built a third one.
                 </p>
               </div>
             </div>
@@ -273,7 +228,7 @@ export default function About() {
                   </>
                 ),
                 title: 'Websites that work for you',
-                body: "Fast, professional sites that aren't just digital brochures. They take bookings, capture leads, answer questions, and turn visitors into customers — automatically.",
+                body: "Fast, professional sites that don't just sit there. They bring in customers, capture leads, take bookings, and answer questions automatically.",
               },
               {
                 icon: (
@@ -300,8 +255,8 @@ export default function About() {
                     <circle cx="12" cy="12" r="3" stroke="var(--ember-deep)" strokeWidth="2" fill="none" />
                   </>
                 ),
-                title: 'Automated workflows',
-                body: "Automated emails and reminders, follow-ups that happen on their own, and behind-the-scenes processes that handle the repetitive stuff. Tech that does the work so you don't have to.",
+                title: 'Automating the busywork',
+                body: "Automated emails and reminders, follow-ups that happen on their own, and behind-the-scenes processes that handle the repetitive stuff so you don't have to.",
               },
               {
                 icon: (
@@ -389,23 +344,23 @@ export default function About() {
             {[
               {
                 num: '01',
-                title: "Let's talk about your business",
-                body: "We'll sit down and talk about what you're trying to accomplish. More customers? Less time spent on busywork? A website that actually does something? Let's figure out what success looks like for you.",
+                title: "We talk about your business",
+                body: "First thing we do is sit down — coffee shop, your place, phone call, whatever works. I want to hear what you're trying to accomplish before I start suggesting anything.",
               },
               {
                 num: '02',
-                title: "I'll recommend what makes sense",
-                body: "Based on what you need and your budget, I'll lay out what's worth doing. Maybe that's a new website with online booking. Maybe it's a custom tool to handle a specific pain point. Maybe it's both. We'll figure it out together.",
+                title: "I tell you what makes sense",
+                body: "Based on what you need and your budget, I'll be straight with you about what's actually worth doing — and what isn't. No upsells, no kitchen sink. Just what fits.",
               },
               {
                 num: '03',
-                title: "I'll handle the execution",
-                body: "I'll build what needs building, set up the integrations, and handle all the technical details. You approve the direction, I take care of making it happen.",
+                title: "I handle the work",
+                body: "I'll build what needs building, set things up, and take care of all the technical details. You approve the direction, I take care of making it happen.",
               },
               {
                 num: '04',
-                title: "We'll keep it going",
-                body: "Good tech isn't a one-time thing. I'll keep working with you to improve, adjust, and add new tools as your business grows.",
+                title: "I stick around",
+                body: "Good tech isn't a one-time thing. I'll keep working with you to make improvements, fix things when they break, and add new pieces as your business grows.",
               },
             ].map((step, idx, arr) => (
               <div key={step.num} className="relative">
@@ -499,7 +454,8 @@ export default function About() {
             >
               Good websites and smart tools shouldn't be complicated or out of
               reach. I'm here to make them accessible, effective, and actually
-              worth the investment.
+              worth the investment — for the businesses that make this place
+              what it is.
             </p>
 
             <a

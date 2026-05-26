@@ -42,7 +42,7 @@ export default function Services() {
               <br />
               I{' '}
               <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                build
+                do
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="12"
@@ -138,15 +138,15 @@ export default function Services() {
                   className="text-4xl md:text-5xl mb-6 leading-[1.05] tracking-tight"
                   style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
                 >
-                  Websites that actually work.
+                  Websites that earn their keep.
                 </h2>
                 <p
                   className="text-lg"
                   style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
                 >
-                  Fast, clean, professional sites that look great on every
-                  device. Built to actually do something for your business —
-                  not just sit there.
+                  Fast, clean, professional sites that don't just sit there.
+                  Built to actually do something for your business — bring in
+                  customers, take bookings, answer questions, capture leads.
                 </p>
               </div>
             </div>
@@ -168,11 +168,11 @@ export default function Services() {
                 <div className="grid sm:grid-cols-2 gap-x-6 gap-y-4">
                   {[
                     'Custom design that fits your business',
-                    'Works perfectly on mobile devices',
+                    'Looks great on phones, tablets, and computers',
+                    'Built to turn visitors into customers',
                     'Contact forms and email integration',
-                    'Basic SEO setup so people can find you',
-                    'Easy way to update content when needed',
-                    'Fast loading speeds',
+                    'Basic SEO so people can find you',
+                    'Easy way to update content yourself',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <svg
@@ -272,7 +272,7 @@ export default function Services() {
                 className="text-xs font-medium tracking-[0.2em] uppercase mb-6"
                 style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
               >
-                Things I've built
+                What I can build for you
               </div>
 
               <div className="grid sm:grid-cols-2 gap-3">
@@ -281,13 +281,13 @@ export default function Services() {
                   'Customer accounts & portals',
                   'Automated confirmations',
                   'Quote request forms',
-                  'Real-time inventory tracking',
+                  'Inventory tracking',
                   'Internal dashboards',
                   'Lead capture & follow-up',
                   'Reviews & testimonials',
                   'Event registration',
                   'Membership tools',
-                  'Online stores & catalogs',
+                  'Online stores',
                   'Third-party integrations',
                 ].map((item) => (
                   <div
@@ -318,7 +318,7 @@ export default function Services() {
                 className="text-sm mt-6 italic"
                 style={{ color: 'var(--stone)' }}
               >
-                And pretty much anything else you need — let's talk.
+                Don't see what you need? Just ask — chances are I can build it.
               </p>
             </div>
           </div>
@@ -380,15 +380,15 @@ export default function Services() {
                 },
                 {
                   title: 'Follow-up sequences',
-                  body: 'Nurture leads and stay in touch with customers automatically — no more "I forgot to email them back."',
+                  body: "Nurture leads and stay in touch with customers automatically — no more \"I forgot to email them back.\"",
                 },
                 {
                   title: 'Smart forms & routing',
                   body: 'Forms that ask the right questions and send each request to the right person without your involvement.',
                 },
                 {
-                  title: 'AI-assisted workflows',
-                  body: 'Where AI genuinely makes things faster — drafting responses, categorizing requests, summarizing data.',
+                  title: 'AI where it actually helps',
+                  body: "I've worked with AI extensively, so I know what's actually useful vs. what's hype. I'll use it for things like drafting responses, categorizing requests, or summarizing data — when it genuinely makes things faster.",
                 },
                 {
                   title: 'Tool integrations',
@@ -488,7 +488,7 @@ export default function Services() {
                     'Choosing the right software or tools for your business',
                     'Setting up new systems or migrating from old ones',
                     'One-on-one help learning the tech you already have',
-                    'Pretty much any other tech problem — just ask',
+                    "If it's tech-related, there's a good chance I can help",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <svg
@@ -603,7 +603,7 @@ export default function Services() {
                 {[
                   'Regular updates and security patches',
                   'Content updates when you need them',
-                  'Fixing issues when something breaks',
+                  'Fixing things when something breaks',
                   'Help with questions or changes',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
@@ -648,7 +648,7 @@ export default function Services() {
               </p>
               <div className="space-y-3">
                 {[
-                  'Regular posting on Facebook, Instagram, etc.',
+                  'Regular posting on Facebook, Instagram, and more',
                   'Content calendar planning',
                   'Responding to messages and comments',
                   'Keeping your presence consistent',
@@ -732,9 +732,9 @@ export default function Services() {
               className="text-lg mb-12 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}
             >
-              Let's talk about what you're trying to do. I'll help you figure
-              out what makes sense for your business and your budget — no
-              pressure to decide everything right away.
+              Let's talk about what you're trying to do. I'll be straight with
+              you about what makes sense for your business and your budget — no
+              upsells, no pressure to figure it all out on the spot.
             </p>
 
             <a

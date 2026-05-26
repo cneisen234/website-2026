@@ -19,11 +19,20 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Kindling Digital - Tech Services",
   description: "Professional website and app design, development, and technical services",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#F5F1EB",
 };
 
 export default function RootLayout({

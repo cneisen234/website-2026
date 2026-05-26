@@ -43,20 +43,18 @@ export default function Home() {
                 className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95] tracking-tight"
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
-                More than
-                <br />
-                just a{' '}
+                A{' '}
                 <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                  website
+                  spark
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
                     height="12"
-                    viewBox="0 0 300 12"
+                    viewBox="0 0 200 12"
                     preserveAspectRatio="none"
                     aria-hidden="true"
                   >
                     <path
-                      d="M2 8 Q 75 2, 150 6 T 298 4"
+                      d="M2 8 Q 50 2, 100 6 T 198 4"
                       stroke="var(--ember-deep)"
                       strokeWidth="2.5"
                       fill="none"
@@ -64,16 +62,16 @@ export default function Home() {
                     />
                   </svg>
                 </em>
-                .
+                {' '}for your business.
               </h1>
 
               <p
                 className="text-xl md:text-2xl mb-10 fade-in-up stagger-2 max-w-2xl"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
               >
-                Websites and tech that don't just sit there — they work for you,
-                save you time, and help your business grow. Your area's local web
-                and tech expert.
+                Websites, custom tools, automation, and on-site tech help for
+                local businesses. Tech that doesn't just sit there — it works
+                for you, saves you time, and helps your business grow.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 fade-in-up stagger-3">
@@ -116,7 +114,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right side: "Here's what that looks like" mini-list */}
+            {/* Right side: services overview card */}
             <div className="md:col-span-5 fade-in-up stagger-3">
               <div
                 className="relative p-8 rounded-2xl"
@@ -130,7 +128,7 @@ export default function Home() {
                   className="text-xs font-medium tracking-[0.2em] uppercase mb-5"
                   style={{ color: 'var(--stone)', fontFamily: 'var(--font-body)' }}
                 >
-                  What that looks like
+                  Here's what I do
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -225,16 +223,17 @@ export default function Home() {
                   className="text-4xl md:text-6xl mb-6 leading-[1.05] tracking-tight"
                   style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
                 >
-                  Your website should work as hard as you do.
+                  Your tech should work as hard as you do.
                 </h2>
                 <p
                   className="text-lg"
                   style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
                 >
-                  Most websites are just digital brochures. I build sites that
-                  actually do things — take bookings, answer questions, follow
-                  up with customers, and handle the busywork so you can focus on
-                  running your business.
+                  Most small business tech is either too complicated, too
+                  expensive, or just sits there doing nothing. I build the kind
+                  that actually pulls its weight — handling bookings, answering
+                  questions, automating busywork, and showing up when you need
+                  a hand in person.
                 </p>
               </div>
             </div>
@@ -244,7 +243,7 @@ export default function Home() {
                 {
                   num: '01',
                   title: 'Built to do work',
-                  body: 'Online booking, automated reminders, customer portals, smart forms — your website should be a tool that gets things done, not just a sign in a digital window.',
+                  body: 'Online booking, automated reminders, customer portals, smart forms — tech should be a tool that gets things done, not just a sign in a digital window.',
                 },
                 {
                   num: '02',
@@ -254,7 +253,7 @@ export default function Home() {
                 {
                   num: '03',
                   title: 'More done, less effort',
-                  body: 'The right tools and automation can handle the repetitive stuff for you — scheduling, follow-ups, answering common questions — so you get more done without adding hours to your day.',
+                  body: 'The right tools and automation handle the repetitive stuff for you — scheduling, follow-ups, answering common questions — so you get more done without adding hours to your day.',
                 },
               ].map((item) => (
                 <div
@@ -291,7 +290,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Do */}
+      {/* How I Can Help */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
@@ -307,13 +306,13 @@ export default function Home() {
               className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
               style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
             >
-              — Capabilities
+              — How I Help
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              What your website can do.
+              Here's what I do.
             </h2>
           </div>
 
@@ -327,8 +326,8 @@ export default function Home() {
                     fill="var(--ember-deep)"
                   />
                 ),
-                title: 'Get found online',
-                body: 'Professional websites that show up in searches and turn visitors into customers. Mobile-friendly, fast, and built to actually get results.',
+                title: 'Websites that get found',
+                body: 'Professional sites that show up in searches and turn visitors into customers. Mobile-friendly, fast, and built to actually get results.',
               },
               {
                 icon: (
@@ -375,7 +374,7 @@ export default function Home() {
                     strokeLinejoin="round"
                   />
                 ),
-                title: 'Tech help of any kind',
+                title: 'On-site tech help',
                 body: "Computer setups, Wi-Fi headaches, picking the right software, training your team on tools you already have — sometimes you just need a tech person nearby without hiring one full-time.",
               },
             ].map((item) => (
@@ -458,15 +457,16 @@ export default function Home() {
               className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
-              Ready for a website that actually works?
+              Ready for tech that actually{' '}
+              <em style={{ color: 'var(--ember-orange)', fontStyle: 'italic' }}>works</em>?
             </h2>
             <p
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              Whether you're starting from scratch or have a site that isn't
-              pulling its weight, let's talk about how to build something that
-              brings in customers and saves you time.
+              Whether you need a new website, want to automate the busywork, or
+              just need someone local who knows tech — let's talk about what
+              would actually help your business.
             </p>
             <a
               href="/contact"

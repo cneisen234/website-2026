@@ -21,12 +21,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How much does a website cost?',
         answer:
-          "It depends on what you need. A basic business website might start around $500–$800. Adding things like online booking, customer portals, or other custom features will cost more. I keep my prices reasonable because I want to help local businesses, not price them out. I'll give you an honest quote after we talk.",
+          "It depends on what you need. A basic business website starts at $1,500, and a full business website (more pages, more features) starts at $2,400. Adding things like online booking, customer portals, or other custom features will adjust the price. I'll give you an honest, itemized quote after we talk so there are no surprises.",
       },
       {
         question: 'Do you offer payment plans?',
         answer:
-          "Yes. I understand not every business can pay everything upfront. We can work out a payment plan that makes sense for your budget. I'm willing to meet you in the middle, whatever that middle might be.",
+          "Yes. I understand not every business can pay everything upfront. We can work out a payment plan that makes sense for your budget — typically split across project milestones, but I'm flexible. I'd rather help you find a way to make it work than lose the opportunity to help.",
       },
       {
         question: 'What about hosting and domain names?',
@@ -47,7 +47,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: "What if I'm not sure what I need?",
         answer:
-          "That's completely normal. Most people aren't sure exactly what they need when they start. That's what our first conversation is for. We'll talk about your business, your goals, and I'll recommend what makes sense. No pressure to decide everything right away.",
+          "That's completely normal — most people aren't sure exactly what they need when they start. That's what our first conversation is for. We'll talk about your business, your goals, and I'll tell you straight what I think makes sense. No commitment, no pressure to figure it all out on the spot.",
+      },
+      {
+        question: "What if I already have a website but it's not working?",
+        answer:
+          "That's actually one of the most common situations I help with. We can talk about what isn't working — whether it's the design, the speed, the lack of customers, or something else — and figure out whether a rebuild makes sense or if some targeted improvements would get you there. Either way, I'll be honest about what I think the best path is.",
       },
     ],
   },
@@ -56,14 +61,19 @@ const faqGroups: FaqGroup[] = [
     title: 'What I build',
     items: [
       {
-        question: 'What do you mean by "more than just a website"?',
+        question: "What's different about how you build things?",
         answer:
-          'Most websites are just digital brochures. I build sites that actually do work for you — take bookings, send confirmations, route quote requests, track inventory, capture leads, and handle the busywork automatically. Your website should be a tool that saves you time, not just a place people can find your phone number.',
+          "Most small business websites are just digital brochures — they sit there and look pretty. I build things that actually do work for you: take bookings, send confirmations, route quote requests, capture leads, automate the busywork. Your tech should be a tool that saves you time, not just a place people can find your phone number.",
       },
       {
         question: 'Do you do on-site tech help?',
         answer:
-          'Yes. For local businesses, I can come on site to help with general tech problems — setting up computers and equipment, troubleshooting Wi-Fi issues, helping you pick the right software, migrating to new systems, or one-on-one help learning the tech you already have. Basically, if you need someone who knows tech to come take a look, I can do that.',
+          "Yes — for clients in the local area, I make on-site visits for general tech help. That includes setting up computers and equipment, troubleshooting Wi-Fi issues, helping you pick the right software, migrating to new systems, or just sitting down with you to learn the tech you already have. If you need someone who knows tech to come take a look, I can do that.",
+      },
+      {
+        question: 'How far will you travel for on-site visits?',
+        answer:
+          "I'm based in Fairview Michigan and happily serve the surrounding area without travel fees. For clients farther out, I can still come on-site — there may be a small travel fee depending on distance. If you're not local, I work with clients remotely all the time and that works great for most things outside of physical tech setup.",
       },
     ],
   },
@@ -72,19 +82,19 @@ const faqGroups: FaqGroup[] = [
     title: 'Ownership & after launch',
     items: [
       {
-        question: 'Will I be able to update my website myself?',
+        question: 'Will I be able to update things myself?',
         answer:
-          "If you want to, yes. I can set up your site so you can make basic updates yourself — changing text, adding photos, posting news. I'll show you how it works. Or, I can handle all updates for you as part of ongoing maintenance. Your choice.",
+          "If you want to, yes. I can set up your website and tools so you can make basic updates yourself — changing text, adding photos, posting news — and I'll walk you through how it works. If you'd rather not deal with it, I can handle updates for you through a maintenance plan. Your choice.",
       },
       {
         question: 'What if I need help after my website launches?',
         answer:
-          "I'm not going anywhere. You can reach out anytime you need help, have questions, or want to make changes. I offer ongoing maintenance packages, or we can work on an as-needed basis. Whatever works better for you.",
+          "I'm not going anywhere. You can reach out anytime you need help, have questions, or want to make changes. I offer ongoing maintenance plans for regular updates and support, or we can work on an as-needed basis. Whatever fits your situation.",
       },
       {
         question: 'Do I own my website?',
         answer:
-          "Yes. Once you've paid for the website, it's yours. You own all the content, design, and code. You're not locked into working with me forever, though I hope you'll want to stick around.",
+          "Yes. Once you've paid for the website, it's yours. You own the content, the design, and the code. You're not locked into working with me forever — though I hope you'll want to stick around.",
       },
     ],
   },
