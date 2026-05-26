@@ -17,8 +17,8 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Kindling Digital - Digital Marketing",
-  description: "Professional website and app design, development, and digital marketing services",
+  title: "Kindling Digital - Tech Services",
+  description: "Professional website and app design, development, and technical services",
 };
 
 export const viewport: Viewport = {
