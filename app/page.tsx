@@ -35,7 +35,7 @@ export default function Home() {
                   className="text-xs font-medium tracking-[0.2em] uppercase"
                   style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
                 >
-                  Local Web & Tech Studio
+                  Local Web & Tech Professional
                 </span>
               </div>
 
