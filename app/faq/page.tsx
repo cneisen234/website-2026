@@ -33,11 +33,6 @@ const faqGroups: FaqGroup[] = [
         answer:
           "There's no deposit. You sign on for the 3-month minimum, and you're not charged your first month until your website is actually live.",
       },
-      {
-        question: 'How do I know which plan to pick?',
-        answer:
-          "It mostly comes down to how much website you need — up to 5 pages on the $100 plan, up to 10 on the $200, which also adds Google Business and business email on your domain. If you're not sure, tell me what you're doing and I'll point you the right way.",
-      },
     ],
   },
   {
@@ -52,12 +47,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'Can I keep my website if I stop?',
         answer:
-          "Yes, there's a buyout. It starts at $1,500 and goes up from there depending on how big the site is and how many features and integrations were built into it. Once it's bought out, the site is yours.",
+          "Yes, there is an option to buyout. The cost depends on how big the site is and how many features and integrations were built into it. Once it's bought out, the site is yours.",
       },
       {
         question: 'Do I own my logo and branding?',
         answer:
-          "Yes. Once your branding is defined, it's yours to keep whether you stay on or not. The website is the piece that needs a buyout if you want to hang onto it after canceling.",
+          "Yes. Once your branding is defined, it's yours to keep even after you cancel.",
       },
     ],
   },
@@ -68,17 +63,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: "How long until my site's live?",
         answer:
-          "The first draft usually takes just a few days. After that, how fast we wrap up mostly depends on how quickly your feedback comes back. And remember, your first month isn't charged until the site is live.",
-      },
-      {
-        question: 'How do changes work while you build it?',
-        answer:
-          "We work closely on it. I put together a first draft, then we keep tweaking until it's where you want it. There's no clock on that first build — you aren't charged until it's live.",
+          "You'll get the first draft within a few days. After that, we will address any feedback you have and make the needed changes. Your site will go live very shortly after.",
       },
       {
         question: 'What if I already have a logo or branding?',
         answer:
-          "Happy to use it, and the price is the same either way. I'd at least like to take a look, since branding is worth refreshing every so often and it's already part of the plan — a good chance to update it. But if you love what you've got, we'll build around it.",
+          "Happy to use it, however I'd at least like to take a look, since branding is worth refreshing every so often and it's already part of the plan — a good chance to update it. But if you love what you've got, we'll build with it.",
       },
       {
         question: 'What if I only need a couple pages?',
@@ -97,19 +87,19 @@ const faqGroups: FaqGroup[] = [
           "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Anything bigger, like new features or integrations, is separate at $50 an hour.",
       },
       {
-        question: 'How does the social posting work?',
+        question: 'How does the social media posting work?',
         answer:
           "However you want it to. Hand it off completely and I'll decide what goes out and where, or tell me exactly what to post on which platform. You can give me as much or as little control as you like.",
       },
       {
         question: 'Can you help with computer or tech problems too?',
         answer:
-          "That's the idea — you've got a tech guy in your back pocket. If you're in my area I'll come out in person; if you're farther off or just prefer it, we can hop on a call and I'll help remotely. Travel outside my area adds a travel fee.",
+          "That's the idea — you've got a tech guy in your back pocket. If you're in my area I'll come out in person; if you're farther off or just prefer it, we can hop on a call and I'll help remotely.",
       },
       {
         question: "What if I'm not sure what I need?",
         answer:
-          "Totally normal. Tell me what you're trying to do and I'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
+          "That's part of the process. Tell me what you're trying to do and I'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
       },
     ],
   },
@@ -212,10 +202,6 @@ export default function FAQ() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="badge badge-tilt mb-8 fade-in-up">
-              <span className="badge-dot" />
-              Frequently Asked Questions
-            </div>
 
             <h1
               className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95] tracking-tight"
@@ -249,8 +235,7 @@ export default function FAQ() {
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              Common questions about pricing, timelines, and how we'll work
-              together. Click any question to see the answer.
+ Click any question to see the answer.
             </p>
           </div>
         </div>
@@ -320,10 +305,6 @@ export default function FAQ() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="badge badge-on-dark badge-tilt mb-6">
-              <span className="badge-dot" />
-              Still Curious
-            </span>
             <h2
               className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
@@ -339,10 +320,10 @@ export default function FAQ() {
             </p>
             <a
               href="/contact"
-              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-10 py-5 text-lg"
-              style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
+              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
             >
-              Get In Touch
+              Get in Touch
               <svg
                 width="20"
                 height="20"

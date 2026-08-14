@@ -25,14 +25,15 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Kindling Digital - Tech Services",
-  description: "Professional website and app design, development, and technical services",
+  title: "Kindling Digital — The tech guy in your back pocket",
+  description:
+    "Digital marketing for a flat monthly price — a custom website, branding, and social, plus a tech guy for everything else.",
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
     ],
   },
 };

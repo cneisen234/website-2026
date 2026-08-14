@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
@@ -8,6 +9,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'FAQ', href: '/faq' },
 ];
@@ -56,17 +58,14 @@ export default function Navigation() {
               className="flex items-center gap-2.5 group"
               onClick={() => setIsOpen(false)}
             >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12"
-                style={{ backgroundColor: 'rgba(194, 65, 12, 0.12)' }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6L12 2z"
-                    fill="var(--ember-deep)"
-                  />
-                </svg>
-              </div>
+              <Image
+                src="/transparent_logo.png"
+                alt="Kindling Digital"
+                width={1024}
+                height={1536}
+                className="h-10 w-auto transition-transform group-hover:rotate-6"
+                priority
+              />
               <span
                 className="text-xl tracking-tight"
                 style={{
@@ -223,16 +222,6 @@ export default function Navigation() {
                       onClick={() => setIsOpen(false)}
                       className="group flex items-baseline gap-4 py-3"
                     >
-                      <span
-                        className="text-sm tracking-[0.15em] uppercase shrink-0 w-8"
-                        style={{
-                          color: 'var(--ember-orange)',
-                          opacity: isActive ? 0.9 : 0.5,
-                          fontFamily: 'var(--font-body)',
-                        }}
-                      >
-                        0{idx + 1}
-                      </span>
                       <span
                         className="text-4xl tracking-tight transition-colors"
                         style={{

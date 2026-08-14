@@ -24,10 +24,7 @@ export default function Contact() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="badge badge-tilt mb-8 fade-in-up">
-              <span className="badge-dot" />
-              Get In Touch
-            </div>
+        
 
             <h1
               className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
@@ -54,15 +51,15 @@ export default function Contact() {
                   />
                 </svg>
               </em>
-              .
+              
             </h1>
 
             <p
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              Thinking about getting set up, got a question about the packages,
-              or a computer that won&apos;t cooperate? Reach out whatever
+              Thinking about getting set up, have a question about the packages, or something else on your mind?
+               Reach out whatever
               way&apos;s easiest for you.
             </p>
           </div>
@@ -93,10 +90,6 @@ export default function Contact() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-5xl mx-auto">
-            <span className="badge badge-on-dark badge-tilt mb-4">
-              <span className="badge-dot" />
-              Reach Out
-            </span>
             <h2
               className="text-4xl md:text-6xl mb-16 leading-[1.05]"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
@@ -339,15 +332,11 @@ export default function Contact() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-12 gap-12 mb-12">
               <div className="md:col-span-5">
-                <span className="badge badge-tilt mb-4">
-                  <span className="badge-dot" />
-                  What Happens Next
-                </span>
                 <h2
                   className="text-4xl md:text-5xl leading-[1.05]"
                   style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
                 >
-                  Just a conversation.
+                  What Happens Next
                 </h2>
                 <p
                   className="text-lg mt-6"

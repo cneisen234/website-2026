@@ -9,17 +9,12 @@ const steps = [
   {
     num: '02',
     title: 'I build a first draft',
-    body: "Usually within a few days I'll have a first version put together, so you've got something real to react to.",
+    body: "Within a few days I'll have a first version put together, so you've got something real to react to.",
   },
   {
     num: '03',
     title: 'We make it yours',
-    body: 'Then we go back and forth, tweaking until it looks and feels exactly like your business.',
-  },
-  {
-    num: '04',
-    title: 'I stick around',
-    body: "Once you're live I'm still here — running your social, making your updates, and picking up the phone when something techy comes up.",
+    body: 'We go back and forth as often as you need, until it looks and feels exactly like you want.',
   },
 ];
 
@@ -43,10 +38,6 @@ export default function About() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="badge badge-tilt mb-8 fade-in-up">
-              <span className="badge-dot" />
-              About
-            </div>
 
             <h1
               className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
@@ -73,7 +64,7 @@ export default function About() {
                   />
                 </svg>
               </em>
-              .
+              
             </h1>
 
             <p
@@ -141,28 +132,15 @@ export default function About() {
                 <span className="badge-dot" />
                 A Little About Me
               </span>
-              <h2
-                className="text-4xl md:text-6xl mb-8 leading-[1.05]"
-                style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
-              >
-                The short version.
-              </h2>
 
-              <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
+              <div className="space-y-6 text-xl" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
-                  I&apos;ve spent the last seven years as a software engineer —
-                  building websites, apps, and all kinds of tools — and doing
+                  I&apos;ve spent the last seven years as a software engineer
+                  building websites, apps, and all kinds of tools, and doing
                   digital marketing for small companies along the way. I&apos;ve
                   done it inside companies and on my own, and somewhere in there I
                   realized I&apos;d rather help businesses directly than build
                   someone else&apos;s product.
-                </p>
-
-                <p>
-                  So that&apos;s what Kindling Digital is. It&apos;s just me — a
-                  one-man shop. My wife Megan jumps in on design and editing, but
-                  otherwise, when you hire me, you get me. The same person who
-                  builds your site is the one who answers when you call.
                 </p>
               </div>
             </div>
@@ -194,15 +172,14 @@ export default function About() {
               <p>
                 For the longest time, getting a professional website meant one of
                 two things: pay a big company a small fortune, or do it yourself
-                with some cheap builder and hope it looks okay. Those were the
-                options.
+                with some cheap template builder and hope it looks okay.
               </p>
               <p>
-                I don&apos;t think that holds up anymore. We&apos;re past the age
-                where this stuff has to sit behind big-business bureaucracy. So I
-                built a third way — you get a real, custom-built presence, the
-                kind that&apos;d normally run thousands, for a flat monthly price,
-                kept up and running for you.
+                We&apos;re past the age
+                where this stuff has to sit behind big-business bureaucracy, so I
+                built a third way. You get a real, custom-built presence, the
+                kind that&apos;d normally run thousands, for a flat monthly price.
+                Best of all, I do all of the work for you so you can focus on what you do best.
               </p>
               
             </div>
@@ -291,10 +268,6 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="badge badge-tilt mb-6">
-              <span className="badge-dot" />
-              Say Hi
-            </span>
             <h2
               className="text-5xl md:text-7xl mb-8 leading-[1.05]"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}

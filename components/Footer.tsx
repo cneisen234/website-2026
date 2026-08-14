@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -28,21 +29,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-12 mb-16">
           {/* Brand column */}
           <div className="md:col-span-5">
-            {/* Logo / wordmark */}
-            <div className="flex items-center gap-3 mb-6">
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center"
-                style={{ backgroundColor: 'rgba(251, 146, 60, 0.15)' }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6L12 2z"
-                    fill="var(--ember-orange)"
-                  />
-                </svg>
-              </div>
+            {/* Stacked logo lockup — flame above the wordmark */}
+            <div className="mb-6">
+              <Image
+                src="/transparent_logo.png"
+                alt="Kindling Digital"
+                width={1024}
+                height={1536}
+                className="h-16 w-auto mb-3"
+              />
               <span
-                className="text-2xl tracking-tight"
+                className="block text-3xl tracking-tight leading-none"
                 style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
               >
                 Kindling Digital
@@ -121,6 +118,7 @@ export default function Footer() {
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
                 { label: 'Services', href: '/services' },
+                { label: 'Portfolio', href: '/portfolio' },
                 { label: 'Pricing', href: '/pricing' },
               ].map((link) => (
                 <li key={link.href}>

@@ -18,9 +18,9 @@ const pieces = [
     ],
   },
   {
-    id: 'branding',
+    id: 'the-brand',
     num: '02',
-    eyebrow: 'Branding',
+    eyebrow: 'The Brand',
     dark: false,
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
@@ -34,58 +34,47 @@ const pieces = [
     ],
   },
   {
-    id: 'social',
+    id: 'the-socials',
     num: '03',
-    eyebrow: 'Social',
+    eyebrow: 'The Socials',
     dark: true,
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
     heading: 'Social media, off your plate.',
     body: "I post to your social every month so you don't have to think about it. It stays active, it looks like the rest of your brand, and it's one more thing you can cross off your list.",
     included: [
-      '1 to 2 posts a month with your package',
-      'Posts that match your branding',
-      'More posts anytime',
+      '1 to 2 posts a month depending on your package',
+      'Posts that match your brand',
+      'Purchase more posts anytime',
     ],
   },
   {
-    id: 'get-found',
+    id: 'and-more',
     num: '04',
-    eyebrow: 'Get Found',
+    eyebrow: 'And More',
     dark: false,
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    heading: 'Show up where people look.',
-    body: "On the $200 package, I get you set up on Google Business so you turn up in local searches and maps. You also get business email on your own domain, so your emails look like they come from a real company instead of a random Gmail.",
+    heading: 'And so much more.',
+    body: "",
     included: [
-      'Google Business registration',
-      'Up to 3 business email accounts on your domain',
-      'Included on the $200 package',
+      'Contact forms',
+      'Blogs',
+      'E-commerce',
+      'Booking forms',
+      'Software integrations',
+      'Computer troubleshooting',
+      'Wi-Fi & networking',
+      'Software setup & training',
     ],
   },
 ];
 
 const jumpLinks = [
   { label: 'The Website', href: '#website' },
-  { label: 'Branding', href: '#branding' },
-  { label: 'Social', href: '#social' },
-  { label: 'Get Found', href: '#get-found' },
-  { label: 'Everything Else', href: '#hourly' },
-];
-
-const hourlyServices = [
-  'Contact forms',
-  'Blogs',
-  'Online payments',
-  'Online stores',
-  'Booking forms',
-  'Surveys',
-  'Automation',
-  'Software integrations',
-  'Computer troubleshooting',
-  'Wi-Fi & networking',
-  'Software setup & training',
-  'Equipment setup',
+  { label: 'The Brand', href: '#the-brand' },
+  { label: 'The Socials', href: '#the-socials' },
+  { label: 'And More', href: '#and-more' },
 ];
 
 export default function Services() {
@@ -104,10 +93,6 @@ export default function Services() {
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="badge badge-tilt mb-8 fade-in-up">
-              <span className="badge-dot" />
-              What I Do
-            </div>
 
             <h1
               className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
@@ -115,7 +100,7 @@ export default function Services() {
             >
               The package, and{' '}
               <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                everything else
+                more
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="12"
@@ -134,15 +119,15 @@ export default function Services() {
                   />
                 </svg>
               </em>
-              .
+              
             </h1>
 
             <p
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              The digital marketing package covers your whole presence online —
-              site, branding, social, the works. Anything past that, I&apos;m the
+              The digital marketing package covers your online presence:
+              website, branding, social media, the works. Anything past that, I&apos;m the
               tech guy you call.
             </p>
 
@@ -260,148 +245,6 @@ export default function Services() {
           </div>
         </section>
       ))}
-
-      {/* It all comes in the package — quick nudge to pricing */}
-      <section className="py-16 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl">
-            <p
-              className="text-2xl md:text-3xl leading-[1.3]"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
-            >
-              It all comes in one monthly package — $100 or $200.{' '}
-              <a href="/pricing" className="italic underline decoration-2 underline-offset-4" style={{ color: 'var(--ember-deep)' }}>
-                See the pricing
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* EVERYTHING ELSE — $50/HR — DARK */}
-      <section
-        id="hourly"
-        className="py-20 md:py-32 relative overflow-hidden scroll-mt-20"
-        style={{ backgroundColor: 'var(--midnight)' }}
-      >
-        <div
-          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
-            transform: 'translate(30%, -20%)',
-          }}
-        />
-
-        <div className="container mx-auto px-4 relative">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-5">
-              <div className="md:sticky md:top-8">
-                <span className="badge badge-on-dark badge-tilt mb-4">
-                  <span className="badge-dot" />
-                  A Guy in Your Pocket
-                </span>
-                <h2
-                  className="text-4xl md:text-6xl mb-6 leading-[1.05]"
-                  style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
-                >
-                  Anything else,{' '}
-                  <em className="italic" style={{ color: 'var(--ember-orange)' }}>
-                    I&apos;m a call away.
-                  </em>
-                </h2>
-                <p
-                  className="text-lg"
-                  style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}
-                >
-                  Your site&apos;s a springboard. Once it&apos;s up, I can add
-                  just about anything to it. And if a computer at the shop starts
-                  giving you trouble, that&apos;s me too.
-                </p>
-              </div>
-            </div>
-
-            <div className="md:col-span-7">
-              <div className="grid sm:grid-cols-2 gap-3">
-                {hourlyServices.map((item) => (
-                  <div
-                    key={item}
-                    className="chip-fun chip-fun-dark p-4 flex items-center gap-3"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-                  >
-                    <span
-                      className="inline-block w-2 h-2 rounded-full shrink-0"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    />
-                    <span className="text-sm md:text-base" style={{ color: 'var(--bone)' }}>
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-base mt-6" style={{ color: 'var(--bone)', opacity: 0.7 }}>
-                Basically anything you see online, I can probably build.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA — CREAM */}
-      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
-        <div
-          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
-            transform: 'translate(-50%, -50%)',
-          }}
-        />
-
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="badge badge-tilt mb-6">
-              <span className="badge-dot" />
-              Get Started
-            </span>
-            <h2
-              className="text-5xl md:text-7xl mb-8 leading-[1.05]"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
-            >
-              Let&apos;s get you set up.
-            </h2>
-            <p
-              className="text-xl mb-12 max-w-2xl mx-auto"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
-            >
-              Tell me a bit about your business and I&apos;ll walk you through
-              what makes sense.
-            </p>
-            <a
-              href="/contact"
-              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
-              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
-            >
-              Get In Touch
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                className="transition-transform group-hover:translate-x-1"
-              >
-                <path
-                  d="M4 10h12m0 0l-4-4m4 4l-4 4"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

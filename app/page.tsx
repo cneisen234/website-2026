@@ -2,14 +2,8 @@ import type { CSSProperties } from 'react';
 
 const compare = [
   {
-    label: 'A template site',
-    body: "Quick and cheap, but it looks like every other template out there. Your branding gets wedged into someone else's layout and never quite fits.",
-    accent: 'var(--stone)',
-    good: false,
-  },
-  {
     label: 'Built around you',
-    body: 'Custom-built to your brand, so it looks like you and nobody else. Everything lines up, and it feels like your business — because it is.',
+    body: 'Consistent colors, uniform fonts, a logo that makes sense — it tells them you are the real deal before they read a single word. That is exactly why it works, and done right, it pays for itself.',
     accent: 'var(--ember-orange)',
     good: true,
   },
@@ -35,20 +29,22 @@ const packageBits = [
     body: 'I post for you every month so it stays active and looks like your brand.',
   },
   {
-    title: 'Found on Google',
+    title: 'And so much more...',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'Google Business and email on your own domain, so you show up and look legit.',
+    body: 'A custom domain, Google Business, business email, and plenty more — all part of the package.',
   },
 ];
 
 const pocketBits = [
   'Contact forms',
   'Online payments',
-  'Booking forms',
-  'Automation',
+  'Online stores',
   'Computer help',
   'Wi-Fi & networking',
+  'Blogs',
+  'Software integrations',
+  'Software setup & training',
 ];
 
 export default function Home() {
@@ -79,10 +75,6 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7">
-              <div className="badge badge-tilt mb-8 fade-in-up">
-                <span className="badge-dot" />
-                Digital Marketing
-              </div>
 
               <h1
                 className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
@@ -109,16 +101,15 @@ export default function Home() {
                     />
                   </svg>
                 </em>
-                .
+                
               </h1>
 
               <p
                 className="text-xl md:text-2xl mb-10 fade-in-up stagger-2 max-w-2xl"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
               >
-                I build your whole look online — your website, your branding, your
-                social — for one flat monthly price. And when something techy
-                comes up, you&apos;ve already got my number.
+                I build your whole online presence — your website, your branding, your
+                social — for one flat monthly price. 
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5 fade-in-up stagger-3">
@@ -157,7 +148,7 @@ export default function Home() {
                     { label: 'A custom website', color: 'var(--ember-deep)' },
                     { label: 'Logo & branding', color: 'var(--forest-green)' },
                     { label: 'Your social, handled', color: 'var(--honey-gold)' },
-                    { label: 'Found on Google', color: 'var(--ember-deep)' },
+                    { label: 'And so much more...', color: 'var(--ember-deep)' },
                   ].map((item) => (
                     <li key={item.label} className="flex items-center gap-3">
                       <span className="inline-block w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
@@ -165,9 +156,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 pt-6" style={{ borderTop: '2px dashed rgba(194, 65, 12, 0.2)' }}>
-                  <p style={{ color: 'var(--ash-gray)' }}>All in one flat monthly price.</p>
-                </div>
               </div>
             </div>
           </div>
@@ -193,13 +181,6 @@ export default function Home() {
             >
               People pick the business that looks the part.
             </h2>
-            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
-              When someone&apos;s scrolling, they land on whoever looks the most
-              put-together. The same colors, the same fonts, a logo that actually
-              fits — it tells them you&apos;re the real deal before they read a
-              single word. Most people don&apos;t notice it happening. That&apos;s
-              exactly why it works, and done right, it pays for itself.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl tilt-alt">
@@ -260,15 +241,17 @@ export default function Home() {
                 className="card-fun group p-10"
                 style={{ backgroundColor: 'white', ['--shadow-color' as string]: bit.accent } as CSSProperties}
               >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:-rotate-12"
-                  style={{ backgroundColor: bit.tint }}
-                >
-                  <span className="w-4 h-4 rounded-full" style={{ backgroundColor: bit.accent }} />
+                <div className="flex items-center gap-4 mb-4">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110 group-hover:-rotate-12"
+                    style={{ backgroundColor: bit.tint }}
+                  >
+                    <span className="w-4 h-4 rounded-full" style={{ backgroundColor: bit.accent }} />
+                  </div>
+                  <h3 className="text-3xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                    {bit.title}
+                  </h3>
                 </div>
-                <h3 className="text-2xl mb-3" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-                  {bit.title}
-                </h3>
                 <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>{bit.body}</p>
               </div>
             ))}
@@ -312,7 +295,7 @@ export default function Home() {
                 The package gets you online and looking sharp. After that,
                 I&apos;m still around. Want a booking form, online payments, or a
                 blog? I&apos;ll build it. Computer at the shop acting up? Call me.
-                Basically anything you see online, I can probably build.
+                Basically anything techy, I'm your guy.
               </p>
             </div>
 
@@ -351,7 +334,7 @@ export default function Home() {
               Ready to look the part?
             </h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
-              Tell me a bit about your business and we&apos;ll figure out what you
+              Tell me about your business and we&apos;ll figure out what you
               need.
             </p>
             <a
