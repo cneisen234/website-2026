@@ -106,12 +106,13 @@ function FaqAccordion({ item, isOpen, onToggle }: { item: FaqItem; isOpen: boole
       className="rounded-2xl overflow-hidden transition-all"
       style={{
         backgroundColor: isOpen ? 'var(--warm-cream)' : 'white',
-        border: `1px solid ${isOpen ? 'rgba(194, 65, 12, 0.25)' : 'rgba(194, 65, 12, 0.12)'}`,
+        border: `2px solid ${isOpen ? 'var(--ember-deep)' : 'rgba(28, 25, 23, 0.12)'}`,
+        boxShadow: isOpen ? '5px 5px 0 rgba(194, 65, 12, 0.85)' : '3px 3px 0 rgba(28, 25, 23, 0.05)',
       }}
     >
       <button
         onClick={onToggle}
-        className="w-full text-left p-6 md:p-7 flex items-center gap-6 transition-colors"
+        className="w-full text-left p-6 md:p-7 flex items-center gap-6 transition-colors cursor-pointer"
         aria-expanded={isOpen}
       >
         <h3
@@ -127,6 +128,7 @@ function FaqAccordion({ item, isOpen, onToggle }: { item: FaqItem; isOpen: boole
           className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all"
           style={{
             backgroundColor: isOpen ? 'var(--ember-deep)' : 'rgba(194, 65, 12, 0.1)',
+            border: '2px solid var(--charcoal)',
           }}
         >
           <svg
@@ -185,29 +187,19 @@ export default function FAQ() {
           }}
         />
 
-        {/* Subtle grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        {/* Warm dotted texture */}
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        {/* Floating spark doodle */}
+        <svg className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--honey-gold)" />
+        </svg>
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                Frequently Asked Questions
-              </span>
+            <div className="badge badge-tilt mb-8 fade-in-up">
+              <span className="badge-dot" />
+              Frequently Asked Questions
             </div>
 
             <h1
@@ -225,9 +217,11 @@ export default function FAQ() {
                   aria-hidden="true"
                 >
                   <path
+                    className="draw-stroke"
+                    pathLength={1}
                     d="M2 8 Q 75 2, 150 6 T 298 4"
                     stroke="var(--ember-deep)"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
                   />
@@ -251,7 +245,7 @@ export default function FAQ() {
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'white' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-20 md:space-y-24">
-            {faqGroups.map((group) => (
+            {faqGroups.map((group, gi) => (
               <div key={group.label} className="grid md:grid-cols-12 gap-8 md:gap-12">
                 {/* Group label column */}
                 <div className="md:col-span-4">
@@ -259,7 +253,8 @@ export default function FAQ() {
                     <span
                       className="text-6xl md:text-7xl leading-none block mb-4"
                       style={{
-                        color: 'rgba(194, 65, 12, 0.35)',
+                        color: ['var(--ember-deep)', 'var(--forest-green)', 'var(--honey-gold)', 'var(--ember-deep)'][gi],
+                        opacity: 0.6,
                         fontFamily: 'var(--font-heading)',
                       }}
                     >
@@ -310,11 +305,9 @@ export default function FAQ() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-6 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Still Curious
+            <span className="badge badge-on-dark badge-tilt mb-6">
+              <span className="badge-dot" />
+              Still Curious
             </span>
             <h2
               className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
@@ -331,12 +324,8 @@ export default function FAQ() {
             </p>
             <a
               href="/contact"
-              className="group inline-flex items-center gap-2 px-10 py-5 rounded-full font-medium text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--ember-orange)',
-                color: 'var(--midnight)',
-                boxShadow: '0 10px 40px -10px rgba(251, 146, 60, 0.5)',
-              }}
+              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
             >
               Get In Touch
               <svg

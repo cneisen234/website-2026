@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 export default function Contact() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
@@ -12,29 +14,19 @@ export default function Contact() {
           }}
         />
 
-        {/* Subtle grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        {/* Warm dotted texture */}
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        {/* Floating spark doodle */}
+        <svg className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--ember-orange)" />
+        </svg>
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                Get In Touch
-              </span>
+            <div className="badge badge-tilt mb-8 fade-in-up">
+              <span className="badge-dot" />
+              Get In Touch
             </div>
 
             <h1
@@ -52,9 +44,11 @@ export default function Contact() {
                   aria-hidden="true"
                 >
                   <path
+                    className="draw-stroke"
+                    pathLength={1}
                     d="M2 8 Q 50 2, 100 6 T 198 4"
                     stroke="var(--ember-deep)"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
                   />
@@ -99,11 +93,9 @@ export default function Contact() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-5xl mx-auto">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Reach Out
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              Reach Out
             </span>
             <h2
               className="text-4xl md:text-6xl mb-16 leading-[1.05] tracking-tight"
@@ -115,11 +107,8 @@ export default function Contact() {
             {/* Email — large prominent block */}
             <a
               href="mailto:chris@kindlingdigital.org"
-              className="group block mb-6 p-8 md:p-10 rounded-3xl transition-all hover:-translate-y-1"
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(251, 146, 60, 0.2)',
-              }}
+              className="card-fun card-fun-dark tilt-l group block mb-8 p-8 md:p-10"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
             >
               <div className="grid md:grid-cols-12 gap-6 items-center">
                 <div className="md:col-span-1">
@@ -181,11 +170,8 @@ export default function Contact() {
             {/* Phone — large prominent block */}
             <a
               href="tel:+17014294837"
-              className="group block mb-12 p-8 md:p-10 rounded-3xl transition-all hover:-translate-y-1"
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(251, 146, 60, 0.2)',
-              }}
+              className="card-fun card-fun-dark tilt-r group block mb-12 p-8 md:p-10"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', ['--shadow-color' as string]: 'var(--honey-gold)' } as CSSProperties}
             >
               <div className="grid md:grid-cols-12 gap-6 items-center">
                 <div className="md:col-span-1">
@@ -245,11 +231,8 @@ export default function Contact() {
 
             {/* Meeting style strip */}
             <div
-              className="p-6 md:p-8 rounded-2xl"
-              style={{
-                backgroundColor: 'rgba(251, 146, 60, 0.05)',
-                border: '1px solid rgba(251, 146, 60, 0.15)',
-              }}
+              className="card-fun card-fun-dark tilt-none p-6 md:p-8"
+              style={{ backgroundColor: 'rgba(251, 146, 60, 0.05)' }}
             >
               <div className="grid md:grid-cols-3 gap-6">
                 {[
@@ -356,11 +339,9 @@ export default function Contact() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-12 gap-12 mb-12">
               <div className="md:col-span-5">
-                <span
-                  className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                  style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-                >
-                  — What Happens Next
+                <span className="badge badge-tilt mb-4">
+                  <span className="badge-dot" />
+                  What Happens Next
                 </span>
                 <h2
                   className="text-4xl md:text-5xl leading-[1.05] tracking-tight"
@@ -377,7 +358,7 @@ export default function Contact() {
                 </p>
               </div>
 
-              <div className="md:col-span-7 space-y-5">
+              <div className="md:col-span-7 space-y-8 tilt-alt">
                 {[
                   {
                     num: '01',
@@ -394,20 +375,18 @@ export default function Contact() {
                     title: 'We\'ll figure out if I can help',
                     body: "You'll walk me through what you're trying to do, and I'll be straight with you about whether I'm the right person for it.",
                   },
-                ].map((item) => (
+                ].map((item, idx) => (
                   <div
                     key={item.num}
-                    className="group relative p-6 rounded-2xl transition-all hover:-translate-y-1 hover:shadow-xl"
-                    style={{
-                      backgroundColor: 'white',
-                      border: '1px solid rgba(194, 65, 12, 0.12)',
-                    }}
+                    className="card-fun group relative p-6"
+                    style={{ backgroundColor: 'white' }}
                   >
                     <div className="flex items-start gap-5">
                       <span
                         className="text-4xl leading-none shrink-0"
                         style={{
-                          color: 'rgba(194, 65, 12, 0.35)',
+                          color: ['var(--ember-deep)', 'var(--honey-gold)', 'var(--forest-green)'][idx],
+                          opacity: 0.75,
                           fontFamily: 'var(--font-heading)',
                         }}
                       >
@@ -449,11 +428,9 @@ export default function Contact() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Still Curious
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              Still Curious
             </span>
             <h2
               className="text-3xl md:text-5xl mb-6 leading-[1.1] tracking-tight"
@@ -470,11 +447,8 @@ export default function Contact() {
             </p>
             <a
               href="/faq"
-              className="group inline-flex items-center gap-2 px-8 py-4 rounded-full font-medium text-lg transition-all hover:-translate-y-0.5"
-              style={{
-                color: 'var(--bone)',
-                border: '1.5px solid rgba(245, 241, 235, 0.4)',
-              }}
+              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
+              style={{ backgroundColor: 'var(--bone)', color: 'var(--midnight)' }}
             >
               View FAQ
               <svg

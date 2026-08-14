@@ -172,7 +172,7 @@ export default function Footer() {
             {/* Mini CTA */}
             <Link
               href="/contact"
-              className="group mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-full font-medium text-sm transition-all hover:-translate-y-0.5"
+              className="btn-fun btn-fun-dark group mt-8 inline-flex items-center gap-2 px-5 py-3 text-sm"
               style={{
                 backgroundColor: 'var(--ember-orange)',
                 color: 'var(--midnight)',

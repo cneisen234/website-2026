@@ -1,14 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter_Tight } from "next/font/google";
+import { Fraunces, Fredoka, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const instrumentSerif = Instrument_Serif({
+// Warm, characterful serif for headlines — friendly where Instrument Serif was formal
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-heading",
+});
+
+// Rounded, approachable sans for the brand name, badges, and buttons
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-rounded",
 });
 
 const interTight = Inter_Tight({
@@ -42,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${instrumentSerif.variable} flex flex-col min-h-screen`}>
+      <body className={`${interTight.variable} ${fraunces.variable} ${fredoka.variable} flex flex-col min-h-screen`}>
         <Navigation />
         {children}
         <Footer />

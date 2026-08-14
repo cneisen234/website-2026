@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 export default function Services() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
@@ -10,28 +12,13 @@ export default function Services() {
             transform: 'translate(20%, -30%)',
           }}
         />
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                Services
-              </span>
+            <div className="badge badge-tilt mb-8 fade-in-up">
+              <span className="badge-dot" />
+              Services
             </div>
 
             <h1
@@ -51,9 +38,11 @@ export default function Services() {
                   aria-hidden="true"
                 >
                   <path
+                    className="draw-stroke"
+                    pathLength={1}
                     d="M2 8 Q 50 2, 100 6 T 198 4"
                     stroke="var(--ember-deep)"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
                   />
@@ -82,12 +71,8 @@ export default function Services() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm px-4 py-2 rounded-full transition-all hover:-translate-y-0.5"
-                  style={{
-                    backgroundColor: 'rgba(194, 65, 12, 0.08)',
-                    color: 'var(--ember-deep)',
-                    border: '1px solid rgba(194, 65, 12, 0.2)',
-                  }}
+                  className="badge font-rounded text-sm transition-transform hover:-translate-y-0.5"
+                  style={{ border: '2px solid var(--charcoal)' }}
                 >
                   {item.label}
                 </a>
@@ -128,11 +113,9 @@ export default function Services() {
                 >
                   01
                 </span>
-                <span
-                  className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                  style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-                >
-                  — Websites
+                <span className="badge badge-on-dark badge-tilt mb-4">
+                  <span className="badge-dot" />
+                  Websites
                 </span>
                 <h2
                   className="text-4xl md:text-5xl mb-6 leading-[1.05] tracking-tight"
@@ -153,11 +136,8 @@ export default function Services() {
 
             <div className="md:col-span-7">
               <div
-                className="p-8 md:p-10 rounded-3xl mb-6"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                  border: '1px solid rgba(251, 146, 60, 0.2)',
-                }}
+                className="card-fun card-fun-dark tilt-r p-8 md:p-10 mb-8"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
               >
                 <div
                   className="text-xs font-medium tracking-[0.2em] uppercase mb-6"
@@ -199,11 +179,8 @@ export default function Services() {
               </div>
 
               <div
-                className="p-6 rounded-2xl"
-                style={{
-                  backgroundColor: 'rgba(251, 146, 60, 0.06)',
-                  border: '1px solid rgba(251, 146, 60, 0.15)',
-                }}
+                className="card-fun card-fun-dark tilt-l p-6"
+                style={{ backgroundColor: 'rgba(251, 146, 60, 0.06)' }}
               >
                 <div
                   className="text-xs font-medium tracking-[0.2em] uppercase mb-2"
@@ -240,15 +217,13 @@ export default function Services() {
               <div className="md:sticky md:top-8">
                 <span
                   className="text-7xl md:text-8xl leading-none block mb-6"
-                  style={{ color: 'rgba(194, 65, 12, 0.3)', fontFamily: 'var(--font-heading)' }}
+                  style={{ color: 'var(--forest-green)', opacity: 0.55, fontFamily: 'var(--font-heading)' }}
                 >
                   02
                 </span>
-                <span
-                  className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                  style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-                >
-                  — Custom Features
+                <span className="badge badge-tilt mb-4" style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.14)' }}>
+                  <span className="badge-dot" />
+                  Custom Features
                 </span>
                 <h2
                   className="text-4xl md:text-5xl mb-6 leading-[1.05] tracking-tight"
@@ -292,16 +267,13 @@ export default function Services() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="p-4 rounded-xl transition-all hover:-translate-y-0.5"
-                    style={{
-                      backgroundColor: 'white',
-                      border: '1px solid rgba(194, 65, 12, 0.12)',
-                    }}
+                    className="chip-fun p-4"
+                    style={{ backgroundColor: 'white', boxShadow: '3px 3px 0 rgba(95, 167, 119, 0.28)' }}
                   >
                     <div className="flex items-center gap-3">
                       <span
-                        className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                        style={{ backgroundColor: 'var(--ember-deep)' }}
+                        className="inline-block w-2 h-2 rounded-full shrink-0"
+                        style={{ backgroundColor: 'var(--forest-green)' }}
                       />
                       <span
                         className="text-sm md:text-base"
@@ -345,15 +317,13 @@ export default function Services() {
               <div className="md:sticky md:top-8">
                 <span
                   className="text-7xl md:text-8xl leading-none block mb-6"
-                  style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                  style={{ color: 'var(--honey-gold)', opacity: 0.6, fontFamily: 'var(--font-heading)' }}
                 >
                   03
                 </span>
-                <span
-                  className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                  style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-                >
-                  — Automation
+                <span className="badge badge-on-dark badge-tilt mb-4" style={{ color: 'var(--honey-gold)', backgroundColor: 'rgba(240, 185, 73, 0.16)' }}>
+                  <span className="badge-dot" />
+                  Automation
                 </span>
                 <h2
                   className="text-4xl md:text-5xl mb-6 leading-[1.05] tracking-tight"
@@ -372,7 +342,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="md:col-span-7 space-y-4">
+            <div className="md:col-span-7 space-y-8 tilt-alt">
               {[
                 {
                   title: 'Automated emails & texts',
@@ -397,11 +367,8 @@ export default function Services() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="p-6 rounded-2xl transition-all hover:-translate-y-0.5"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                    border: '1px solid rgba(251, 146, 60, 0.15)',
-                  }}
+                  className="card-fun card-fun-dark p-6"
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', ['--shadow-color' as string]: 'var(--honey-gold)' } as CSSProperties}
                 >
                   <h3
                     className="text-xl mb-2"
@@ -443,11 +410,9 @@ export default function Services() {
                 >
                   04
                 </span>
-                <span
-                  className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                  style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-                >
-                  — On-Site Tech Help
+                <span className="badge badge-tilt mb-4">
+                  <span className="badge-dot" />
+                  On-Site Tech Help
                 </span>
                 <h2
                   className="text-4xl md:text-5xl mb-6 leading-[1.05] tracking-tight"
@@ -468,11 +433,8 @@ export default function Services() {
 
             <div className="md:col-span-7">
               <div
-                className="p-8 md:p-10 rounded-3xl mb-6"
-                style={{
-                  backgroundColor: 'white',
-                  border: '1px solid rgba(194, 65, 12, 0.15)',
-                }}
+                className="card-fun tilt-l p-8 md:p-10 mb-8"
+                style={{ backgroundColor: 'white' }}
               >
                 <div
                   className="text-xs font-medium tracking-[0.2em] uppercase mb-6"
@@ -513,11 +475,8 @@ export default function Services() {
               </div>
 
               <div
-                className="p-6 rounded-2xl"
-                style={{
-                  backgroundColor: 'rgba(194, 65, 12, 0.06)',
-                  border: '1px solid rgba(194, 65, 12, 0.15)',
-                }}
+                className="card-fun tilt-r p-6"
+                style={{ backgroundColor: 'rgba(194, 65, 12, 0.06)' }}
               >
                 <div
                   className="text-xs font-medium tracking-[0.2em] uppercase mb-2"
@@ -551,11 +510,9 @@ export default function Services() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Ongoing Services
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              Ongoing Services
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -571,14 +528,11 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 tilt-alt">
             {/* Maintenance */}
             <div
-              className="p-8 rounded-3xl"
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(251, 146, 60, 0.2)',
-              }}
+              className="card-fun card-fun-dark p-8"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
             >
               <span
                 className="text-5xl leading-none block mb-4"
@@ -621,15 +575,12 @@ export default function Services() {
 
             {/* Social Media */}
             <div
-              className="p-8 rounded-3xl"
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(251, 146, 60, 0.2)',
-              }}
+              className="card-fun card-fun-dark p-8"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', ['--shadow-color' as string]: 'var(--forest-green)' } as CSSProperties}
             >
               <span
                 className="text-5xl leading-none block mb-4"
-                style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                style={{ color: 'var(--forest-green)', opacity: 0.6, fontFamily: 'var(--font-heading)' }}
               >
                 06
               </span>
@@ -739,12 +690,8 @@ export default function Services() {
 
             <a
               href="/contact"
-              className="group inline-flex items-center gap-2 px-10 py-5 rounded-full font-medium text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--charcoal)',
-                color: 'var(--bone)',
-                boxShadow: '0 10px 30px -10px rgba(28, 25, 23, 0.4)',
-              }}
+              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
             >
               Let's Talk
               <svg

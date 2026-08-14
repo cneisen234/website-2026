@@ -10,28 +10,13 @@ export default function Pricing() {
             transform: 'translate(20%, -30%)',
           }}
         />
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                Pricing
-              </span>
+            <div className="badge badge-tilt mb-8 fade-in-up">
+              <span className="badge-dot" />
+              Pricing
             </div>
 
             <h1
@@ -51,9 +36,11 @@ export default function Pricing() {
                   aria-hidden="true"
                 >
                   <path
+                    className="draw-stroke"
+                    pathLength={1}
                     d="M2 8 Q 75 2, 150 6 T 298 4"
                     stroke="var(--ember-deep)"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
                   />
@@ -79,8 +66,8 @@ export default function Pricing() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2 text-sm"
-                  style={{ color: 'var(--stone)' }}
+                  className="chip-fun flex items-center gap-2 text-sm px-4 py-2"
+                  style={{ color: 'var(--ash-gray)', backgroundColor: 'white' }}
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path
@@ -121,11 +108,9 @@ export default function Pricing() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Build Something New
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              Build Something New
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -137,11 +122,8 @@ export default function Pricing() {
 
           {/* Websites */}
           <div
-            className="mb-6 p-8 md:p-12 rounded-3xl"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid rgba(251, 146, 60, 0.2)',
-            }}
+            className="card-fun card-fun-dark tilt-none mb-8 p-8 md:p-12"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
           >
             <div className="grid md:grid-cols-12 gap-8 mb-10">
               <div className="md:col-span-5">
@@ -223,17 +205,14 @@ export default function Pricing() {
 
           {/* Custom Applications */}
           <div
-            className="p-8 md:p-12 rounded-3xl"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid rgba(251, 146, 60, 0.2)',
-            }}
+            className="card-fun card-fun-dark tilt-none p-8 md:p-12"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
           >
             <div className="grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-5">
                 <span
                   className="text-6xl md:text-7xl leading-none block mb-4"
-                  style={{ color: 'var(--ember-orange)', opacity: 0.5, fontFamily: 'var(--font-heading)' }}
+                  style={{ color: 'var(--honey-gold)', opacity: 0.65, fontFamily: 'var(--font-heading)' }}
                 >
                   02
                 </span>
@@ -289,11 +268,9 @@ export default function Pricing() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-            >
-              — Keep Things Running
+            <span className="badge badge-tilt mb-4">
+              <span className="badge-dot" />
+              Keep Things Running
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -305,17 +282,14 @@ export default function Pricing() {
 
           {/* Maintenance */}
           <div
-            className="mb-6 p-8 md:p-12 rounded-3xl"
-            style={{
-              backgroundColor: 'white',
-              border: '1px solid rgba(194, 65, 12, 0.15)',
-            }}
+            className="card-fun tilt-none mb-8 p-8 md:p-12"
+            style={{ backgroundColor: 'white' }}
           >
             <div className="grid md:grid-cols-12 gap-8 mb-6">
               <div className="md:col-span-5">
                 <span
                   className="text-6xl md:text-7xl leading-none block mb-4"
-                  style={{ color: 'rgba(194, 65, 12, 0.3)', fontFamily: 'var(--font-heading)' }}
+                  style={{ color: 'var(--forest-green)', opacity: 0.55, fontFamily: 'var(--font-heading)' }}
                 >
                   03
                 </span>
@@ -395,11 +369,8 @@ export default function Pricing() {
 
           {/* Social Media */}
           <div
-            className="p-8 md:p-12 rounded-3xl"
-            style={{
-              backgroundColor: 'white',
-              border: '1px solid rgba(194, 65, 12, 0.15)',
-            }}
+            className="card-fun tilt-none p-8 md:p-12"
+            style={{ backgroundColor: 'white' }}
           >
             <div className="grid md:grid-cols-12 gap-8 mb-6">
               <div className="md:col-span-5">
@@ -501,11 +472,9 @@ export default function Pricing() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — One-Off Help
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              One-Off Help
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -516,11 +485,8 @@ export default function Pricing() {
           </div>
 
           <div
-            className="p-8 md:p-12 rounded-3xl"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid rgba(251, 146, 60, 0.2)',
-            }}
+            className="card-fun card-fun-dark tilt-none p-8 md:p-12"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
           >
             <div className="grid md:grid-cols-12 gap-8 mb-6">
               <div className="md:col-span-5">
@@ -622,11 +588,9 @@ export default function Pricing() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-5xl mx-auto">
             <div className="max-w-3xl mb-12">
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                — Payment Plans
+              <span className="badge badge-tilt mb-4">
+                <span className="badge-dot" />
+                Payment Plans
               </span>
               <h2
                 className="text-4xl md:text-5xl leading-[1.05] tracking-tight mb-6"
@@ -644,7 +608,7 @@ export default function Pricing() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4 mb-16">
+            <div className="grid md:grid-cols-3 gap-6 mb-16 tilt-alt">
               {[
                 {
                   title: 'Split payments',
@@ -661,11 +625,8 @@ export default function Pricing() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="p-6 rounded-2xl"
-                  style={{
-                    backgroundColor: 'white',
-                    border: '1px solid rgba(194, 65, 12, 0.12)',
-                  }}
+                  className="card-fun p-6"
+                  style={{ backgroundColor: 'white' }}
                 >
                   <h3
                     className="text-xl mb-3"
@@ -702,11 +663,9 @@ export default function Pricing() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-6 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — Want An Exact Quote
+            <span className="badge badge-on-dark badge-tilt mb-6">
+              <span className="badge-dot" />
+              Want An Exact Quote
             </span>
             <h2
               className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
@@ -723,12 +682,8 @@ export default function Pricing() {
             </p>
             <a
               href="/contact"
-              className="group inline-flex items-center gap-2 px-10 py-5 rounded-full font-medium text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--ember-orange)',
-                color: 'var(--midnight)',
-                boxShadow: '0 10px 40px -10px rgba(251, 146, 60, 0.5)',
-              }}
+              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
             >
               Get In Touch
               <svg

@@ -37,24 +37,168 @@
   }
 }
 
+/* Tailwind v4's preflight drops the pointer cursor on buttons — put it back */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;            /* relaxed, not clenched — friendlier than the old -0.01em */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), Georgia, serif;
-  font-weight: 400;             /* Instrument Serif is designed for 400, not bold */
-  letter-spacing: -0.02em;
+  font-weight: 500;             /* Fraunces has a warm, soft weight range */
+  letter-spacing: -0.01em;      /* eased off the tight -0.02em */
 }
 
-/* Italic Instrument Serif for editorial emphasis */
+/* Italic Fraunces for editorial emphasis — soft and characterful */
 em {
   font-style: italic;
   font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Rounded, approachable face for brand name, badges + buttons */
+.font-rounded {
+  font-family: var(--font-rounded), ui-rounded, 'Segoe UI', sans-serif;
+}
+
+/* Friendly pill badge — replaces the stiff tracked-uppercase eyebrow labels */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-family: var(--font-rounded), sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  background: rgba(194, 65, 12, 0.09);
+  color: var(--ember-deep);
+}
+.badge-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: currentColor;
+}
+/* On dark sections */
+.badge-on-dark {
+  background: rgba(251, 146, 60, 0.14);
+  color: var(--ember-orange);
+}
+
+/* Springy, playful hover for cards + tiles */
+.pop-hover {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+.pop-hover:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 18px 40px -18px rgba(28, 25, 23, 0.28);
+}
+
+/* Chunky, tactile "sticker" card — friendly outline + a colored hard-offset shadow.
+   Sits at a slight resting tilt so nothing feels bolted to a rigid grid. */
+.card-fun {
+  --tilt: -1.2deg;
+  --shadow-color: rgba(194, 65, 12, 0.9);
+  border: 2px solid var(--charcoal);
+  border-radius: 1.75rem;
+  box-shadow: 7px 7px 0 var(--shadow-color);
+  transform: rotate(var(--tilt));
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease;
+}
+.card-fun:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 11px 13px 0 var(--shadow-color);
+}
+.tilt-r { --tilt: 1.2deg; }
+.tilt-l { --tilt: -1.5deg; }
+.tilt-none { --tilt: 0deg; }
+
+/* Auto-alternate the resting tilt of card-fun children (for stacked/gridded lists) */
+.tilt-alt > .card-fun:nth-child(odd) { --tilt: -1.3deg; }
+.tilt-alt > .card-fun:nth-child(even) { --tilt: 1.3deg; }
+
+/* On dark sections the outline + shadow use warm ember instead of charcoal */
+.card-fun-dark {
+  --shadow-color: rgba(251, 146, 60, 0.85);
+  border-color: rgba(251, 146, 60, 0.5);
+}
+
+/* Chunky pill button that presses down into its shadow on hover */
+.btn-fun {
+  font-family: var(--font-rounded), sans-serif;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 2px solid var(--charcoal);
+  box-shadow: 4px 4px 0 var(--charcoal);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.25s ease;
+}
+.btn-fun:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--charcoal);
+}
+.btn-fun:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--charcoal);
+}
+/* Warm-shadow variant for dark backgrounds */
+.btn-fun-dark {
+  border-color: var(--midnight);
+  box-shadow: 4px 4px 0 rgba(15, 20, 25, 0.6);
+}
+.btn-fun-dark:hover { box-shadow: 2px 2px 0 rgba(15, 20, 25, 0.6); }
+
+/* Sticker-style badge sits at a jaunty little angle */
+.badge-tilt { transform: rotate(-2.5deg); }
+
+/* Small chunky chip for dense lists — lighter than a full card-fun */
+.chip-fun {
+  border: 2px solid rgba(28, 25, 23, 0.1);
+  border-radius: 0.9rem;
+  box-shadow: 3px 3px 0 rgba(194, 65, 12, 0.22);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+.chip-fun:hover {
+  transform: translate(-1px, -2px);
+  box-shadow: 5px 6px 0 rgba(194, 65, 12, 0.3);
+}
+/* Warm variant for dark backgrounds */
+.chip-fun-dark {
+  border-color: rgba(251, 146, 60, 0.35);
+  box-shadow: 3px 3px 0 rgba(251, 146, 60, 0.28);
+}
+.chip-fun-dark:hover { box-shadow: 5px 6px 0 rgba(251, 146, 60, 0.35); }
+
+/* Warm dotted texture — cozier than the corporate grid */
+.dot-texture {
+  background-image: radial-gradient(var(--ember-deep) 1.3px, transparent 1.3px);
+  background-size: 26px 26px;
+}
+
+/* Gentle continuous float for decorative spark/doodle bits */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(4deg); }
+}
+.floaty { animation: floaty 5s ease-in-out infinite; }
+.floaty-slow { animation: floaty 7s ease-in-out infinite; }
+
+/* Hand-drawn accent stroke that draws itself in */
+@keyframes drawStroke {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+.draw-stroke {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawStroke 0.9s ease 0.4s forwards;
 }
 
 /* Animations */

@@ -114,9 +114,9 @@ export default function Navigation() {
             {/* Desktop CTA */}
             <Link
               href="/contact"
-              className="group hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              className="btn-fun group hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm"
               style={{
-                backgroundColor: 'var(--charcoal)',
+                backgroundColor: 'var(--ember-deep)',
                 color: 'var(--bone)',
               }}
             >
@@ -255,11 +255,10 @@ export default function Navigation() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-full font-medium text-lg transition-all"
+              className="btn-fun btn-fun-dark group flex items-center justify-center gap-2 w-full px-6 py-4 text-lg"
               style={{
                 backgroundColor: 'var(--ember-orange)',
                 color: 'var(--midnight)',
-                boxShadow: '0 10px 30px -10px rgba(251, 146, 60, 0.5)',
               }}
             >
               Let's Talk

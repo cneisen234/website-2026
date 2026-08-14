@@ -14,29 +14,19 @@ export default function About() {
           }}
         />
 
-        {/* Subtle grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(var(--charcoal) 1px, transparent 1px), linear-gradient(90deg, var(--charcoal) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        {/* Warm dotted texture */}
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        {/* Floating spark doodle */}
+        <svg className="floaty-slow absolute top-28 right-[14%] hidden lg:block pointer-events-none" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--forest-green)" />
+        </svg>
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 mb-8 fade-in-up">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase"
-                style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-              >
-                About Kindling Digital
-              </span>
+            <div className="badge badge-tilt mb-8 fade-in-up">
+              <span className="badge-dot" />
+              About Kindling Digital
             </div>
 
             <h1
@@ -54,9 +44,11 @@ export default function About() {
                   aria-hidden="true"
                 >
                   <path
+                    className="draw-stroke"
+                    pathLength={1}
                     d="M2 8 Q 50 2, 100 6 T 198 4"
                     stroke="var(--ember-deep)"
-                    strokeWidth="2.5"
+                    strokeWidth="3"
                     fill="none"
                     strokeLinecap="round"
                   />
@@ -102,43 +94,43 @@ export default function About() {
           <div className="grid md:grid-cols-12 gap-12 items-start">
             {/* Photo */}
               <div className="md:col-span-5">
-                <div className="relative">
-                  
-                  {/* Decorative orange offset frame */}
+                <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(-2.5deg)' }}>
+                  {/* A little strip of "tape" up top */}
                   <div
-                    className="absolute -inset-[0.2px] rounded-[25px]"   // Slightly larger than the photo
+                    className="absolute left-1/2 -top-4 z-10 h-8 w-28 -translate-x-1/2 rotate-[-4deg]"
                     style={{
-                      border: '1px solid rgba(251, 146, 60, 0.35)',
-                      background: 'transparent',
+                      backgroundColor: 'rgba(240, 185, 73, 0.5)',
+                      boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)',
                     }}
+                    aria-hidden="true"
                   />
-
-                  {/* Main photo container */}
+                  {/* Polaroid frame */}
                   <div
-                    className="relative aspect-[4/5] rounded-3xl overflow-hidden"
+                    className="rounded-2xl bg-white p-3 pb-6 transition-transform duration-300 hover:rotate-0"
                     style={{
-                      border: '1px solid rgba(251, 146, 60, 0.2)',
+                      border: '2px solid var(--charcoal)',
+                      boxShadow: '10px 12px 0 rgba(251, 146, 60, 0.85)',
                     }}
                   >
-                    <Image
-                      src="/chris.png"
-                      alt="Chris, founder of Kindling Digital"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      className="object-cover"
-                      priority
-                    />
+                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                      <Image
+                        src="/chris.png"
+                        alt="Chris, founder of Kindling Digital"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
             {/* Story text */}
             <div className="md:col-span-7">
-              <span
-                className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-                style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-              >
-                — A Little About Me
+              <span className="badge badge-on-dark badge-tilt mb-4">
+                <span className="badge-dot" />
+                A Little About Me
               </span>
               <h2
                 className="text-4xl md:text-6xl mb-8 leading-[1.05] tracking-tight"
@@ -196,11 +188,9 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-            >
-              — What I'm Good At
+            <span className="badge badge-tilt mb-4" style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.14)' }}>
+              <span className="badge-dot" />
+              What I'm Good At
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -210,10 +200,7 @@ export default function About() {
             </h2>
           </div>
 
-          <div
-            className="grid md:grid-cols-2 gap-px max-w-6xl rounded-3xl overflow-hidden"
-            style={{ backgroundColor: 'rgba(194, 65, 12, 0.15)' }}
-          >
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl tilt-alt">
             {[
               {
                 icon: (
@@ -276,11 +263,11 @@ export default function About() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="group p-10 transition-all hover:bg-[var(--paper)]"
+                className="card-fun group p-10"
                 style={{ backgroundColor: 'white' }}
               >
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3"
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:-rotate-12"
                   style={{ backgroundColor: 'rgba(194, 65, 12, 0.1)' }}
                 >
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -326,11 +313,9 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              — How It Works
+            <span className="badge badge-on-dark badge-tilt mb-4" style={{ color: 'var(--honey-gold)', backgroundColor: 'rgba(240, 185, 73, 0.16)' }}>
+              <span className="badge-dot" />
+              How It Works
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
@@ -370,8 +355,8 @@ export default function About() {
                     <span
                       className="text-7xl md:text-8xl leading-none"
                       style={{
-                        color: 'var(--ember-orange)',
-                        opacity: 0.7,
+                        color: ['var(--ember-orange)', 'var(--honey-gold)', 'var(--forest-green)', 'var(--ember-orange)'][idx],
+                        opacity: 0.8,
                         fontFamily: 'var(--font-heading)',
                       }}
                     >
@@ -398,13 +383,7 @@ export default function About() {
 
                 {/* Divider between steps */}
                 {idx < arr.length - 1 && (
-                  <div
-                    className="h-px w-full"
-                    style={{
-                      background:
-                        'linear-gradient(90deg, transparent, rgba(251, 146, 60, 0.2) 20%, rgba(251, 146, 60, 0.2) 80%, transparent)',
-                    }}
-                  />
+                  <div className="w-full" style={{ borderTop: '2px dashed rgba(251, 146, 60, 0.3)' }} />
                 )}
               </div>
             ))}
@@ -425,11 +404,9 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto">
-            <span
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-body)' }}
-            >
-              — Why I Do This
+            <span className="badge badge-tilt mb-4">
+              <span className="badge-dot" />
+              Why I Do This
             </span>
 
             {/* Quote-style pull statement */}
@@ -460,12 +437,8 @@ export default function About() {
 
             <a
               href="/contact"
-              className="group inline-flex items-center gap-2 px-10 py-5 rounded-full font-medium text-lg transition-all hover:shadow-2xl hover:-translate-y-0.5"
-              style={{
-                backgroundColor: 'var(--charcoal)',
-                color: 'var(--bone)',
-                boxShadow: '0 10px 30px -10px rgba(28, 25, 23, 0.4)',
-              }}
+              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
             >
               Let's Talk
               <svg
