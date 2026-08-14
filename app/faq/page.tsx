@@ -16,85 +16,100 @@ type FaqGroup = {
 const faqGroups: FaqGroup[] = [
   {
     label: '01',
-    title: 'Pricing & money',
+    title: 'How it works',
     items: [
       {
-        question: 'How much does a website cost?',
+        question: 'How does the monthly price work?',
         answer:
-          "It depends on what you need. A basic business website starts at $1,500, and a full business website (more pages, more features) starts at $2,400. Adding things like online booking, customer portals, or other custom features will adjust the price. I'll give you an honest, itemized quote after we talk so there are no surprises.",
+          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and I keep it going. Anything outside the plan is handled separately at $50 an hour.",
       },
       {
-        question: 'Do you offer payment plans?',
+        question: 'Is there a contract or minimum?',
         answer:
-          "Yes. I understand not every business can pay everything upfront. We can work out a payment plan that makes sense for your budget — typically split across project milestones, but I'm flexible. I'd rather help you find a way to make it work than lose the opportunity to help.",
+          "There's a 3-month minimum to start. After that it's month to month and you can cancel whenever you want.",
       },
       {
-        question: 'What about hosting and domain names?',
+        question: 'Do I pay anything upfront?',
         answer:
-          "I'll help you get set up with hosting (where your website lives) and a domain name (your web address). I can recommend reliable, affordable options and handle all the technical setup. Typical hosting costs are $10–30/month depending on your needs.",
+          "There's no deposit. You sign on for the 3-month minimum, and you're not charged your first month until your website is actually live.",
+      },
+      {
+        question: 'How do I know which plan to pick?',
+        answer:
+          "It mostly comes down to how much website you need — up to 5 pages on the $100 plan, up to 10 on the $200, which also adds Google Business and business email on your domain. If you're not sure, tell me what you're doing and I'll point you the right way.",
       },
     ],
   },
   {
     label: '02',
-    title: 'Process & timeline',
+    title: 'Canceling & ownership',
     items: [
       {
-        question: 'How long does it take to build a website?',
+        question: 'What happens if I cancel?',
         answer:
-          "A typical business website takes 2–4 weeks from start to launch. More complex projects with custom tools, booking systems, or automation might take 4–8 weeks. I'll give you a realistic timeline upfront and keep you updated throughout.",
+          "After your 3-month minimum you can cancel anytime. Your brand packet — the logo, colors, fonts, and brand guide — is yours to keep forever, and so is your domain, as long as you cover the renewal fees from there on. The website and the other services come down at the end of your last billing cycle, the same way any subscription works.",
       },
       {
-        question: "What if I'm not sure what I need?",
+        question: 'Can I keep my website if I stop?',
         answer:
-          "That's completely normal — most people aren't sure exactly what they need when they start. That's what our first conversation is for. We'll talk about your business, your goals, and I'll tell you straight what I think makes sense. No commitment, no pressure to figure it all out on the spot.",
+          "Yes, there's a buyout. It starts at $1,500 and goes up from there depending on how big the site is and how many features and integrations were built into it. Once it's bought out, the site is yours.",
       },
       {
-        question: "What if I already have a website but it's not working?",
+        question: 'Do I own my logo and branding?',
         answer:
-          "That's actually one of the most common situations I help with. We can talk about what isn't working — whether it's the design, the speed, the lack of customers, or something else — and figure out whether a rebuild makes sense or if some targeted improvements would get you there. Either way, I'll be honest about what I think the best path is.",
+          "Yes. Once your branding is defined, it's yours to keep whether you stay on or not. The website is the piece that needs a buyout if you want to hang onto it after canceling.",
       },
     ],
   },
   {
     label: '03',
-    title: 'What I build',
+    title: 'Building your site',
     items: [
       {
-        question: "What's different about how you build things?",
+        question: "How long until my site's live?",
         answer:
-          "Most small business websites are just digital brochures — they sit there and look pretty. I build things that actually do work for you: take bookings, send confirmations, route quote requests, capture leads, automate the busywork. Your tech should be a tool that saves you time, not just a place people can find your phone number.",
+          "The first draft usually takes just a few days. After that, how fast we wrap up mostly depends on how quickly your feedback comes back. And remember, your first month isn't charged until the site is live.",
       },
       {
-        question: 'Do you do on-site tech help?',
+        question: 'How do changes work while you build it?',
         answer:
-          "Yes — for clients in the local area, I make on-site visits for general tech help. That includes setting up computers and equipment, troubleshooting Wi-Fi issues, helping you pick the right software, migrating to new systems, or just sitting down with you to learn the tech you already have. If you need someone who knows tech to come take a look, I can do that.",
+          "We work closely on it. I put together a first draft, then we keep tweaking until it's where you want it. There's no clock on that first build — you aren't charged until it's live.",
       },
       {
-        question: 'How far will you travel for on-site visits?',
+        question: 'What if I already have a logo or branding?',
         answer:
-          "I'm based in Fairview Michigan and happily serve the surrounding area without travel fees. For clients farther out, I can still come on-site — there may be a small travel fee depending on distance. If you're not local, I work with clients remotely all the time and that works great for most things outside of physical tech setup.",
+          "Happy to use it, and the price is the same either way. I'd at least like to take a look, since branding is worth refreshing every so often and it's already part of the plan — a good chance to update it. But if you love what you've got, we'll build around it.",
+      },
+      {
+        question: 'What if I only need a couple pages?',
+        answer:
+          "The page count is a ceiling, not a target. The price is flat whether you use two pages or all ten.",
       },
     ],
   },
   {
     label: '04',
-    title: 'Ownership & after launch',
+    title: "Once you're up",
     items: [
       {
-        question: 'Will I be able to update things myself?',
+        question: 'What counts as one of my monthly changes?',
         answer:
-          "If you want to, yes. I can set up your website and tools so you can make basic updates yourself — changing text, adding photos, posting news — and I'll walk you through how it works. If you'd rather not deal with it, I can handle updates for you through a maintenance plan. Your choice.",
+          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Anything bigger, like new features or integrations, is separate at $50 an hour.",
       },
       {
-        question: 'What if I need help after my website launches?',
+        question: 'How does the social posting work?',
         answer:
-          "I'm not going anywhere. You can reach out anytime you need help, have questions, or want to make changes. I offer ongoing maintenance plans for regular updates and support, or we can work on an as-needed basis. Whatever fits your situation.",
+          "However you want it to. Hand it off completely and I'll decide what goes out and where, or tell me exactly what to post on which platform. You can give me as much or as little control as you like.",
       },
       {
-        question: 'Do I own my website?',
+        question: 'Can you help with computer or tech problems too?',
         answer:
-          "Yes. Once you've paid for the website, it's yours. You own the content, the design, and the code. You're not locked into working with me forever — though I hope you'll want to stick around.",
+          "That's the idea — you've got a tech guy in your back pocket. If you're in my area I'll come out in person; if you're farther off or just prefer it, we can hop on a call and I'll help remotely. Travel outside my area adds a travel fee.",
+      },
+      {
+        question: "What if I'm not sure what I need?",
+        answer:
+          "Totally normal. Tell me what you're trying to do and I'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
       },
     ],
   },

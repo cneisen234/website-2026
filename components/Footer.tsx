@@ -53,7 +53,7 @@ export default function Footer() {
               className="text-lg mb-8 max-w-md"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              A{' '}
+              The{' '}
               <em
                 style={{
                   color: 'var(--ember-orange)',
@@ -61,10 +61,10 @@ export default function Footer() {
                   fontFamily: 'var(--font-heading)',
                 }}
               >
-                spark
+                tech guy
               </em>
-              {' '}for your business. Local web and tech expertise without the
-              corporate runaround.
+              {' '}in your back pocket. Digital marketing that gets you looking
+              professional online, plus a hand with whatever tech comes up.
             </p>
 
             {/* Contact info */}

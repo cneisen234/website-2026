@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
 
             <h1
-              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95] tracking-tight"
+              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
               Let's{' '}
@@ -61,9 +61,9 @@ export default function Contact() {
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              Ready for a website that works for your business? Have questions?
-              Want to grab coffee and talk through some ideas? Pick whatever
-              way's easiest for you.
+              Thinking about getting set up, got a question about the packages,
+              or a computer that won&apos;t cooperate? Reach out whatever
+              way&apos;s easiest for you.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Contact() {
               Reach Out
             </span>
             <h2
-              className="text-4xl md:text-6xl mb-16 leading-[1.05] tracking-tight"
+              className="text-4xl md:text-6xl mb-16 leading-[1.05]"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
               Pick what works for you.
@@ -238,7 +238,7 @@ export default function Contact() {
                 {[
                   {
                     label: 'In Person',
-                    detail: 'Coffee shop, your office, or mine',
+                    detail: 'A coffee shop or your place',
                     icon: (
                       <path
                         d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
@@ -344,17 +344,17 @@ export default function Contact() {
                   What Happens Next
                 </span>
                 <h2
-                  className="text-4xl md:text-5xl leading-[1.05] tracking-tight"
+                  className="text-4xl md:text-5xl leading-[1.05]"
                   style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
                 >
-                  No pressure, no sales pitch.
+                  Just a conversation.
                 </h2>
                 <p
                   className="text-lg mt-6"
                   style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
                 >
-                  Just an honest conversation about what makes sense for your
-                  business — and whether we're a good fit to work together.
+                  We&apos;ll talk through what you&apos;re after and whether
+                  we&apos;re a good fit. That&apos;s it.
                 </p>
               </div>
 
@@ -433,7 +433,7 @@ export default function Contact() {
               Still Curious
             </span>
             <h2
-              className="text-3xl md:text-5xl mb-6 leading-[1.1] tracking-tight"
+              className="text-3xl md:text-5xl mb-6 leading-[1.1]"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
               Have questions first?

@@ -1,11 +1,33 @@
 import Image from "next/image";
 
+const steps = [
+  {
+    num: '01',
+    title: 'We talk it through',
+    body: "We start with a straightforward conversation about your business and what you're going for.",
+  },
+  {
+    num: '02',
+    title: 'I build a first draft',
+    body: "Usually within a few days I'll have a first version put together, so you've got something real to react to.",
+  },
+  {
+    num: '03',
+    title: 'We make it yours',
+    body: 'Then we go back and forth, tweaking until it looks and feels exactly like your business.',
+  },
+  {
+    num: '04',
+    title: 'I stick around',
+    body: "Once you're live I'm still here — running your social, making your updates, and picking up the phone when something techy comes up.",
+  },
+];
+
 export default function About() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
       {/* Hero Section */}
       <section className="relative">
-        {/* Ambient background glow */}
         <div
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl pointer-events-none"
           style={{
@@ -13,11 +35,8 @@ export default function About() {
             transform: 'translate(20%, -30%)',
           }}
         />
-
-        {/* Warm dotted texture */}
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
-        {/* Floating spark doodle */}
         <svg className="floaty-slow absolute top-28 right-[14%] hidden lg:block pointer-events-none" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--forest-green)" />
         </svg>
@@ -26,16 +45,16 @@ export default function About() {
           <div className="max-w-4xl">
             <div className="badge badge-tilt mb-8 fade-in-up">
               <span className="badge-dot" />
-              About Kindling Digital
+              About
             </div>
 
             <h1
-              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95] tracking-tight"
+              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              A{' '}
+              Hey, I&apos;m{' '}
               <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                spark
+                Chris
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   height="12"
@@ -54,15 +73,15 @@ export default function About() {
                   />
                 </svg>
               </em>
-              {' '}for your business.
+              .
             </h1>
 
             <p
               className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              Local web and tech help for the businesses that keep small-town
-              Michigan running.
+              I&apos;m the guy behind Kindling Digital. Here&apos;s a little about
+              who I am and why I do things the way I do.
             </p>
           </div>
         </div>
@@ -76,55 +95,45 @@ export default function About() {
         <div
           className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
           style={{
-            background:
-              'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
             transform: 'translate(-30%, -30%)',
           }}
         />
         <div
           className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{
-            background:
-              'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)',
             transform: 'translate(30%, 30%)',
           }}
         />
 
         <div className="container mx-auto px-4 relative">
           <div className="grid md:grid-cols-12 gap-12 items-start">
-            {/* Photo */}
-              <div className="md:col-span-5">
-                <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(-2.5deg)' }}>
-                  {/* A little strip of "tape" up top */}
-                  <div
-                    className="absolute left-1/2 -top-4 z-10 h-8 w-28 -translate-x-1/2 rotate-[-4deg]"
-                    style={{
-                      backgroundColor: 'rgba(240, 185, 73, 0.5)',
-                      boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)',
-                    }}
-                    aria-hidden="true"
-                  />
-                  {/* Polaroid frame */}
-                  <div
-                    className="rounded-2xl bg-white p-3 pb-6 transition-transform duration-300 hover:rotate-0"
-                    style={{
-                      border: '2px solid var(--charcoal)',
-                      boxShadow: '10px 12px 0 rgba(251, 146, 60, 0.85)',
-                    }}
-                  >
-                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
-                      <Image
-                        src="/chris.png"
-                        alt="Chris, founder of Kindling Digital"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 40vw"
-                        className="object-cover"
-                        priority
-                      />
-                    </div>
+            {/* Photo — a tilted, taped polaroid */}
+            <div className="md:col-span-5">
+              <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(-2.5deg)' }}>
+                <div
+                  className="absolute left-1/2 -top-4 z-10 h-8 w-28 -translate-x-1/2 rotate-[-4deg]"
+                  style={{ backgroundColor: 'rgba(240, 185, 73, 0.5)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)' }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="rounded-2xl bg-white p-3 pb-6 transition-transform duration-300 hover:rotate-0"
+                  style={{ border: '2px solid var(--charcoal)', boxShadow: '10px 12px 0 rgba(251, 146, 60, 0.85)' }}
+                >
+                  <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                    <Image
+                      src="/chris.png"
+                      alt="Chris, founder of Kindling Digital"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
+            </div>
 
             {/* Story text */}
             <div className="md:col-span-7">
@@ -133,42 +142,27 @@ export default function About() {
                 A Little About Me
               </span>
               <h2
-                className="text-4xl md:text-6xl mb-8 leading-[1.05] tracking-tight"
+                className="text-4xl md:text-6xl mb-8 leading-[1.05]"
                 style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
               >
-                Hi, I'm Chris.
+                The short version.
               </h2>
 
               <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
-                  I've spent the last six years building websites, custom tools,
-                  and behind-the-scenes tech for small businesses — the kind of
-                  work that helps a shop owner stop dreading their inventory
-                  spreadsheet, or lets a service business take bookings without
-                  playing phone tag all day.
+                  I&apos;ve spent the last seven years as a software engineer —
+                  building websites, apps, and all kinds of tools — and doing
+                  digital marketing for small companies along the way. I&apos;ve
+                  done it inside companies and on my own, and somewhere in there I
+                  realized I&apos;d rather help businesses directly than build
+                  someone else&apos;s product.
                 </p>
 
                 <p>
-                  Most of that time has been spent on the same kinds of problems
-                  I help with now: websites that bring in customers, automations
-                  that handle the repetitive stuff, and getting the right tools
-                  in the right hands. I've worked with startups, established
-                  shops, and everything in between, and I've seen what actually
-                  moves the needle for a small business — and what's just
-                  expensive distraction.
-                </p>
-
-                <p>
-                  Kindling Digital is my way of bringing that work closer to
-                  home. I live and work right here in small-town Michigan, and
-                  I started this because too many local businesses are stuck
-                  choosing between cookie-cutter templates that don't fit them
-                  and big-city agencies that charge like it's New York.
-                </p>
-
-                <p>
-                  Neither option is right for the businesses around here. So I
-                  built a third one.
+                  So that&apos;s what Kindling Digital is. It&apos;s just me — a
+                  one-man shop. My wife Megan jumps in on design and editing, but
+                  otherwise, when you hire me, you get me. The same person who
+                  builds your site is the one who answers when you call.
                 </p>
               </div>
             </div>
@@ -176,120 +170,47 @@ export default function About() {
         </div>
       </section>
 
-      {/* What I'm Good At */}
+      {/* Why I do it this way — CREAM */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
-          }}
+          style={{ background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)' }}
         />
 
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mb-16">
-            <span className="badge badge-tilt mb-4" style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.14)' }}>
+          <div className="max-w-3xl">
+            <span className="badge badge-tilt mb-4">
               <span className="badge-dot" />
-              What I'm Good At
+              Why I Do This
             </span>
             <h2
-              className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
+              className="text-4xl md:text-6xl mb-8 leading-[1.05]"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              The things I do best.
+              Why I do it this way.
             </h2>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl tilt-alt">
-            {[
-              {
-                icon: (
-                  <>
-                    <circle cx="12" cy="12" r="10" stroke="var(--ember-deep)" strokeWidth="2" fill="none" />
-                    <path
-                      d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
-                      stroke="var(--ember-deep)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                  </>
-                ),
-                title: 'Websites that work for you',
-                body: "Fast, professional sites that don't just sit there. They bring in customers, capture leads, take bookings, and answer questions automatically.",
-              },
-              {
-                icon: (
-                  <path
-                    d="M12 2l2 4 4-1-1 4 4 2-4 2 1 4-4-1-2 4-2-4-4 1 1-4-4-2 4-2-1-4 4 1z"
-                    stroke="var(--ember-deep)"
-                    strokeWidth="1.5"
-                    fill="none"
-                    strokeLinejoin="round"
-                  />
-                ),
-                title: 'Custom tools & integrations',
-                body: "Booking systems, client portals, inventory tracking, internal dashboards — if there's a part of your business eating up too much time, there's probably a tool that can handle it.",
-              },
-              {
-                icon: (
-                  <>
-                    <path
-                      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-                      stroke="var(--ember-deep)"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <circle cx="12" cy="12" r="3" stroke="var(--ember-deep)" strokeWidth="2" fill="none" />
-                  </>
-                ),
-                title: 'Automating the busywork',
-                body: "Automated emails and reminders, follow-ups that happen on their own, and behind-the-scenes processes that handle the repetitive stuff so you don't have to.",
-              },
-              {
-                icon: (
-                  <>
-                    <path
-                      d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-                      stroke="var(--ember-deep)"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinejoin="round"
-                    />
-                  </>
-                ),
-                title: 'Explaining things clearly',
-                body: "I talk about your business and what the tech actually does for you — no jargon, no condescension. You'll always understand what we're building and why it matters.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="card-fun group p-10"
-                style={{ backgroundColor: 'white' }}
-              >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:-rotate-12"
-                  style={{ backgroundColor: 'rgba(194, 65, 12, 0.1)' }}
-                >
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                    {item.icon}
-                  </svg>
-                </div>
-                <h3
-                  className="text-2xl mb-3"
-                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
-                >
-                  {item.title}
-                </h3>
-                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
+            <div className="space-y-6 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}>
+              <p>
+                For the longest time, getting a professional website meant one of
+                two things: pay a big company a small fortune, or do it yourself
+                with some cheap builder and hope it looks okay. Those were the
+                options.
+              </p>
+              <p>
+                I don&apos;t think that holds up anymore. We&apos;re past the age
+                where this stuff has to sit behind big-business bureaucracy. So I
+                built a third way — you get a real, custom-built presence, the
+                kind that&apos;d normally run thousands, for a flat monthly price,
+                kept up and running for you.
+              </p>
+              
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How We'll Work Together — DARK timeline */}
+      {/* What working with me is like — DARK timeline */}
       <section
         className="py-20 md:py-32 relative overflow-hidden"
         style={{ backgroundColor: 'var(--midnight)' }}
@@ -297,60 +218,29 @@ export default function About() {
         <div
           className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{
-            background:
-              'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
             transform: 'translate(30%, -20%)',
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
-            transform: 'translate(-30%, 30%)',
           }}
         />
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span className="badge badge-on-dark badge-tilt mb-4" style={{ color: 'var(--honey-gold)', backgroundColor: 'rgba(240, 185, 73, 0.16)' }}>
+            <span className="badge badge-on-dark badge-tilt mb-4">
               <span className="badge-dot" />
-              How It Works
+              Working Together
             </span>
             <h2
-              className="text-4xl md:text-6xl leading-[1.05] tracking-tight"
+              className="text-4xl md:text-6xl leading-[1.05]"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
-              How we'll work together.
+              What working with me is like.
             </h2>
           </div>
 
           <div className="max-w-5xl">
-            {[
-              {
-                num: '01',
-                title: "We talk about your business",
-                body: "First thing we do is sit down — coffee shop, your place, phone call, whatever works. I want to hear what you're trying to accomplish before I start suggesting anything.",
-              },
-              {
-                num: '02',
-                title: "I tell you what makes sense",
-                body: "Based on what you need and your budget, I'll be straight with you about what's actually worth doing — and what isn't. No upsells, no kitchen sink. Just what fits.",
-              },
-              {
-                num: '03',
-                title: "I handle the work",
-                body: "I'll build what needs building, set things up, and take care of all the technical details. You approve the direction, I take care of making it happen.",
-              },
-              {
-                num: '04',
-                title: "I stick around",
-                body: "Good tech isn't a one-time thing. I'll keep working with you to make improvements, fix things when they break, and add new pieces as your business grows.",
-              },
-            ].map((step, idx, arr) => (
+            {steps.map((step, idx, arr) => (
               <div key={step.num} className="relative">
                 <div className="grid md:grid-cols-12 gap-8 py-8">
-                  {/* Number column */}
                   <div className="md:col-span-3 flex md:justify-end items-start">
                     <span
                       className="text-7xl md:text-8xl leading-none"
@@ -364,7 +254,6 @@ export default function About() {
                     </span>
                   </div>
 
-                  {/* Content column */}
                   <div className="md:col-span-9 md:pl-4">
                     <h3
                       className="text-2xl md:text-3xl mb-4"
@@ -381,7 +270,6 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Divider between steps */}
                 {idx < arr.length - 1 && (
                   <div className="w-full" style={{ borderTop: '2px dashed rgba(251, 146, 60, 0.3)' }} />
                 )}
@@ -391,56 +279,41 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why I Do This + CTA */}
+      {/* CTA — CREAM */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{
-            background:
-              'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
             transform: 'translate(-50%, -50%)',
           }}
         />
 
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto">
-            <span className="badge badge-tilt mb-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="badge badge-tilt mb-6">
               <span className="badge-dot" />
-              Why I Do This
+              Say Hi
             </span>
-
-            {/* Quote-style pull statement */}
-            <div className="relative pl-8 mb-12">
-              <div
-                className="absolute left-0 top-0 bottom-0 w-1 rounded-full"
-                style={{ backgroundColor: 'var(--ember-deep)' }}
-              />
-              <p
-                className="text-2xl md:text-4xl leading-[1.3] tracking-tight"
-                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
-              >
-                Local businesses should have the same access to good tech as the
-                big guys — without needing a huge budget or a tech team to run
-                it.
-              </p>
-            </div>
-
-            <p
-              className="text-lg mb-12 max-w-3xl"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}
+            <h2
+              className="text-5xl md:text-7xl mb-8 leading-[1.05]"
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              Good websites and smart tools shouldn't be complicated or out of
-              reach. I'm here to make them accessible, effective, and actually
-              worth the investment — for the businesses that make this place
-              what it is.
+              Come say hi.
+            </h2>
+            <p
+              className="text-xl mb-12 max-w-2xl mx-auto"
+              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
+            >
+              If any of this sounds like your kind of thing, reach out. I&apos;d
+              love to hear what you&apos;re working on.
             </p>
-
             <a
               href="/contact"
               className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
               style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
             >
-              Let's Talk
+              Get in Touch
               <svg
                 width="20"
                 height="20"
