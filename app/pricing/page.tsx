@@ -48,46 +48,43 @@ export default function Pricing() {
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
-          <div className="max-w-4xl">
+          <div className="grid md:grid-cols-12 items-center">
+            <div className="md:col-span-7">
 
             <h1
-              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
+              className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              Your website,{' '}
-              <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                one price
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="12"
-                  viewBox="0 0 300 12"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    className="draw-stroke"
-                    pathLength={1}
-                    d="M2 8 Q 75 2, 150 6 T 298 4"
-                    stroke="var(--ember-deep)"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </em>
-              
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Your brand,</span>
+              <span
+                className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
+                style={{ color: 'var(--ember-deep)' }}
+              >
+                <span className="relative inline-block">
+                  one price
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full"
+                    height="14"
+                    viewBox="0 0 300 12"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      className="draw-stroke"
+                      pathLength={1}
+                      d="M2 8 Q 75 2, 150 6 T 298 4"
+                      stroke="var(--ember-deep)"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
             </h1>
-
-            <p
-              className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl mb-8"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
-            >
-              Everything&apos;s custom-built from scratch and made to match your
-              brand. Once you&apos;re set up, you&apos;ve got a tech guy in your
-              pocket for anything else that comes up.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-3 fade-in-up stagger-3">
+          </div>
+          <div className="md:col-span-5 w-full md:mb-8 fade-in-up stagger-3">
+          <div className="flex flex-wrap flex-col gap-3 fade-in-up stagger-3">
               {[
                 'Custom built from scratch',
                 'Branding included',
@@ -110,6 +107,7 @@ export default function Pricing() {
                   {item}
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </div>

@@ -37,43 +37,63 @@ export default function About() {
         </svg>
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
-          <div className="max-w-4xl">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
 
             <h1
-              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
+              className="md:col-span-7  mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              Hey, I&apos;m{' '}
-              <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                Chris
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="12"
-                  viewBox="0 0 200 12"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    className="draw-stroke"
-                    pathLength={1}
-                    d="M2 8 Q 50 2, 100 6 T 198 4"
-                    stroke="var(--ember-deep)"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </em>
-              
+              <span className="md:block text-4xl md:text-6xl leading-[1.05]">Hey there,</span>
+              <span
+                className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
+                style={{ color: 'var(--ember-deep)' }}
+              >
+                <span className="relative inline-block">
+                I&apos;m Chris
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full"
+                    height="14"
+                    viewBox="0 0 200 12"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      className="draw-stroke"
+                      pathLength={1}
+                      d="M2 8 Q 50 2, 100 6 T 198 4"
+                      stroke="var(--ember-deep)"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
             </h1>
-
-            <p
-              className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
-            >
-              I&apos;m the guy behind Kindling Digital. Here&apos;s a little about
-              who I am and why I do things the way I do.
-            </p>
+            <div className="md:col-span-5 w-full fade-in-up stagger-3">
+            <div className="flex flex-col gap-5 md:mb-5 fade-in-up stagger-3">
+            <a
+                  href="/pricing"
+                  className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
+                  style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
+                >
+                  See the Packages
+                  <svg
+                    width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    className="transition-transform group-hover:translate-x-1"
+                  >
+                    <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+                <a
+                  href="/contact"
+                  className="btn-fun inline-flex items-center justify-center px-8 py-4 text-lg"
+                  style={{ backgroundColor: 'var(--paper)', color: 'var(--charcoal)' }}
+                >
+                  Get in Touch
+                </a>
+                </div>
+            </div>
           </div>
         </div>
       </section>
@@ -135,12 +155,9 @@ export default function About() {
 
               <div className="space-y-6 text-xl" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
-                  I&apos;ve spent the last seven years as a software engineer
+                  I&apos;ve spent over seven years as a software engineer
                   building websites, apps, and all kinds of tools, and doing
-                  digital marketing for small companies along the way. I&apos;ve
-                  done it inside companies and on my own, and somewhere in there I
-                  realized I&apos;d rather help businesses directly than build
-                  someone else&apos;s product.
+                  digital marketing for small companies along the way. I'm passionate about small businesses and want to give them access to tools that have long been out of their reach. Why should the big guys monopolize the resources when it's the everyday small business owner that needs them the most? That's where I come in. Reach out to me, I'm here to help and I've come up with a very affordable way to give you the best tools on the market. 
                 </p>
               </div>
             </div>
@@ -278,8 +295,7 @@ export default function About() {
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
             >
-              If any of this sounds like your kind of thing, reach out. I&apos;d
-              love to hear what you&apos;re working on.
+              If any of this sounds like your kind of thing, reach out. I&apos;m here to help.
             </p>
             <a
               href="/contact"

@@ -77,43 +77,53 @@ export default function Home() {
             <div className="md:col-span-7">
 
               <h1
-                className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
+                className="mb-8 fade-in-up stagger-1"
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
-                The tech guy in your{' '}
-                <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                  back pocket
-                  <svg
-                    className="absolute -bottom-2 left-0 w-full"
-                    height="12"
-                    viewBox="0 0 300 12"
-                    preserveAspectRatio="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      className="draw-stroke"
-                      pathLength={1}
-                      d="M2 8 Q 75 2, 150 6 T 298 4"
-                      stroke="var(--ember-deep)"
-                      strokeWidth="3"
-                      fill="none"
-                      strokeLinecap="round"
+                <span className="block text-4xl md:text-6xl leading-[1.05]">
+                  The{' '}
+                  <span className="relative inline-block">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-[-6px] top-[0.16em] bottom-[0.08em] -rotate-1 rounded-md"
+                      style={{ backgroundColor: 'rgba(240, 185, 73, 0.65)', zIndex: 0 }}
                     />
-                  </svg>
-                </em>
-                
+                    <span className="relative" style={{ zIndex: 1 }}>spark</span>
+                  </span>{' '}
+                  your
+                </span>
+                <span
+                  className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
+                  style={{ color: 'var(--ember-deep)' }}
+                >
+                  <span className="relative inline-block">
+                    brand needs
+                    <svg
+                      className="absolute -bottom-1 left-0 w-full"
+                      height="14"
+                      viewBox="0 0 300 12"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        className="draw-stroke"
+                        pathLength={1}
+                        d="M2 8 Q 75 2, 150 6 T 298 4"
+                        stroke="var(--ember-deep)"
+                        strokeWidth="3"
+                        fill="none"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                </span>
               </h1>
+            </div>
 
-              <p
-                className="text-xl md:text-2xl mb-10 fade-in-up stagger-2 max-w-2xl"
-                style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
-              >
-                I build your whole online presence — your website, your branding, your
-                social — for one flat monthly price. 
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-5 fade-in-up stagger-3">
-                <a
+            {/* What you get card */}
+            <div className="md:col-span-5 w-full fade-in-up stagger-3">
+            <div className="flex flex-col gap-5 md:mb-15 fade-in-up stagger-3">
+            <a
                   href="/pricing"
                   className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
@@ -133,30 +143,7 @@ export default function Home() {
                 >
                   Get in Touch
                 </a>
-              </div>
-            </div>
-
-            {/* What you get card */}
-            <div className="md:col-span-5 fade-in-up stagger-3">
-              <div
-                className="card-fun tilt-r relative p-8"
-                style={{ backgroundColor: 'var(--paper)', ['--shadow-color' as string]: 'var(--ember-deep)' } as CSSProperties}
-              >
-                <div className="badge badge-tilt mb-5">What you get</div>
-                <ul className="space-y-4">
-                  {[
-                    { label: 'A custom website', color: 'var(--ember-deep)' },
-                    { label: 'Logo & branding', color: 'var(--forest-green)' },
-                    { label: 'Your social, handled', color: 'var(--honey-gold)' },
-                    { label: 'And so much more...', color: 'var(--ember-deep)' },
-                  ].map((item) => (
-                    <li key={item.label} className="flex items-center gap-3">
-                      <span className="inline-block w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
-                      <span className="font-medium" style={{ color: 'var(--charcoal)' }}>{item.label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                </div>
             </div>
           </div>
         </div>

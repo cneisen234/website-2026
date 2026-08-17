@@ -28,14 +28,6 @@ export const metadata: Metadata = {
   title: "Kindling Digital — The tech guy in your back pocket",
   description:
     "Digital marketing for a flat monthly price — a custom website, branding, and social, plus a tech guy for everything else.",
-  icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
-    apple: [
-      { url: "/favicon.png", type: "image/png" },
-    ],
-  },
 };
 
 export const viewport: Viewport = {

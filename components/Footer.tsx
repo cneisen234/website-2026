@@ -60,8 +60,15 @@ export default function Footer() {
               >
                 tech guy
               </em>
-              {' '}in your back pocket. Digital marketing that gets you looking
-              professional online, plus a hand with whatever tech comes up.
+              {' '}in your back pocket. Digital marketing that gives your brand a  <em
+                style={{
+                  color: 'var(--ember-orange)',
+                  fontStyle: 'italic',
+                  fontFamily: 'var(--font-heading)',
+                }}
+              >
+                spark
+              </em>, plus a hand with your everyday tech needs.
             </p>
 
             {/* Contact info */}

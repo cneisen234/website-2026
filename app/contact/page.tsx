@@ -26,42 +26,37 @@ export default function Contact() {
           <div className="max-w-4xl">
         
 
-            <h1
-              className="text-6xl md:text-8xl mb-8 fade-in-up stagger-1 leading-[0.95]"
+          <h1
+              className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              Let's{' '}
-              <em className="relative inline-block" style={{ color: 'var(--ember-deep)', fontStyle: 'italic' }}>
-                talk
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="12"
-                  viewBox="0 0 200 12"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    className="draw-stroke"
-                    pathLength={1}
-                    d="M2 8 Q 50 2, 100 6 T 198 4"
-                    stroke="var(--ember-deep)"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </em>
-              
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Let's give your brand</span>
+              <span
+                className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
+                style={{ color: 'var(--ember-deep)' }}
+              >
+                <span className="relative inline-block">
+                 a spark
+                  <svg
+                    className="absolute -bottom-1 left-0 w-full"
+                    height="14"
+                    viewBox="0 0 300 12"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      className="draw-stroke"
+                      pathLength={1}
+                      d="M2 8 Q 75 2, 150 6 T 298 4"
+                      stroke="var(--ember-deep)"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </span>
             </h1>
-
-            <p
-              className="text-xl md:text-2xl fade-in-up stagger-2 max-w-3xl"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
-            >
-              Thinking about getting set up, have a question about the packages, or something else on your mind?
-               Reach out whatever
-              way&apos;s easiest for you.
-            </p>
           </div>
         </div>
       </section>
