@@ -346,7 +346,7 @@ export default function Contact() {
                 {[
                   {
                     num: '01',
-                    title: "I'll get back to you within 24 hours",
+                    title: "We'll get back to you within 24 hours",
                     body: "Usually much faster. If you're in a hurry, just text.",
                   },
                   {
@@ -356,8 +356,8 @@ export default function Contact() {
                   },
                   {
                     num: '03',
-                    title: 'We\'ll figure out if I can help',
-                    body: "You'll walk me through what you're trying to do, and I'll be straight with you about whether I'm the right person for it.",
+                    title: 'We\'ll figure out if we can help',
+                    body: "You'll walk us through what you're trying to do, and we'll be straight with you about whether we're the right fit.",
                   },
                 ].map((item, idx) => (
                   <div

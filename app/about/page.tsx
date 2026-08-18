@@ -8,8 +8,8 @@ const steps = [
   },
   {
     num: '02',
-    title: 'I build a first draft',
-    body: "Within a few days I'll have a first version put together, so you've got something real to react to.",
+    title: 'We build a first draft',
+    body: "Within a few days we'll have a first version put together, so you've got something real to react to.",
   },
   {
     num: '03',
@@ -43,13 +43,13 @@ export default function About() {
               className="md:col-span-7  mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="md:block text-4xl md:text-6xl leading-[1.05]">Hey there,</span>
+              <span className="md:block text-4xl md:text-6xl leading-[1.05]">It takes two to make</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}
               >
                 <span className="relative inline-block">
-                I&apos;m Chris
+                a spark
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
                     height="14"
@@ -98,7 +98,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* My Story — DARK with photo */}
+      {/* Chris — DARK with photo */}
       <section
         className="py-20 md:py-32 relative overflow-hidden"
         style={{ backgroundColor: 'var(--midnight)' }}
@@ -110,16 +110,9 @@ export default function About() {
             transform: 'translate(-30%, -30%)',
           }}
         />
-        <div
-          className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)',
-            transform: 'translate(30%, 30%)',
-          }}
-        />
 
         <div className="container mx-auto px-4 relative">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
             {/* Photo — a tilted, taped polaroid */}
             <div className="md:col-span-5">
               <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(-2.5deg)' }}>
@@ -135,7 +128,7 @@ export default function About() {
                   <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
                     <Image
                       src="/chris.png"
-                      alt="Chris, founder of Kindling Digital"
+                      alt="Chris, developer and founder of Kindling Digital"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover"
@@ -146,18 +139,20 @@ export default function About() {
               </div>
             </div>
 
-            {/* Story text */}
+            {/* Bio */}
             <div className="md:col-span-7">
               <span className="badge badge-on-dark badge-tilt mb-4">
                 <span className="badge-dot" />
-                A Little About Me
+                Development &amp; Tech
               </span>
-
-              <div className="space-y-6 text-xl" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
+              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+                Hi, I&apos;m Chris.
+              </h2>
+              <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
                   I&apos;ve spent over seven years as a software engineer
                   building websites, apps, and all kinds of tools, and doing
-                  digital marketing for small companies along the way. I'm passionate about small businesses and want to give them access to tools that have long been out of their reach. Why should the big guys monopolize the resources when it's the everyday small business owner that needs them the most? That's where I come in. Reach out to me, I'm here to help and I've come up with a very affordable way to give you the best tools on the market. 
+                  digital marketing for small companies along the way. I&apos;m passionate about small businesses and want to give them access to tools that have long been out of their reach. Why should the big guys monopolize the resources when it&apos;s the everyday small business owner that needs them the most? That&apos;s where I come in. Reach out to me, I&apos;m here to help and I&apos;ve come up with a very affordable way to give you the best tools on the market.
                 </p>
               </div>
             </div>
@@ -165,27 +160,87 @@ export default function About() {
         </div>
       </section>
 
-      {/* Why I do it this way — CREAM */}
-      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      {/* Megan — CREAM with photo */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--forest-green) 0%, transparent 70%)', transform: 'translate(-30%, 0)' }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            {/* Bio */}
+            <div className="md:col-span-7">
+              <span
+                className="badge badge-tilt mb-4"
+                style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.14)' }}
+              >
+                <span className="badge-dot" />
+                Design &amp; Content
+              </span>
+              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                Hi, I&apos;m Megan.
+              </h2>
+              <div className="space-y-6 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}>
+                <p>
+                  I&apos;m the graphic designer and content editor of Kindling Digital.
+                   I&apos;m passionate about giving small businesses a look
+                  that actually holds together. I love bringing art into my everyday 
+                  life and that passion is poured into everything I design. 
+                  Your brand is your identity and I'm going to help you bring that out in center stage.
+                </p>
+              </div>
+            </div>
+
+            {/* Photo — a tilted, taped polaroid */}
+            <div className="md:col-span-5">
+              <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(2.5deg)' }}>
+                <div
+                  className="absolute left-1/2 -top-4 z-10 h-8 w-28 -translate-x-1/2 rotate-[4deg]"
+                  style={{ backgroundColor: 'rgba(95, 167, 119, 0.5)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)' }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="rounded-2xl bg-white p-3 pb-6 transition-transform duration-300 hover:rotate-0"
+                  style={{ border: '2px solid var(--charcoal)', boxShadow: '10px 12px 0 rgba(95, 167, 119, 0.85)' }}
+                >
+                  <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                    <Image
+                      src="/megan.png"
+                      alt="Megan, designer and content editor at Kindling Digital"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why we do it this way — DARK */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
         <div
           className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)' }}
         />
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl">
-            <span className="badge badge-tilt mb-4">
+            <span className="badge badge-on-dark badge-tilt mb-4">
               <span className="badge-dot" />
-              Why I Do This
+              Why We Do This
             </span>
             <h2
               className="text-4xl md:text-6xl mb-8 leading-[1.05]"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
-              Why I do it this way.
+              Why we do it this way.
             </h2>
 
-            <div className="space-y-6 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}>
+            <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
               <p>
                 For the longest time, getting a professional website meant one of
                 two things: pay a big company a small fortune, or do it yourself
@@ -193,41 +248,37 @@ export default function About() {
               </p>
               <p>
                 We&apos;re past the age
-                where this stuff has to sit behind big-business bureaucracy, so I
+                where this stuff has to sit behind big-business bureaucracy, so we
                 built a third way. You get a real, custom-built presence, the
                 kind that&apos;d normally run thousands, for a flat monthly price.
-                Best of all, I do all of the work for you so you can focus on what you do best.
+                Best of all, we do all of the work for you so you can focus on what you do best.
               </p>
-              
             </div>
           </div>
         </div>
       </section>
 
-      {/* What working with me is like — DARK timeline */}
-      <section
-        className="py-20 md:py-32 relative overflow-hidden"
-        style={{ backgroundColor: 'var(--midnight)' }}
-      >
+      {/* What working with us is like — CREAM timeline */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
-          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{
-            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
             transform: 'translate(30%, -20%)',
           }}
         />
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mb-16">
-            <span className="badge badge-on-dark badge-tilt mb-4">
+            <span className="badge badge-tilt mb-4">
               <span className="badge-dot" />
               Working Together
             </span>
             <h2
               className="text-4xl md:text-6xl leading-[1.05]"
-              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              What working with me is like.
+              What working with us is like.
             </h2>
           </div>
 
@@ -239,7 +290,7 @@ export default function About() {
                     <span
                       className="text-7xl md:text-8xl leading-none"
                       style={{
-                        color: ['var(--ember-orange)', 'var(--honey-gold)', 'var(--forest-green)', 'var(--ember-orange)'][idx],
+                        color: ['var(--ember-deep)', 'var(--honey-gold)', 'var(--forest-green)', 'var(--ember-deep)'][idx],
                         opacity: 0.8,
                         fontFamily: 'var(--font-heading)',
                       }}
@@ -251,13 +302,13 @@ export default function About() {
                   <div className="md:col-span-9 md:pl-4">
                     <h3
                       className="text-2xl md:text-3xl mb-4"
-                      style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+                      style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
                     >
                       {step.title}
                     </h3>
                     <p
                       className="text-lg max-w-2xl"
-                      style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
+                      style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
                     >
                       {step.body}
                     </p>
@@ -265,7 +316,7 @@ export default function About() {
                 </div>
 
                 {idx < arr.length - 1 && (
-                  <div className="w-full" style={{ borderTop: '2px dashed rgba(251, 146, 60, 0.3)' }} />
+                  <div className="w-full" style={{ borderTop: '2px dashed rgba(194, 65, 12, 0.25)' }} />
                 )}
               </div>
             ))}
@@ -273,12 +324,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA — CREAM */}
-      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      {/* CTA — DARK */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
         <div
-          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl pointer-events-none"
+          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{
-            background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
             transform: 'translate(-50%, -50%)',
           }}
         />
@@ -287,20 +338,20 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             <h2
               className="text-5xl md:text-7xl mb-8 leading-[1.05]"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
               Come say hi.
             </h2>
             <p
               className="text-xl mb-12 max-w-2xl mx-auto"
-              style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}
+              style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.6' }}
             >
-              If any of this sounds like your kind of thing, reach out. I&apos;m here to help.
+              If any of this sounds like your kind of thing, reach out. We&apos;re here to help.
             </p>
             <a
               href="/contact"
-              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
-              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
+              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
             >
               Get in Touch
               <svg

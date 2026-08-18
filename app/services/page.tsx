@@ -9,7 +9,7 @@ const pieces = [
     accent: 'var(--ember-orange)',
     tint: 'rgba(251, 146, 60, 0.14)',
     heading: 'Your site, built from scratch.',
-    body: "I build every site by hand with the same tools the big companies use. It's made to match your brand and quick to load, and because it's built from scratch, you can keep adding to it later.",
+    body: "We build every site by hand with the same tools the big companies use. It's made to match your brand and quick to load, and because it's built from scratch, you can keep adding to it later.",
     included: [
       'Up to 5 or 10 pages, depending on your package',
       'Custom design that matches your brand',
@@ -25,7 +25,7 @@ const pieces = [
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     heading: 'A brand that holds together.',
-    body: "If you don't have colors, fonts, or a logo yet, I'll put them together for you. You get a brand document that spells it all out, so when you order business cards, fliers, or anything else, everything matches and looks like the same business.",
+    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you. You get a brand document that spells it all out, so when you order business cards, fliers, or anything else, everything matches and looks like the same business.",
     included: [
       'Logo design',
       'Brand colors & fonts',
@@ -41,7 +41,7 @@ const pieces = [
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
     heading: 'Social media, off your plate.',
-    body: "I post to your social every month so you don't have to think about it. It stays active, it looks like the rest of your brand, and it's one more thing you can cross off your list.",
+    body: "We post to your social every month so you don't have to think about it. It stays active, it looks like the rest of your brand, and it's one more thing you can cross off your list.",
     included: [
       '1 to 2 posts a month depending on your package',
       'Posts that match your brand',

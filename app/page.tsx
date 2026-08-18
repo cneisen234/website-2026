@@ -280,9 +280,9 @@ export default function Home() {
               </h2>
               <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
                 The package gets you online and looking sharp. After that,
-                I&apos;m still around. Want a booking form, online payments, or a
-                blog? I&apos;ll build it. Computer at the shop acting up? Call me.
-                Basically anything techy, I'm your guy.
+                we&apos;re still around. Want a booking form, online payments, or a
+                blog? We&apos;ll build it. Computer at the shop acting up? Call us.
+                Basically anything techy, we&apos;ve got you.
               </p>
             </div>
 
@@ -321,7 +321,7 @@ export default function Home() {
               Ready to look the part?
             </h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
-              Tell me about your business and we&apos;ll figure out what you
+              Tell us about your business and we&apos;ll figure out what you
               need.
             </p>
             <a

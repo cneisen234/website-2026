@@ -21,7 +21,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the monthly price work?',
         answer:
-          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and I keep it going. Anything outside the plan is handled separately at $50 an hour.",
+          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $50 an hour.",
       },
       {
         question: 'Is there a contract or minimum?',
@@ -68,7 +68,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What if I already have a logo or branding?',
         answer:
-          "Happy to use it, however I'd at least like to take a look, since branding is worth refreshing every so often and it's already part of the plan — a good chance to update it. But if you love what you've got, we'll build with it.",
+          "Happy to use it, however we'd at least like to take a look, since branding is worth refreshing every so often and it's already part of the plan — a good chance to update it. But if you love what you've got, we'll build with it.",
       },
       {
         question: 'What if I only need a couple pages?',
@@ -89,17 +89,17 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the social media posting work?',
         answer:
-          "However you want it to. Hand it off completely and I'll decide what goes out and where, or tell me exactly what to post on which platform. You can give me as much or as little control as you like.",
+          "However you want it to. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. You can give us as much or as little control as you like.",
       },
       {
         question: 'Can you help with computer or tech problems too?',
         answer:
-          "That's the idea — you've got a tech guy in your back pocket. If you're in my area I'll come out in person; if you're farther off or just prefer it, we can hop on a call and I'll help remotely.",
+          "That's the idea — you've got a tech guy in your back pocket. If you're in our area we'll come out in person; if you're farther off or just prefer it, we can hop on a call and help remotely.",
       },
       {
         question: "What if I'm not sure what I need?",
         answer:
-          "That's part of the process. Tell me what you're trying to do and I'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
+          "That's part of the process. Tell us what you're trying to do and we'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
       },
     ],
   },
@@ -338,7 +338,7 @@ export default function FAQ() {
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              Just reach out — I'm happy to answer anything else you're wondering
+              Just reach out — we're happy to answer anything else you're wondering
               about, no commitment required.
             </p>
             <a

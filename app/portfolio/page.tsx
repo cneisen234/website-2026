@@ -118,7 +118,7 @@ export default function Portfolio() {
               <p className="text-lg mb-8" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.75' }}>
                 Particular Notions is a handmade craft vendor — beaded charms and
                 keychains, each one made by hand. It needed a site that felt as
-                personal as the work. I built the whole thing from scratch and put
+                personal as the work. We built the whole thing from scratch and put
                 the branding together to match: the sage-and-gold palette, the fox
                 logo, the fonts. From the homepage to the last product card, it all looks
                 like one business.

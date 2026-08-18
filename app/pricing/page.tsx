@@ -145,7 +145,7 @@ export default function Pricing() {
               className="text-lg mt-6 max-w-2xl"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
             >
-             I custom build your website using the same tools and design principles large firms charge thousands for. It comes with the package. Pick the plan that works for you.
+             We custom build your website using the same tools and design principles large firms charge thousands for. It comes with the package. Pick the plan that works for you.
             </p>
           </div>
 
@@ -234,7 +234,7 @@ export default function Pricing() {
           <div className="max-w-3xl">
             <span className="badge badge-tilt mb-4">
               <span className="badge-dot" />
-              A Guy in Your Pocket
+              In Your Back Pocket
             </span>
             <h2
               className="text-4xl md:text-6xl mb-6 leading-[1.05]"
