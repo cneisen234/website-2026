@@ -89,7 +89,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the social media posting work?',
         answer:
-          "However you want it to. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. You can give us as much or as little control as you like.",
+          "However you want it to. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. You can give us as much or as little control as you like. Need more than your plan includes? Extra posts are $25 for a basic level post, or $50 when we shoot the photo or design a custom graphic.",
       },
       {
         question: 'Can you help with computer or tech problems too?',

@@ -2,33 +2,38 @@ import type { CSSProperties } from 'react';
 
 const plans = [
   {
+    name: 'Brand in a Box',
     price: '$100',
     cadence: '/month',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
     features: [
-      'Up to a 5-page custom-built website',
-      'Custom domain registration or transfer',
-      'Logo design',
-      'Brand packaging',
-      '3 minor site changes a month (text & photo updates)',
-      '1 social media post a month',
+      { label: 'Up to a 5-page custom-built website' },
+      { label: 'Custom domain registration or transfer' },
+      { label: 'Logo design' },
+      { label: 'Brand packaging' },
+      { label: '3 minor site changes a month', note: 'Text & photo updates' },
+      { label: '1 social media post a month' },
     ],
   },
   {
-    price: '$200',
+    name: 'Business in a Box',
+    price: '$250',
     cadence: '/month',
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     features: [
-      'Up to a 10-page custom-built website',
-      'Custom domain registration or transfer',
-      'Logo design',
-      'Brand packaging',
-      '5 minor site changes a month (text & photo updates)',
-      '2 social media posts a month',
-      'Google Business registration',
-      'Up to 3 business email accounts on your domain (name@yoursite.com)',
+      { label: 'Up to a 10-page custom-built website' },
+      { label: 'Custom domain registration or transfer' },
+      { label: 'Logo design' },
+      { label: 'Brand packaging' },
+      { label: '5 minor site changes a month', note: 'Text & photo updates' },
+      { label: '2 social media posts a month' },
+      { label: 'Google Business registration' },
+      { label: 'Up to 3 business email accounts on your domain', note: 'name@yoursite.com' },
+      { label: 'Business card design & ordering', note: '100 cards, limit 1 order a month' },
+      { label: 'Custom email signature design' },
+      { label: 'Branded swag ordering', note: 'Tees, mugs, posters, flyers & more — product cost separate' },
     ],
   },
 ];
@@ -186,6 +191,12 @@ export default function Pricing() {
                 className="card-fun tilt-none flex flex-col p-8 md:p-10"
                 style={{ backgroundColor: 'white', ['--shadow-color' as string]: plan.accent } as CSSProperties}
               >
+                <h3
+                  className="text-2xl md:text-3xl mb-3"
+                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                >
+                  {plan.name}
+                </h3>
                 <div className="flex items-baseline gap-2 mb-8">
                   <span
                     className="text-6xl md:text-7xl leading-none"
@@ -203,7 +214,7 @@ export default function Pricing() {
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
+                    <li key={feature.label} className="flex items-start gap-3">
                       <span
                         className="mt-0.5 shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                         style={{ backgroundColor: plan.tint }}
@@ -218,8 +229,18 @@ export default function Pricing() {
                           />
                         </svg>
                       </span>
-                      <span style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>
-                        {feature}
+                      <span className="flex flex-col">
+                        <span style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>
+                          {feature.label}
+                        </span>
+                        {feature.note && (
+                          <span
+                            className="text-sm mt-0.5"
+                            style={{ color: 'var(--stone)', lineHeight: '1.4' }}
+                          >
+                            {feature.note}
+                          </span>
+                        )}
                       </span>
                     </li>
                   ))}

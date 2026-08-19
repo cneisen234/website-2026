@@ -32,7 +32,7 @@ const packageBits = [
     title: 'And so much more...',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'A custom domain, Google Business, business email, and plenty more — all part of the package.',
+    body: 'A custom domain, Google Business, business email, business cards, branded swag, and plenty more — all part of the package.',
   },
 ];
 

@@ -30,6 +30,7 @@ const pieces = [
       'Logo design',
       'Brand colors & fonts',
       'A brand guide document',
+      'Business cards, email signatures & branded swag',
       'A look that stays consistent everywhere',
     ],
   },
