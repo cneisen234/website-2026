@@ -28,6 +28,12 @@ export const metadata: Metadata = {
   title: "Kindling Digital — The tech guy in your back pocket",
   description:
     "Digital marketing for a flat monthly price — a custom website, branding, and social, plus a tech guy for everything else.",
+  // Stop phones from auto-linking example emails/phone numbers into tappable links
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
