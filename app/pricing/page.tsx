@@ -31,7 +31,7 @@ const plans = [
       { label: '2 social media posts a month' },
       { label: 'Google Business registration' },
       { label: 'Up to 3 business email accounts on your domain', note: 'name@yoursite.com' },
-      { label: 'Business card design & ordering', note: '100 cards, limit 1 order a month' },
+      { label: 'Business card design & ordering', note: '50 cards a month, automatically ordered' },
       { label: 'Custom email signature design' },
       { label: 'Branded swag ordering', note: 'Tees, mugs, posters, flyers & more — product cost separate' },
     ],
