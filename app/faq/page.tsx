@@ -21,7 +21,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the monthly price work?',
         answer:
-          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $50 an hour.",
+          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $75 an hour.",
       },
       {
         question: 'Is there a contract or minimum?',
@@ -84,7 +84,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What counts as one of my monthly changes?',
         answer:
-          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Anything bigger, like new features or integrations, is separate at $50 an hour.",
+          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Once you've used up the changes in your plan, each additional minor update is just $15. Anything bigger, like new features or integrations, is separate at $75 an hour.",
       },
       {
         question: 'How does the social media posting work?',

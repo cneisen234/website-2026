@@ -33,6 +33,36 @@ const plans = [
   },
 ];
 
+const addOns = [
+  {
+    price: '$15',
+    unit: '/ update',
+    title: 'Extra minor update',
+    accent: 'var(--ember-deep)',
+    tint: 'rgba(194, 65, 12, 0.1)',
+    description:
+      'Every text or photo update beyond what your package includes. Same quick turnaround, small flat price.',
+  },
+  {
+    price: '$25',
+    unit: '/ post',
+    title: 'Minor social media post',
+    accent: 'var(--forest-green)',
+    tint: 'rgba(95, 167, 119, 0.14)',
+    description:
+      'Text only, or with a photo or graphic you provide. We write it up and get it posted where you want it.',
+  },
+  {
+    price: '$50',
+    unit: '/ post',
+    title: 'Major social media post',
+    accent: 'var(--ember-orange)',
+    tint: 'rgba(234, 88, 12, 0.12)',
+    description:
+      'We take the photo or design a custom graphic from scratch, then write and publish the post.',
+  },
+];
+
 export default function Pricing() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
@@ -223,11 +253,101 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* EVERYTHING ELSE — $50/HR — CREAM */}
-      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      {/* ADD-ONS — FOR SUBSCRIBERS — CREAM */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
-          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)' }}
+          className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--forest-green) 0%, transparent 70%)',
+            transform: 'translate(-30%, -20%)',
+          }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span className="badge badge-tilt mb-4">
+              <span className="badge-dot" />
+              Add-ons for members
+            </span>
+            <h2
+              className="text-4xl md:text-6xl leading-[1.05] mb-6"
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+            >
+              Need a little{' '}
+              <em className="italic" style={{ color: 'var(--ember-deep)' }}>
+                extra?
+              </em>
+            </h2>
+            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+              These flat-rate add-ons are available to anyone on a paid monthly plan — simple
+              pricing for the little things that pop up between packages. Not a subscriber yet? No
+              problem, these services are billed at the hourly rate below.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            {addOns.map((addOn) => (
+              <div
+                key={addOn.title}
+                className="card-fun tilt-none flex flex-col p-8"
+                style={{ backgroundColor: 'white', ['--shadow-color' as string]: addOn.accent } as CSSProperties}
+              >
+                <span
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
+                  style={{ backgroundColor: addOn.tint }}
+                >
+                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 4v12M4 10h12"
+                      stroke={addOn.accent}
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                <div className="flex items-baseline gap-2 mb-3">
+                  <span
+                    className="text-5xl leading-none"
+                    style={{ color: addOn.accent, fontFamily: 'var(--font-heading)' }}
+                  >
+                    {addOn.price}
+                  </span>
+                  <span className="text-base font-rounded" style={{ color: 'var(--stone)' }}>
+                    {addOn.unit}
+                  </span>
+                </div>
+                <h3
+                  className="text-xl mb-3"
+                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                >
+                  {addOn.title}
+                </h3>
+                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>{addOn.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EVERYTHING ELSE — $75/HR — DARK */}
+      <section
+        className="py-20 md:py-32 relative overflow-hidden"
+        style={{ backgroundColor: 'var(--midnight)' }}
+      >
+        <div
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)',
+            transform: 'translate(30%, -10%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-15 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--forest-green) 0%, transparent 70%)',
+            transform: 'translate(-20%, 30%)',
+          }}
         />
 
         <div className="container mx-auto px-4 relative">
@@ -238,16 +358,16 @@ export default function Pricing() {
             </span>
             <h2
               className="text-4xl md:text-6xl mb-6 leading-[1.05]"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
               Everything else is only{' '}
-              <em className="italic" style={{ color: 'var(--ember-deep)' }}>
-                $50 an hour.
+              <em className="italic" style={{ color: 'var(--ember-orange)' }}>
+                $75 an hour.
               </em>
             </h2>
-            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
               Anything past the package — new features, tech help, whatever comes
-              up — is a flat $50 an hour.
+              up — is a flat $75 an hour.
             </p>
           </div>
         </div>
