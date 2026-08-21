@@ -30,7 +30,7 @@ const pieces = [
       'Logo design',
       'Brand colors & fonts',
       'A brand guide document',
-      'Business cards, email signatures & branded swag',
+      'Business cards & email signature design',
       'A look that stays consistent everywhere',
     ],
   },
@@ -42,11 +42,11 @@ const pieces = [
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
     heading: 'Social media, off your plate.',
-    body: "We post to your social every month so you don't have to think about it. It stays active, it looks like the rest of your brand, and it's one more thing you can cross off your list.",
+    body: "Want your social handled? We'll write and post for you so it stays active and looks like the rest of your brand — add it whenever you want, and only pay for the posts you use.",
     included: [
-      '1 to 2 posts a month depending on your package',
+      'Simple flat rate per post',
       'Posts that match your brand',
-      'Purchase more posts anytime',
+      'As many or as few as you want',
     ],
   },
   {

@@ -12,8 +12,11 @@ const plans = [
       { label: 'Custom domain registration or transfer' },
       { label: 'Logo design' },
       { label: 'Brand packaging' },
-      { label: '3 minor site changes a month', note: 'Text & photo updates' },
-      { label: '1 social media post a month' },
+      { label: '4 minor site changes a month', note: 'Text & photo updates' },
+      {
+        label: 'Member rates on add-on services',
+        note: 'Social posts from $25, branded swag from $50, extra updates $15',
+      },
     ],
   },
   {
@@ -27,8 +30,7 @@ const plans = [
       { label: 'Custom domain registration or transfer' },
       { label: 'Logo design' },
       { label: 'Brand packaging' },
-      { label: '5 minor site changes a month', note: 'Text & photo updates' },
-      { label: '2 social media posts a month' },
+      { label: '8 minor site changes a month', note: 'Text & photo updates, also includes google business updates' },
       { label: 'Google Business registration' },
       {
         label: 'Up to 3 business email accounts on your domain',
@@ -40,7 +42,10 @@ const plans = [
       },
       { label: 'Business card design & ordering', note: '50 cards a month, automatically ordered' },
       { label: 'Custom email signature design' },
-      { label: 'Branded swag ordering', note: 'Tees, mugs, posters, flyers & more — product cost separate' },
+      {
+        label: 'Member rates on add-on services',
+        note: 'Social posts from $25, branded swag from $50, extra updates $15',
+      },
     ],
   },
 ];
@@ -72,6 +77,15 @@ const addOns = [
     tint: 'rgba(234, 88, 12, 0.12)',
     description:
       'We take the photo or design a custom graphic from scratch, then write and publish the post.',
+  },
+  {
+    price: '$50',
+    unit: '/ item + cost',
+    title: 'Branded swag',
+    accent: 'var(--honey-gold)',
+    tint: 'rgba(240, 185, 73, 0.16)',
+    description:
+      'Custom-designed tees, mugs, posters, flyers & more — $50 to design each item, plus whatever it costs to print and ship.',
   },
 ];
 
@@ -308,13 +322,14 @@ export default function Pricing() {
               </em>
             </h2>
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-              These flat-rate add-ons are available to anyone on a paid monthly plan — simple
-              pricing for the little things that pop up between packages. Not a subscriber yet? No
-              problem, these services are billed at the hourly rate below.
+              These flat-rate add-ons are available to anyone on a paid monthly plan — social
+              posts, branded swag, extra site updates, and the odds and ends that come up along the
+              way. Not a subscriber yet? No problem, these services are billed at the hourly rate
+              below.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {addOns.map((addOn) => (
               <div
                 key={addOn.title}
@@ -395,8 +410,30 @@ export default function Pricing() {
             </h2>
             <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
               Anything past the package — new features, tech help, whatever comes
-              up — is a flat $75 an hour.
+              up — is a flat $75 an hour. A few things folks often ask for:
             </p>
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              {[
+                'Booking & scheduling setup',
+                'Online payments & invoicing',
+                'Website copywriting & blog posts',
+                'Menus, flyers & signage',
+                'SMS & appointment reminders',
+                'New pages & features',
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="text-sm px-4 py-2 rounded-full font-rounded"
+                  style={{
+                    color: 'var(--bone)',
+                    border: '1.5px solid rgba(245, 241, 235, 0.25)',
+                  }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

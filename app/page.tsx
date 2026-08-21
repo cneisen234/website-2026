@@ -23,16 +23,16 @@ const packageBits = [
     body: 'Colors, fonts, and a logo, plus a brand guide so everything you print matches.',
   },
   {
-    title: 'Social, handled',
+    title: 'Kept fresh',
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
-    body: 'I post for you every month so it stays active and looks like your brand.',
+    body: 'Monthly site updates and a tech guy on call, so your site stays current instead of going stale.',
   },
   {
     title: 'And so much more...',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'A custom domain, Google Business, business email, business cards, branded swag, and plenty more — all part of the package.',
+    body: 'A custom domain, Google Business, business email, business cards, and plenty more — all part of the package.',
   },
 ];
 

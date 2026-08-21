@@ -21,7 +21,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the monthly price work?',
         answer:
-          "It's a flat monthly fee that covers everything in your plan — your website, branding, social posts, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $75 an hour.",
+          "It's a flat monthly fee that covers everything in your plan — your website, branding, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $75 an hour.",
       },
       {
         question: 'Is there a contract or minimum?',
@@ -89,7 +89,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'How does the social media posting work?',
         answer:
-          "However you want it to. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. You can give us as much or as little control as you like. Need more than your plan includes? Extra posts are $25 for a basic level post, or $50 when we shoot the photo or design a custom graphic.",
+          "It's à la carte, so you add posts whenever you want them and only pay for what you use. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. For subscribers it's a flat $25 a post when you provide the photo or graphic, or $50 when we shoot the photo or design a custom one.",
       },
       {
         question: 'Can you help with computer or tech problems too?',
