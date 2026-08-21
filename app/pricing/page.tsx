@@ -409,31 +409,63 @@ export default function Pricing() {
               </em>
             </h2>
             <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
-              Anything past the package — new features, tech help, whatever comes
-              up — is a flat $75 an hour. A few things folks often ask for:
+              Anything past the package is a flat $75 an hour — from handy tools bolted onto your
+              site to being the tech guy in your back pocket for whatever else comes up.
             </p>
+          </div>
 
-            <div className="flex flex-wrap gap-3 mt-8">
-              {[
-                'Booking & scheduling setup',
-                'Online payments & invoicing',
-                'Website copywriting & blog posts',
-                'Menus, flyers & signage',
-                'SMS & appointment reminders',
-                'New pages & features',
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="text-sm px-4 py-2 rounded-full font-rounded"
-                  style={{
-                    color: 'var(--bone)',
-                    border: '1.5px solid rgba(245, 241, 235, 0.25)',
-                  }}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mt-12 max-w-4xl">
+            {[
+              {
+                label: 'Add-ons for your site',
+                accent: 'var(--ember-orange)',
+                items: [
+                  'Booking & scheduling',
+                  'Online payments & checkout',
+                  'Contact & intake forms',
+                  'Reviews & testimonials',
+                  'Photo galleries',
+                  'Email newsletter signup',
+                  'New pages & features',
+                ],
+              },
+              {
+                label: 'The tech guy in your back pocket',
+                accent: 'var(--honey-gold)',
+                items: [
+                  'Computer troubleshooting',
+                  'Wi-Fi & networking',
+                  'Printer & device setup',
+                  'Email & account help',
+                  'Software setup & training',
+                  'Point-of-sale (POS) setup',
+                  'Virus & malware cleanup',
+                ],
+              },
+            ].map((group) => (
+              <div key={group.label}>
+                <h3
+                  className="text-sm font-rounded uppercase tracking-wide mb-5"
+                  style={{ color: group.accent }}
                 >
-                  {item}
-                </span>
-              ))}
-            </div>
+                  {group.label}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-sm px-4 py-2 rounded-full font-rounded"
+                      style={{
+                        color: 'var(--bone)',
+                        border: '1.5px solid rgba(245, 241, 235, 0.25)',
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
