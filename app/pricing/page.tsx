@@ -438,8 +438,6 @@ export default function Pricing() {
                   'Printer & device setup',
                   'Email & account help',
                   'Software setup & training',
-                  'Point-of-sale (POS) setup',
-                  'Virus & malware cleanup',
                 ],
               },
             ].map((group) => (
@@ -450,7 +448,7 @@ export default function Pricing() {
                 >
                   {group.label}
                 </h3>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col items-start sm:flex-row sm:flex-wrap gap-3">
                   {group.items.map((item) => (
                     <span
                       key={item}
