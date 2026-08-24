@@ -61,6 +61,15 @@ const addOns = [
       'Every text or photo update beyond what your package includes. Same quick turnaround, small flat price.',
   },
   {
+    price: '$15',
+    unit: '/ page a month',
+    title: 'Extra page',
+    accent: 'var(--ember-deep)',
+    tint: 'rgba(194, 65, 12, 0.1)',
+    description:
+      "Need more room than your plan's page count? Add another custom-built page for a flat $15 a month.",
+  },
+  {
     price: '$25',
     unit: '/ post',
     title: 'Minor social media post',
@@ -323,13 +332,13 @@ export default function Pricing() {
             </h2>
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
               These flat-rate add-ons are available to anyone on a paid monthly plan — social
-              posts, branded swag, extra site updates, and the odds and ends that come up along the
-              way. Not a subscriber yet? No problem, these services are billed at the hourly rate
-              below.
+              posts, branded swag, extra pages and updates, and the odds and ends that come up along
+              the way. Not a subscriber yet? No problem, these services are billed at the hourly
+              rate below.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {addOns.map((addOn) => (
               <div
                 key={addOn.title}
