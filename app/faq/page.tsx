@@ -87,9 +87,9 @@ const faqGroups: FaqGroup[] = [
           "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Once you've used up the changes in your plan, each additional minor update is just $15. Anything bigger, like new features or integrations, is separate at $75 an hour.",
       },
       {
-        question: 'How does the social media posting work?',
+        question: 'How does content and branded design work?',
         answer:
-          "It's à la carte, so you add posts whenever you want them and only pay for what you use. Hand it off completely and we'll decide what goes out and where, or tell us exactly what to post on which platform. For subscribers it's a flat $25 a post when you provide the photo or graphic, or $50 when we shoot the photo or design a custom one.",
+          "It's à la carte, so you add pieces whenever you want them and only pay for what you use. For subscribers, written content — captions, copy, blurbs, and the like — is a flat $25 a piece. Custom branded content and swag — graphics, flyers, tees, mugs, and posters designed from scratch — is $50 a piece, plus whatever it costs to print and ship any physical items.",
       },
       {
         question: 'Can you help with computer or tech problems too?',

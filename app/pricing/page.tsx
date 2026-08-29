@@ -15,7 +15,7 @@ const plans = [
       { label: '4 minor site changes a month', note: 'Text & photo updates' },
       {
         label: 'Member rates on add-on services',
-        note: 'Social posts from $25, branded swag from $50, extra updates $15',
+        note: 'Content from $25, branded content & swag from $50, extra updates $15',
       },
     ],
   },
@@ -44,7 +44,7 @@ const plans = [
       { label: 'Custom email signature design' },
       {
         label: 'Member rates on add-on services',
-        note: 'Social posts from $25, branded swag from $50, extra updates $15',
+        note: 'Content from $25, branded content & swag from $50, extra updates $15',
       },
     ],
   },
@@ -64,37 +64,28 @@ const addOns = [
     price: '$15',
     unit: '/ page a month',
     title: 'Extra page',
-    accent: 'var(--ember-deep)',
-    tint: 'rgba(194, 65, 12, 0.1)',
+    accent: 'var(--ember-orange)',
+    tint: 'rgba(234, 88, 12, 0.12)',
     description:
       "Need more room than your plan's page count? Add another custom-built page for a flat $15 a month.",
   },
   {
     price: '$25',
-    unit: '/ post',
-    title: 'Minor social media post',
+    unit: '/ piece',
+    title: 'Content creation',
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     description:
-      'Text only, or with a photo or graphic you provide. We write it up and get it posted where you want it.',
-  },
-  {
-    price: '$50',
-    unit: '/ post',
-    title: 'Major social media post',
-    accent: 'var(--ember-orange)',
-    tint: 'rgba(234, 88, 12, 0.12)',
-    description:
-      'We take the photo or design a custom graphic from scratch, then write and publish the post.',
+      'Written content — captions, copy, blurbs, and the like. Tell us what you need and we write it up, ready to use.',
   },
   {
     price: '$50',
     unit: '/ item + cost',
-    title: 'Branded swag',
+    title: 'Branded content & swag',
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
     description:
-      'Custom-designed tees, mugs, posters, flyers & more — $50 to design each item, plus whatever it costs to print and ship.',
+      'Custom-designed graphics, flyers, tees, mugs, posters & more — $50 to design each piece, plus whatever it costs to print and ship any physical items.',
   },
 ];
 
@@ -331,8 +322,8 @@ export default function Pricing() {
               </em>
             </h2>
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-              These flat-rate add-ons are available to anyone on a paid monthly plan — social
-              posts, branded swag, extra pages and updates, and the odds and ends that come up along
+              These flat-rate add-ons are available to anyone on a paid monthly plan — content
+              creation, branded content &amp; swag, extra pages and updates, and the odds and ends that come up along
               the way. Not a subscriber yet? No problem, these services are billed at the hourly
               rate below.
             </p>

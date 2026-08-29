@@ -35,18 +35,19 @@ const pieces = [
     ],
   },
   {
-    id: 'the-socials',
+    id: 'the-content',
     num: '03',
-    eyebrow: 'The Socials',
+    eyebrow: 'The Content',
     dark: true,
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
-    heading: 'Social media, off your plate.',
-    body: "Want your social handled? We'll write and post for you so it stays active and looks like the rest of your brand — add it whenever you want, and only pay for the posts you use.",
+    heading: 'Custom branded content, designed for you.',
+    body: "Need graphics, flyers, or branded merch? We design custom content and items from scratch so everything looks like the same business — add it whenever you want, and only pay for the pieces you use.",
     included: [
-      'Simple flat rate per post',
-      'Posts that match your brand',
-      'As many or as few as you want',
+      'Custom-designed graphics & flyers',
+      'Branded swag — tees, mugs, posters & more',
+      'Everything matches your brand',
+      'Add as many or as few as you want',
     ],
   },
   {
@@ -74,7 +75,7 @@ const pieces = [
 const jumpLinks = [
   { label: 'The Website', href: '#website' },
   { label: 'The Brand', href: '#the-brand' },
-  { label: 'The Socials', href: '#the-socials' },
+  { label: 'The Content', href: '#the-content' },
 ];
 
 export default function Services() {
