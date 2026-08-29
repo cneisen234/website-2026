@@ -50,6 +50,31 @@ const plans = [
   },
 ];
 
+const buyouts = [
+  {
+    name: 'Brand in a Box',
+    price: '$4,500',
+    compare: '$9,000+',
+    pages: 5,
+    perPage: '$400',
+    accent: 'var(--ember-deep)',
+    tint: 'rgba(194, 65, 12, 0.1)',
+    summary:
+      'The 5-page custom-built site and the full brand — logo, colors, fonts, the works — built once and handed straight to you.',
+  },
+  {
+    name: 'Business in a Box',
+    price: '$8,000',
+    compare: '$15,000+',
+    pages: 10,
+    perPage: '$400',
+    accent: 'var(--forest-green)',
+    tint: 'rgba(95, 167, 119, 0.14)',
+    summary:
+      'The full 10-page site with branding, business email, Google Business, and print-ready extras — yours to keep, files and all.',
+  },
+];
+
 const addOns = [
   {
     price: '$15',
@@ -295,8 +320,8 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ADD-ONS — FOR SUBSCRIBERS — CREAM */}
-      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
+            {/* ADD-ONS — FOR SUBSCRIBERS — CREAM */}
+            <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{
@@ -367,6 +392,134 @@ export default function Pricing() {
                   {addOn.title}
                 </h3>
                 <p style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>{addOn.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PREFER TO BUY OUT? — ONE-TIME — PAPER */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--paper)' }}>
+        <div
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)',
+            transform: 'translate(30%, -20%)',
+          }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span className="badge badge-tilt mb-4">
+              <span className="badge-dot" />
+              Prefer to own it?
+            </span>
+            <h2
+              className="text-4xl md:text-6xl leading-[1.05] mb-6"
+              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+            >
+              Rather buy it out than{' '}
+              <em className="italic" style={{ color: 'var(--ember-deep)' }}>
+                subscribe?
+              </em>
+            </h2>
+            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+              Not everyone wants a monthly bill — and that&apos;s fair. Prefer to own your site outright?
+              Pay once and it&apos;s yours: the custom-built site, the full brand, and all the files, handed
+              straight to you. It&apos;s the same hand-built work big firms charge thousands for, priced
+              honestly for what it is. After handoff, any changes are the flat $75 an hour — or take the
+              wheel yourself.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl">
+            {buyouts.map((buyout) => (
+              <div
+                key={buyout.name}
+                className="card-fun tilt-none flex flex-col p-8 md:p-10"
+                style={{ backgroundColor: 'white', ['--shadow-color' as string]: buyout.accent } as CSSProperties}
+              >
+                <h3
+                  className="text-2xl md:text-3xl mb-3"
+                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                >
+                  {buyout.name}
+                </h3>
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span
+                    className="text-6xl md:text-7xl leading-none"
+                    style={{ color: buyout.accent, fontFamily: 'var(--font-heading)' }}
+                  >
+                    {buyout.price}
+                  </span>
+                  <span className="text-lg font-rounded" style={{ color: 'var(--stone)' }}>
+                    one-time
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mb-8">
+                  <span className="text-base font-rounded line-through" style={{ color: 'var(--stone)' }}>
+                    {buyout.compare}
+                  </span>
+                  <span className="text-sm font-rounded" style={{ color: 'var(--stone)' }}>
+                    at a typical firm
+                  </span>
+                </div>
+
+                <p className="mb-8" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
+                  {buyout.summary}
+                </p>
+
+                <ul className="space-y-4 mb-8">
+                  {[
+                    'Pay once — no subscription',
+                    'You own the site, brand & files outright',
+                    `${buyout.perPage} per extra page beyond the ${buyout.pages} included`,
+                    'Custom features (contact forms, booking, e-commerce & the like) quoted separately',
+                    'Updates after handoff at the flat $75/hr',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        className="mt-0.5 shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: buyout.tint }}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                          <path
+                            d="M3 8l3 3 7-7"
+                            stroke={buyout.accent}
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="/contact"
+                  className="btn-fun group mt-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
+                  style={{ backgroundColor: buyout.accent, color: 'white' }}
+                >
+                  Buy It Out
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="transition-transform group-hover:translate-x-1"
+                  >
+                    <path
+                      d="M4 10h12m0 0l-4-4m4 4l-4 4"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
             ))}
           </div>
