@@ -32,7 +32,7 @@ export default function Footer() {
             {/* Stacked logo lockup — flame above the wordmark */}
             <div className="mb-6">
               <Image
-                src="/transparent_logo.png"
+                src="/transparent_logo.webp"
                 alt="Kindling Digital"
                 width={1024}
                 height={1536}

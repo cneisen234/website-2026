@@ -59,7 +59,7 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               <Image
-                src="/transparent_logo.png"
+                src="/transparent_logo.webp"
                 alt="Kindling Digital"
                 width={1024}
                 height={1536}

@@ -127,7 +127,7 @@ export default function About() {
                 >
                   <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
                     <Image
-                      src="/chris.png"
+                      src="/chris.webp"
                       alt="Chris, developer and founder of Kindling Digital"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
@@ -206,7 +206,7 @@ export default function About() {
                 >
                   <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
                     <Image
-                      src="/megan.png"
+                      src="/megan.webp"
                       alt="Megan, designer and content editor at Kindling Digital"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"

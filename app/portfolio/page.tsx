@@ -91,6 +91,116 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Soady Poppers — LIGHT case study */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--paper)' }}>
+        <div
+          className="absolute bottom-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)', transform: 'translate(30%, 0)' }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-16 md:gap-12 items-center">
+            {/* Screenshots */}
+            <div className="md:col-span-7 order-2 md:order-1">
+              <div className="relative mx-auto max-w-xl md:ml-0">
+                {/* Desktop in a browser frame */}
+                <div
+                  className="rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '-12px 14px 0 rgba(214, 106, 60, 0.85)',
+                    transform: 'rotate(1.5deg)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#d98b6a' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#e8c069' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
+                  </div>
+                  <Image
+                    src="/soadypopperdesktop.webp"
+                    alt="The Soady Poppers website on desktop"
+                    width={1703}
+                    height={853}
+                    className="w-full h-auto"
+                  />
+                </div>
+
+                {/* Mobile overlapping */}
+                <div
+                  className="absolute -bottom-8 right-2 md:-bottom-10 md:-right-6 w-24 sm:w-28 md:w-40 rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '-6px 8px 0 rgba(240, 185, 73, 0.9)',
+                    transform: 'rotate(-5deg)',
+                  }}
+                >
+                  <Image
+                    src="/soadypoppermobile.webp"
+                    alt="The Soady Poppers website on mobile"
+                    width={386}
+                    height={838}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="md:col-span-5 order-1 md:order-2">
+              <span
+                className="badge badge-tilt mb-4"
+                style={{ color: 'var(--ember-deep)', backgroundColor: 'rgba(214, 106, 60, 0.14)' }}
+              >
+                <span className="badge-dot" />
+                Soady Poppers
+              </span>
+              <h2
+                className="text-4xl md:text-5xl mb-6 leading-[1.05]"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                A soda shop as fun as its sodas.
+              </h2>
+              <p className="text-lg mb-8" style={{ color: 'var(--charcoal)', opacity: 0.8, lineHeight: '1.75' }}>
+                Soady Poppers is a family-run soda pop shop in Fairview, Michigan —
+                hand-crafted dirty sodas, fresh-squeezed lemonade, energy refreshers
+                and Big Poppa&apos;s gourmet kettle corn. We built the whole site from
+                scratch and wired it up to take orders online, then matched the branding
+                to the counter: bright, playful, a little loud. From the menu to
+                checkout, it&apos;s all one shop.
+              </p>
+
+              <div className="flex flex-wrap gap-2.5 mb-10">
+                {built.map((item) => (
+                  <span
+                    key={item}
+                    className="chip-fun inline-flex items-center gap-2 text-sm px-4 py-2"
+                    style={{ backgroundColor: 'rgba(214, 106, 60, 0.08)', color: 'var(--charcoal)' }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--ember-deep)' }} />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://www.soadypoppers.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-fun group inline-flex items-center gap-2 px-8 py-4 text-lg"
+                style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
+              >
+                Visit the site
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Particular Notions — DARK case study */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--midnight)' }}>
         <div
@@ -169,7 +279,7 @@ export default function Portfolio() {
                     <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
                   </div>
                   <Image
-                    src="/particularnotions2.png"
+                    src="/particularnotions2.webp"
                     alt="The Particular Notions website on desktop"
                     width={1720}
                     height={892}
@@ -187,7 +297,7 @@ export default function Portfolio() {
                   }}
                 >
                   <Image
-                    src="/particularnotions1.png"
+                    src="/particularnotions1.webp"
                     alt="The Particular Notions website on mobile"
                     width={373}
                     height={810}
