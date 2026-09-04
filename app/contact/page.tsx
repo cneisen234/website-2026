@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import ContactForm from '@/components/ContactForm';
 
 export default function Contact() {
   return (
@@ -61,6 +62,30 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Contact Form — PAPER */}
+      <section className="pb-8 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="card-fun tilt-none p-8 md:p-12"
+              style={{ backgroundColor: 'white', ['--shadow-color' as string]: 'var(--ember-deep)' } as CSSProperties}
+            >
+              <h2
+                className="text-3xl md:text-4xl mb-2 leading-[1.1]"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                Send us a message.
+              </h2>
+              <p className="mb-8 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
+                Tell us a bit about your business and what you need. We&apos;ll get back to
+                you within 24 hours — no pressure, no jargon.
+              </p>
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Methods — DARK */}
       <section
         className="py-20 md:py-32 relative overflow-hidden"
@@ -89,7 +114,7 @@ export default function Contact() {
               className="text-4xl md:text-6xl mb-16 leading-[1.05]"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
-              Pick what works for you.
+              Or reach us directly.
             </h2>
 
             {/* Email — large prominent block */}

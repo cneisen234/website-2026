@@ -50,7 +50,8 @@ export default function Footer() {
               className="text-lg mb-8 max-w-md"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              The{' '}
+              Professional, custom digital technology for small businesses — websites,
+              software, and whatever else your business needs — plus a{' '}
               <em
                 style={{
                   color: 'var(--ember-orange)',
@@ -60,15 +61,7 @@ export default function Footer() {
               >
                 tech guy
               </em>
-              {' '}in your back pocket. Digital marketing that gives your brand a  <em
-                style={{
-                  color: 'var(--ember-orange)',
-                  fontStyle: 'italic',
-                  fontFamily: 'var(--font-heading)',
-                }}
-              >
-                spark
-              </em>, plus a hand with your everyday tech needs.
+              {' '}in your back pocket for everything after.
             </p>
 
             {/* Contact info */}

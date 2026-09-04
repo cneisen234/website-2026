@@ -1,50 +1,58 @@
 import type { CSSProperties } from 'react';
+import Image from 'next/image';
 
-const compare = [
+const capabilities = [
   {
-    label: 'Built around you',
-    body: 'Consistent colors, uniform fonts, a logo that makes sense — it tells them you are the real deal before they read a single word. That is exactly why it works, and done right, it pays for itself.',
-    accent: 'var(--ember-orange)',
-    good: true,
-  },
-];
-
-const packageBits = [
-  {
-    title: 'A custom website',
+    title: 'Get online',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'Built from scratch and matched to your brand. The kind of site that usually runs a few thousand, included.',
+    body: 'A custom website built from scratch, redesigns, branding, business email, and Google Business — a presence that looks like the real deal.',
+    items: ['Custom websites', 'Website redesigns', 'Branding & logo', 'Business email', 'Google Business'],
   },
   {
-    title: 'Logo & branding',
+    title: 'Sell & book',
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
-    body: 'Colors, fonts, and a logo, plus a brand guide so everything you print matches.',
+    body: 'Take payments, run an online store, and let customers book you around the clock — wired straight into your site.',
+    items: ['Online payments', 'Ecommerce', 'Booking & scheduling', 'Contact & intake forms'],
   },
   {
-    title: 'Kept fresh',
+    title: 'Work smarter',
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
-    body: 'Monthly site updates and a tech guy on call, so your site stays current instead of going stale.',
+    body: 'Custom software, web apps, and automation that take the busywork off your plate and connect the tools you already use.',
+    items: ['Custom software', 'Web applications', 'Business automation', 'Integrations', 'Internal tools'],
   },
   {
-    title: 'And so much more...',
-    accent: 'var(--ember-deep)',
-    tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'A custom domain, Google Business, business email, business cards, and plenty more — all part of the package.',
+    title: 'And a hand with the rest',
+    accent: 'var(--ember-orange)',
+    tint: 'rgba(234, 88, 12, 0.12)',
+    body: 'Ongoing updates, technical help, and whatever else comes up — a real person on call for the tech side of your business.',
+    items: ['Website updates', 'Tech support', 'Software setup & training', 'Wi-Fi & networking'],
   },
 ];
 
-const pocketBits = [
-  'Contact forms',
-  'Online payments',
-  'Online stores',
-  'Computer help',
-  'Wi-Fi & networking',
-  'Blogs',
-  'Software integrations',
-  'Software setup & training',
+const work = [
+  {
+    name: 'Soady Poppers',
+    tag: 'Soda shop · online ordering',
+    image: '/soadypopperdesktop.webp',
+    width: 1703,
+    height: 853,
+    shadow: 'rgba(214, 106, 60, 0.85)',
+    tilt: '1.5deg',
+    href: 'https://www.soadypoppers.com/',
+  },
+  {
+    name: 'Particular Notions',
+    tag: 'Handmade goods · storefront',
+    image: '/particularnotions2.webp',
+    width: 1720,
+    height: 892,
+    shadow: 'rgba(95, 167, 119, 0.8)',
+    tilt: '-1.5deg',
+    href: 'https://www.particularnotions.com/',
+  },
 ];
 
 export default function Home() {
@@ -75,29 +83,24 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20 md:py-28 relative">
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7">
+              <span className="badge badge-tilt mb-6 fade-in-up">
+                <span className="badge-dot" />
+                Digital & tech for small business
+              </span>
 
               <h1
-                className="mb-8 fade-in-up stagger-1"
+                className="mb-6 fade-in-up stagger-1"
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
                 <span className="block text-4xl md:text-6xl leading-[1.05]">
-                  The{' '}
-                  <span className="relative inline-block">
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-x-[-6px] top-[0.16em] bottom-[0.08em] -rotate-1 rounded-md"
-                      style={{ backgroundColor: 'rgba(240, 185, 73, 0.65)', zIndex: 0 }}
-                    />
-                    <span className="relative" style={{ zIndex: 1 }}>spark</span>
-                  </span>{' '}
-                  your
+                  The digital tools your business needs,
                 </span>
                 <span
                   className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    brand needs
+                    built custom
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"
@@ -118,17 +121,23 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-            </div>
 
-            {/* What you get card */}
-            <div className="md:col-span-5 w-full fade-in-up stagger-3">
-            <div className="flex flex-col gap-5 md:mb-15 fade-in-up stagger-3">
-            <a
-                  href="/pricing"
+              <p
+                className="text-lg md:text-xl max-w-xl mb-8 fade-in-up stagger-2"
+                style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
+              >
+                Kindling Digital builds professional, custom websites, software, and
+                technology for small businesses — the kind of work that usually costs a
+                fortune, priced for a small-business budget.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 fade-in-up stagger-3">
+                <a
+                  href="/contact"
                   className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
                 >
-                  See the Packages
+                  Get in Touch
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     className="transition-transform group-hover:translate-x-1"
@@ -137,73 +146,58 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="/contact"
+                  href="/portfolio"
                   className="btn-fun inline-flex items-center justify-center px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--paper)', color: 'var(--charcoal)' }}
                 >
-                  Get in Touch
+                  See Our Work
                 </a>
+              </div>
+
+              <p className="mt-5 text-sm fade-in-up stagger-4" style={{ color: 'var(--stone)' }}>
+                Websites &amp; branding from <strong style={{ color: 'var(--ember-deep)' }}>$100/month</strong>. No big upfront bill.
+              </p>
+            </div>
+
+            {/* Snapshot of a recent build */}
+            <div className="md:col-span-5 w-full fade-in-up stagger-3">
+              <div className="relative mx-auto max-w-md">
+                <div
+                  className="rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '10px 12px 0 rgba(214, 106, 60, 0.85)',
+                    transform: 'rotate(1.8deg)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#d98b6a' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#e8c069' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
+                  </div>
+                  <Image
+                    src="/soadypopperdesktop.webp"
+                    alt="A recent custom website built by Kindling Digital"
+                    width={1703}
+                    height={853}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
+                <span
+                  className="absolute -bottom-4 -left-3 badge badge-tilt"
+                  style={{ backgroundColor: 'white', border: '2px solid var(--charcoal)', color: 'var(--ember-deep)' }}
+                >
+                  <span className="badge-dot" />
+                  Recent build
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why it matters — DARK */}
-      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
-        <div
-          className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)', transform: 'translate(-30%, -30%)' }}
-        />
-
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mb-14">
-            <span className="badge badge-on-dark badge-tilt mb-4">
-              <span className="badge-dot" />
-              Why It Matters
-            </span>
-            <h2
-              className="text-4xl md:text-6xl mb-6 leading-[1.05]"
-              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
-            >
-              People pick the business that looks the part.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl tilt-alt">
-            {compare.map((c) => (
-              <div
-                key={c.label}
-                className="card-fun card-fun-dark p-8"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', ['--shadow-color' as string]: c.accent } as CSSProperties}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span
-                    className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: c.good ? 'var(--ember-orange)' : 'rgba(255,255,255,0.1)' }}
-                  >
-                    {c.good ? (
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8l3 3 7-7" stroke="var(--midnight)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    ) : (
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--stone)' }} />
-                    )}
-                  </span>
-                  <span className="text-xl" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                    {c.label}
-                  </span>
-                </div>
-                <p style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
-                  {c.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What's in the package — CREAM */}
+      {/* What we can build — CREAM */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
@@ -214,45 +208,55 @@ export default function Home() {
           <div className="max-w-3xl mb-16">
             <span className="badge badge-tilt mb-4">
               <span className="badge-dot" />
-              The Package
+              What We Do
             </span>
-            <h2 className="text-4xl md:text-6xl leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-              Your whole presence, one package.
+            <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+              Whatever your business needs to run online.
             </h2>
+            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+              Most people find us for a website — but that&apos;s just the start. If it&apos;s
+              digital, there&apos;s a good chance we can build it, and stick around to keep it
+              running. One team for the whole tech side of your business.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-x-8 gap-y-10 max-w-6xl tilt-alt">
-            {packageBits.map((bit) => (
+            {capabilities.map((cap) => (
               <div
-                key={bit.title}
-                className="card-fun group p-10"
-                style={{ backgroundColor: 'white', ['--shadow-color' as string]: bit.accent } as CSSProperties}
+                key={cap.title}
+                className="card-fun group p-8 md:p-10"
+                style={{ backgroundColor: 'white', ['--shadow-color' as string]: cap.accent } as CSSProperties}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110 group-hover:-rotate-12"
-                    style={{ backgroundColor: bit.tint }}
+                    style={{ backgroundColor: cap.tint }}
                   >
-                    <span className="w-4 h-4 rounded-full" style={{ backgroundColor: bit.accent }} />
+                    <span className="w-4 h-4 rounded-full" style={{ backgroundColor: cap.accent }} />
                   </div>
-                  <h3 className="text-3xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-                    {bit.title}
+                  <h3 className="text-2xl md:text-3xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                    {cap.title}
                   </h3>
                 </div>
-                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>{bit.body}</p>
+                <p className="mb-6" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>{cap.body}</p>
+                <div className="flex flex-wrap gap-2">
+                  {cap.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-sm px-3 py-1.5 rounded-full"
+                      style={{ backgroundColor: cap.tint, color: 'var(--ash-gray)' }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <div className="mt-14">
             <a href="/services" className="group inline-flex items-center gap-2 font-medium text-lg transition-all" style={{ color: 'var(--ember-deep)' }}>
-              See what&apos;s in a package
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
-                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-            <a href="/pricing" className="group inline-flex items-center gap-2 font-medium text-lg transition-all" style={{ color: 'var(--ember-deep)' }}>
-              See pricing
+              See everything we can do
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
                 <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -261,7 +265,157 @@ export default function Home() {
         </div>
       </section>
 
-      {/* In your back pocket — DARK */}
+      {/* The work — DARK */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
+        <div
+          className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)', transform: 'translate(-30%, -30%)' }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-16">
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              The Work
+            </span>
+            <h2
+              className="text-4xl md:text-6xl mb-6 leading-[1.05]"
+              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+            >
+              Take a look for yourself.
+            </h2>
+            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
+              Every site is built by hand and made to match the business behind it. These
+              are real, live businesses we&apos;ve worked with.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 md:gap-10 max-w-6xl mb-14">
+            {work.map((project) => (
+              <a
+                key={project.name}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div
+                  className="rounded-2xl overflow-hidden bg-white transition-transform duration-300 group-hover:-translate-y-1"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: `10px 12px 0 ${project.shadow}`,
+                    transform: `rotate(${project.tilt})`,
+                  }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#d98b6a' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#e8c069' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
+                  </div>
+                  <Image
+                    src={project.image}
+                    alt={`The ${project.name} website built by Kindling Digital`}
+                    width={project.width}
+                    height={project.height}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="mt-8 flex items-baseline justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+                      {project.name}
+                    </h3>
+                    <p className="text-sm mt-1" style={{ color: 'var(--bone)', opacity: 0.55 }}>
+                      {project.tag}
+                    </p>
+                  </div>
+                  <span
+                    className="inline-flex items-center gap-1.5 text-sm shrink-0"
+                    style={{ color: 'var(--ember-orange)' }}
+                  >
+                    Visit
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <a
+            href="/portfolio"
+            className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
+            style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
+          >
+            See the full portfolio
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+              <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      {/* Pricing contrast — CREAM */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)', transform: 'translate(20%, 20%)' }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-12 items-center max-w-6xl">
+            <div className="md:col-span-6">
+              <span className="badge badge-tilt mb-4">
+                <span className="badge-dot" />
+                Pricing
+              </span>
+              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                Professional and custom, without the big upfront bill.
+              </h2>
+              <p className="text-lg mb-8" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+                A custom website and full branding usually means thousands of dollars
+                before you&apos;re even live. We do it as one flat monthly price — so a
+                professional presence is something an ordinary small business can
+                actually afford. Prefer to own it outright? You can buy it out, too.
+              </p>
+              <a
+                href="/pricing"
+                className="btn-fun group inline-flex items-center gap-2 px-8 py-4 text-lg"
+                style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
+              >
+                See pricing
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                  <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="md:col-span-6 grid sm:grid-cols-2 gap-6 tilt-alt">
+              {[
+                { name: 'Brand in a Box', price: '$100', accent: 'var(--ember-deep)', desc: 'Custom 5-page site, logo & branding, monthly updates.' },
+                { name: 'Business in a Box', price: '$250', accent: 'var(--forest-green)', desc: 'A 10-page site, branding, business email, Google Business & more.' },
+              ].map((plan) => (
+                <div
+                  key={plan.name}
+                  className="card-fun p-8 flex flex-col"
+                  style={{ backgroundColor: 'white', ['--shadow-color' as string]: plan.accent } as CSSProperties}
+                >
+                  <span className="text-sm font-rounded mb-2" style={{ color: 'var(--stone)' }}>{plan.name}</span>
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="text-5xl leading-none" style={{ color: plan.accent, fontFamily: 'var(--font-heading)' }}>{plan.price}</span>
+                    <span className="text-base font-rounded" style={{ color: 'var(--stone)' }}>/mo</span>
+                  </div>
+                  <p className="text-sm" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>{plan.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ongoing partner — DARK */}
       <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
         <div
           className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
@@ -269,37 +423,20 @@ export default function Home() {
         />
 
         <div className="container mx-auto px-4 relative">
-          <div className="grid md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-6">
-              <span className="badge badge-on-dark badge-tilt mb-4">
-                <span className="badge-dot" />
-                In Your Back Pocket
-              </span>
-              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                And a tech guy for everything else.
-              </h2>
-              <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
-                The package gets you online and looking sharp. After that,
-                we&apos;re still around. Want a booking form, online payments, or a
-                blog? We&apos;ll build it. Computer at the shop acting up? Call us.
-                Basically anything techy, we&apos;ve got you.
-              </p>
-            </div>
-
-            <div className="md:col-span-6">
-              <div className="grid sm:grid-cols-2 gap-3">
-                {pocketBits.map((item) => (
-                  <div
-                    key={item}
-                    className="chip-fun chip-fun-dark p-4 flex items-center gap-3"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
-                  >
-                    <span className="inline-block w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: 'var(--ember-orange)' }} />
-                    <span className="text-sm md:text-base" style={{ color: 'var(--bone)' }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              A Partner, Not a Project
+            </span>
+            <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+              The tech guy in your back pocket.
+            </h2>
+            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
+              A lot of clients start with a website and come back when they need
+              something more — online payments, a booking system, a tool to save them
+              time, a hand with the computer at the shop. You don&apos;t have to go find a
+              new company every time. We&apos;re here for whatever comes next.
+            </p>
           </div>
         </div>
       </section>
@@ -318,11 +455,11 @@ export default function Home() {
               Get Started
             </span>
             <h2 className="text-5xl md:text-7xl mb-8 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-              Ready to look the part?
+              Tell us what you&apos;re working on.
             </h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
-              Tell us about your business and we&apos;ll figure out what you
-              need.
+              Whatever the digital or tech problem, tell us about your business and
+              we&apos;ll figure out how we can help.
             </p>
             <a
               href="/contact"

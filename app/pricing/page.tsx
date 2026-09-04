@@ -226,7 +226,7 @@ export default function Pricing() {
               className="text-lg mt-6 max-w-2xl"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
             >
-             We custom build your website using the same tools and design principles large firms charge thousands for. It comes with the package. Pick the plan that works for you.
+             A professional, custom-built website and a full brand — the kind of work that usually costs thousands upfront. With us, it&apos;s one flat monthly price. Pick the plan that fits.
             </p>
           </div>
 
@@ -427,9 +427,8 @@ export default function Pricing() {
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
               Not everyone wants a monthly bill — and that&apos;s fair. Prefer to own your site outright?
               Pay once and it&apos;s yours: the custom-built site, the full brand, and all the files, handed
-              straight to you. It&apos;s the same hand-built work big firms charge thousands for, priced
-              honestly for what it is. After handoff, any changes are the flat $75 an hour — or take the
-              wheel yourself.
+              straight to you. It&apos;s the same hand-built, custom work big firms charge much more for.
+              After handoff, any changes are the flat $75 an hour — or take the wheel yourself.
             </p>
           </div>
 
@@ -563,7 +562,9 @@ export default function Pricing() {
             </h2>
             <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}>
               Anything past the package is a flat $75 an hour — from handy tools bolted onto your
-              site to being the tech guy in your back pocket for whatever else comes up.
+              site to being the tech guy in your back pocket for whatever else comes up. Bigger
+              custom builds, like software, web apps, and automations, are scoped and quoted up
+              front, so you always know the cost before we start.
             </p>
           </div>
 

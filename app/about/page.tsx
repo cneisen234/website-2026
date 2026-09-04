@@ -73,11 +73,11 @@ export default function About() {
             <div className="md:col-span-5 w-full fade-in-up stagger-3">
             <div className="flex flex-col gap-5 md:mb-5 fade-in-up stagger-3">
             <a
-                  href="/pricing"
+                  href="/contact"
                   className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
                 >
-                  See the Packages
+                  Get in Touch
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     className="transition-transform group-hover:translate-x-1"
@@ -86,11 +86,11 @@ export default function About() {
                   </svg>
                 </a>
                 <a
-                  href="/contact"
+                  href="/pricing"
                   className="btn-fun inline-flex items-center justify-center px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--paper)', color: 'var(--charcoal)' }}
                 >
-                  Get in Touch
+                  See the Packages
                 </a>
                 </div>
             </div>
@@ -150,9 +150,13 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
                 <p>
-                  I&apos;ve spent over seven years as a software engineer
-                  building websites, apps, and all kinds of tools, and doing
-                  digital marketing for small companies along the way. I&apos;m passionate about small businesses and want to give them access to tools that have long been out of their reach. Why should the big guys monopolize the resources when it&apos;s the everyday small business owner that needs them the most? That&apos;s where I come in. Reach out to me, I&apos;m here to help and I&apos;ve come up with a very affordable way to give you the best tools on the market.
+                  I&apos;ve spent over seven years as a software engineer, building
+                  websites, apps, and all kinds of custom tools for small companies
+                  along the way. I&apos;m passionate about small businesses and want to give
+                  them access to the kind of technology that&apos;s long been out of their
+                  reach. Why should the big guys have all the good tools when it&apos;s the
+                  everyday small business owner who needs them most? That&apos;s where I come
+                  in. Whatever the digital or tech problem, reach out — I&apos;m here to help.
                 </p>
               </div>
             </div>
@@ -242,16 +246,17 @@ export default function About() {
 
             <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
               <p>
-                For the longest time, getting a professional website meant one of
-                two things: pay a big company a small fortune, or do it yourself
-                with some cheap template builder and hope it looks okay.
+                For a long time, getting professional, custom technology meant one of
+                two things: pay a big company a small fortune, or piece it together
+                yourself and hope for the best. For most small businesses, neither is a
+                real option.
               </p>
               <p>
-                We&apos;re past the age
-                where this stuff has to sit behind big-business bureaucracy, so we
-                built a third way. You get a real, custom-built presence, the
-                kind that&apos;d normally run thousands, for a flat monthly price.
-                Best of all, we do all of the work for you so you can focus on what you do best.
+                We think that&apos;s backwards. The tools that help a business grow
+                shouldn&apos;t be reserved for the big players. So we make real,
+                custom-built work — the kind that&apos;d normally run thousands — something
+                an ordinary small business can actually afford. Best of all, we do all
+                of the work for you, so you can focus on what you do best.
               </p>
             </div>
           </div>

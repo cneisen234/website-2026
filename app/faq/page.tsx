@@ -239,11 +239,11 @@ export default function FAQ() {
           <div className="md:col-span-5 w-full fade-in-up stagger-3">
             <div className="flex flex-col gap-5 fade-in-up stagger-3">
             <a
-                  href="/pricing"
+                  href="/contact"
                   className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
                 >
-                  See the Packages
+                  Get in Touch
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     className="transition-transform group-hover:translate-x-1"
@@ -252,11 +252,11 @@ export default function FAQ() {
                   </svg>
                 </a>
                 <a
-                  href="/contact"
+                  href="/pricing"
                   className="btn-fun inline-flex items-center justify-center px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--paper)', color: 'var(--charcoal)' }}
                 >
-                  Get in Touch
+                  See the Packages
                 </a>
                 </div>
             </div>

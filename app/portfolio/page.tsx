@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const built = [
   'Custom website',
+  'Online store & checkout',
   'Logo & branding',
-  'Brand colors & fonts',
   'Built from scratch',
   'Works on any device',
 ];
@@ -62,6 +62,13 @@ export default function Portfolio() {
                 </span>
               </span>
             </h1>
+            <p
+              className="text-lg md:text-xl max-w-lg fade-in-up stagger-2"
+              style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
+            >
+              Real, live businesses we&apos;ve worked with — built from scratch, branding
+              and all. Take a look, then imagine what we could build for you.
+            </p>
             </div>
             <div className="md:col-span-5 w-full fade-in-up stagger-3">
             <div className="flex flex-col gap-5 fade-in-up stagger-3">

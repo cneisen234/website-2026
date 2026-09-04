@@ -4,78 +4,96 @@ const pieces = [
   {
     id: 'website',
     num: '01',
-    eyebrow: 'The Website',
+    eyebrow: 'Websites',
     dark: true,
     accent: 'var(--ember-orange)',
     tint: 'rgba(251, 146, 60, 0.14)',
     heading: 'Your site, built from scratch.',
-    body: "We build every site by hand with the same tools the big companies use. It's made to match your brand and quick to load, and because it's built from scratch, you can keep adding to it later.",
+    body: "We build every site by hand — no templates. It's made to match your brand, quick to load, and works on any device. Because it's custom, you can keep adding to it as your business grows.",
     included: [
-      'Up to 5 or 10 pages, depending on your package',
       'Custom design that matches your brand',
       'Fast, and works on any device',
+      'Redesigns of an existing site',
+      'Business email & Google Business setup',
       'Built so you can add to it later',
     ],
   },
   {
     id: 'the-brand',
     num: '02',
-    eyebrow: 'The Brand',
+    eyebrow: 'Branding',
     dark: false,
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     heading: 'A brand that holds together.',
-    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you. You get a brand document that spells it all out, so when you order business cards, fliers, or anything else, everything matches and looks like the same business.",
+    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you. You get a brand guide that spells it all out, so your website, business cards, and anything else all look like the same business.",
     included: [
       'Logo design',
       'Brand colors & fonts',
       'A brand guide document',
       'Business cards & email signature design',
-      'A look that stays consistent everywhere',
+      'Custom graphics, flyers & branded swag',
     ],
   },
   {
-    id: 'the-content',
+    id: 'sell-and-book',
     num: '03',
-    eyebrow: 'The Content',
+    eyebrow: 'Sell & Book',
     dark: true,
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
-    heading: 'Custom branded content, designed for you.',
-    body: "Need graphics, flyers, or branded merch? We design custom content and items from scratch so everything looks like the same business — add it whenever you want, and only pay for the pieces you use.",
+    heading: 'Take orders and bookings online.',
+    body: "Turn your site into something that works for you around the clock. Sell products, take payments, and let customers book appointments themselves — all built right into your site so it's one smooth experience.",
     included: [
-      'Custom-designed graphics & flyers',
-      'Branded swag — tees, mugs, posters & more',
-      'Everything matches your brand',
-      'Add as many or as few as you want',
+      'Online payments & checkout',
+      'Online stores & ecommerce',
+      'Booking & scheduling',
+      'Contact & intake forms',
+      'Reviews, galleries & newsletter signup',
     ],
   },
   {
-    id: 'and-more',
+    id: 'software',
     num: '04',
-    eyebrow: 'And More',
+    eyebrow: 'Software & Automation',
     dark: false,
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    heading: 'And so much more.',
-    body: "",
+    heading: 'Custom software that does the busywork.',
+    body: "This is where we go beyond a website. Need a tool built around how your business actually runs? We build custom software, web apps, and automations that save you time and connect the tools you already use.",
     included: [
-      'Contact forms',
-      'Blogs',
-      'E-commerce',
-      'Booking forms',
-      'Software integrations',
-      'Computer troubleshooting',
+      'Custom software & web applications',
+      'Business automation',
+      'Integrations between your tools',
+      'Internal tools & dashboards',
+      'Custom digital solutions of all kinds',
+    ],
+  },
+  {
+    id: 'support',
+    num: '05',
+    eyebrow: 'Ongoing Support',
+    dark: true,
+    accent: 'var(--forest-green)',
+    tint: 'rgba(95, 167, 119, 0.14)',
+    heading: 'A tech guy in your back pocket.',
+    body: "We don't disappear once you're live. We keep your site updated, and we're around for whatever else comes up on the tech side — a real person who knows your business, on call.",
+    included: [
+      'Ongoing website updates',
+      'Computer & tech troubleshooting',
       'Wi-Fi & networking',
       'Software setup & training',
+      'Email & account help',
     ],
   },
 ];
 
 const jumpLinks = [
-  { label: 'The Website', href: '#website' },
-  { label: 'The Brand', href: '#the-brand' },
-  { label: 'The Content', href: '#the-content' },
+  { label: 'Websites', href: '#website' },
+  { label: 'Branding', href: '#the-brand' },
+  { label: 'Sell & Book', href: '#sell-and-book' },
+  { label: 'Software', href: '#software' },
+  { label: 'Support', href: '#support' },
 ];
 
 export default function Services() {
@@ -100,13 +118,13 @@ export default function Services() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">The package and</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Everything we</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}
               >
                 <span className="relative inline-block">
-                 the works
+                 can build
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
                     height="14"
@@ -128,9 +146,13 @@ export default function Services() {
               </span>
             </h1>
 
-            <div>
-           
-            </div>
+            <p
+              className="text-lg md:text-xl max-w-lg fade-in-up stagger-2"
+              style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
+            >
+              Most businesses come to us for a website. Then they find out we can build
+              just about anything digital they need — and stick around to keep it running.
+            </p>
           </div>
           <div className="md:col-span-5 w-full fade-in-up stagger-3">
           <div className="flex flex-wrap md:mb-10 md:flex-col gap-2 fade-in-up stagger-3">
@@ -248,6 +270,41 @@ export default function Services() {
           </div>
         </section>
       ))}
+
+      {/* CTA — CREAM */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full opacity-15 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--ember-deep) 0%, transparent 70%)', transform: 'translate(-50%, -50%)' }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="badge badge-tilt mb-6">
+              <span className="badge-dot" />
+              Get Started
+            </span>
+            <h2 className="text-4xl md:text-6xl mb-8 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+              Not sure what you need? That&apos;s fine.
+            </h2>
+            <p className="text-xl mb-12 max-w-2xl mx-auto" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
+              Tell us what you&apos;re trying to do and we&apos;ll figure out the right way to
+              get there — no jargon, no pressure.
+            </p>
+            <a
+              href="/contact"
+              className="btn-fun group inline-flex items-center gap-2 px-10 py-5 text-lg"
+              style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
+            >
+              Get in Touch
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
