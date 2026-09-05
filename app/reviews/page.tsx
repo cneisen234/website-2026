@@ -29,11 +29,18 @@ const reviews: Review[] = [
       "Christopher Neisen is a coding machine and a strong leader. I have gotten to know Chris well over the past year and it has been a pleasure to work with him. He is one of those rare guys who can lead a development team, help with any problems they may have, manage the project and do individual contributor work himself. He is both comfortable in a straight line engineering position or in the leader/manager role, for me he has done both jobs at once exceedingly well! One of Chris's superpowers is that he takes initiative and that initiative is always well thought out, NOT reckless, and it makes big impacts. I don't have to tell him what to do, he just knows what to do. When you have worked in startups and you have someone like this, they are like gold, totally invaluable. You got a million things to do and its nice to know someone has got your back. Chris is one of those guys who has your back, you can walk away from a project without worry. Finally and most importantly, Chris is a guy with high integrity and a great positive personality. If you don't know Chris! Get to know Chris! You won't regret it",
   },
   {
+    name: 'Jared Hineman',
+    company: 'CEO of WeClean',
+    rating: 5,
+    body:
+      "I had the pleasure of working closely with Chris at WeClean, and he consistently proved himself to be an exceptional full stack software engineer with outstanding skill and a strong work ethic. He possesses a deep understanding of software development principles and remarkable technical proficiency. His ability to grasp complex concepts quickly and apply them effectively to solve intricate problems was invaluable to our team's success. One of his greatest strengths is problem-solving; he approaches challenges with a logical, analytical mindset and examines every aspect of a problem to come up with an efficient solution that keeps the project moving forward. His attention to detail and commitment to delivering high-quality code were evident in everything he built for us. I have no doubt he'll make significant contributions to any team and help drive its success.",
+  },
+  {
     name: 'Jason Gibb',
     company: 'COO at Nash Capital',
     rating: 5,
     body:
-      "WeClean needed a full-stack developer to build a SaaS application from scratch. In less than three months Chris created the app from start to finish, with fully-functional front end, back end, and data model. Chris was a pleasure to work with on the project, providing excellent communication, asking great questions to understand customer needs, and bringing new ideas to the table at every standup. I would definitely hire him again.",
+      "We needed a full-stack developer to build a SaaS application from scratch. In less than three months Chris created the app from start to finish, with fully-functional front end, back end, and data model. Chris was a pleasure to work with on the project, providing excellent communication, asking great questions to understand customer needs, and bringing new ideas to the table at every standup. I would definitely hire him again.",
   },
 ];
 
