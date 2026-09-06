@@ -100,7 +100,7 @@ export default function Home() {
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    We&apos;ll figure it out.
+                    We&apos;re on it!
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"

@@ -19,6 +19,11 @@ const faqGroups: FaqGroup[] = [
     title: 'How it works',
     items: [
       {
+        question: 'Do you only build websites?',
+        answer:
+          "No — a website is just where most people start. We also build online ordering and payments, booking systems, custom software, automations, and integrations, and we handle the everyday tech side once you're up and running. You don't even need a full website plan; smaller custom work and tech help are billed hourly at $75. Tell us what's not working and we'll figure out the fix.",
+      },
+      {
         question: 'How does the monthly price work?',
         answer:
           "It's a flat monthly fee that covers everything in your plan — your website, branding, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $75 an hour.",
@@ -99,7 +104,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: "What if I'm not sure what I need?",
         answer:
-          "That's part of the process. Tell us what you're trying to do and we'll be straight with you about what makes sense — which plan fits, or whether it's really just a bit of hourly work.",
+          "That's part of the process — you don't need to arrive with a technical spec. Tell us what you're trying to do and we'll be straight with you about what makes sense: which plan fits, whether it's a bit of hourly work, or a larger custom build we'd scope and quote up front.",
       },
     ],
   },
