@@ -4,17 +4,17 @@ const steps = [
   {
     num: '01',
     title: 'We talk it through',
-    body: "We start with a straightforward conversation about your business and what you're going for.",
+    body: "We start with a straightforward conversation about your business, what's getting in the way, and what you're trying to do.",
   },
   {
     num: '02',
     title: 'We build a first draft',
-    body: "Within a few days we'll have a first version put together, so you've got something real to react to.",
+    body: "For a website, you'll have a first version within a few days. For a bigger custom build, we scope it and map out the approach first. Either way, you get something real to react to early.",
   },
   {
     num: '03',
     title: 'We make it yours',
-    body: 'We go back and forth as often as you need, until it looks and feels exactly like you want.',
+    body: 'We go back and forth as often as you need, until it works — and looks — exactly the way you want.',
   },
 ];
 

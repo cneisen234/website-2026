@@ -35,7 +35,7 @@ export default function Portfolio() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Sparks I've given</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Sparks we've given</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}
