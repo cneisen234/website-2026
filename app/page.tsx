@@ -85,7 +85,7 @@ export default function Home() {
             <div className="md:col-span-7">
               <span className="badge badge-tilt mb-6 fade-in-up">
                 <span className="badge-dot" />
-                Your small-business tech partner
+                Digital & tech for small business
               </span>
 
               <h1
@@ -93,14 +93,14 @@ export default function Home() {
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
                 <span className="block text-4xl md:text-6xl leading-[1.05]">
-                  Something in your business getting in the way?
+                  Got a technology problem?
                 </span>
                 <span
                   className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    We&apos;ll fix it.
+                    We&apos;ll figure it out.
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"
@@ -126,10 +126,10 @@ export default function Home() {
                 className="text-lg md:text-xl max-w-xl mb-8 fade-in-up stagger-2"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
               >
-                You don&apos;t need to know whether the answer is a website, an app, some
-                automation, or a custom system that doesn&apos;t exist yet. Tell us what&apos;s not
-                working in your business — we figure out the technology and build it, at a
-                price a small business can actually afford.
+                Websites, online ordering, payments, booking, automation, custom
+                software, and more — built around how your business actually works.
+                No big agency bill. No need to become a technology expert. Just tell us
+                what you need.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 fade-in-up stagger-3">
