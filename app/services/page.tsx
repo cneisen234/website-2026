@@ -9,7 +9,7 @@ const pieces = [
     accent: 'var(--ember-orange)',
     tint: 'rgba(251, 146, 60, 0.14)',
     heading: 'Your site, built from scratch.',
-    body: "We build every site by hand — no templates. It's made to match your brand, quick to load, and works on any device. Because it's custom, you can keep adding to it as your business grows.",
+    body: "Maybe you don't have a site yet, or the one you've got doesn't look like the quality of your work. We build every site by hand — no templates — made to match your brand, quick to load, and working on any device. Because it's custom, it can keep growing with your business.",
     included: [
       'Custom design that matches your brand',
       'Fast, and works on any device',
@@ -43,7 +43,7 @@ const pieces = [
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
     heading: 'Take orders and bookings online.',
-    body: "Turn your site into something that works for you around the clock. Sell products, take payments, and let customers book appointments themselves — all built right into your site so it's one smooth experience.",
+    body: "When every order or booking runs through a phone call, a text, or waiting until morning, you lose customers who wanted to buy right then. Let people browse, buy, pay, and book appointments themselves — around the clock, built right into your site so it's one smooth experience.",
     included: [
       'Online payments & checkout',
       'Online stores & ecommerce',
@@ -60,7 +60,7 @@ const pieces = [
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
     heading: 'Custom software that does the busywork.',
-    body: "This is where we go beyond a website. Need a tool built around how your business actually runs? We build custom software, web apps, and automations that save you time and connect the tools you already use.",
+    body: "Sometimes what you need doesn't exist in an off-the-shelf tool — or you're stuck doing the same job by hand every week. This is where we go past a website: custom software, web apps, and automations built around how your business actually runs, connecting the tools you already use.",
     included: [
       'Custom software & web applications',
       'Business automation',
@@ -77,7 +77,7 @@ const pieces = [
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     heading: 'A tech guy in your back pocket.',
-    body: "We don't disappear once you're live. We keep your site updated, and we're around for whatever else comes up on the tech side — a real person who knows your business, on call.",
+    body: "We don't disappear once you're live. We keep your site updated and we're around for whatever else comes up on the tech side — no employee to hire, no new company to track down every time. Just a real person who already knows your business, on call as your needs change.",
     included: [
       'Ongoing website updates',
       'Computer & tech troubleshooting',
@@ -150,8 +150,10 @@ export default function Services() {
               className="text-lg md:text-xl max-w-lg fade-in-up stagger-2"
               style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
             >
-              Most businesses come to us for a website. Then they find out we can build
-              just about anything digital they need — and stick around to keep it running.
+              Most businesses come to us for a website. Then they find out that if
+              it&apos;s digital and it&apos;s slowing them down, we can probably build the fix —
+              and stick around to keep it running. You don&apos;t have to know what you need;
+              tell us the problem and we&apos;ll sort out the technology.
             </p>
           </div>
           <div className="md:col-span-5 w-full fade-in-up stagger-3">

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Reviews | Kindling Digital',
   description:
-    'See what clients are saying about working with Kindling Digital on their websites and branding.',
+    'See what clients are saying about working with Kindling Digital — the technology partner small businesses call for websites, custom builds, and ongoing support.',
 };
 
 type Review = {
@@ -252,7 +252,7 @@ export default function Reviews() {
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              Let's talk about your website and bring your ideas to life — no commitment required.
+              Tell us what your business needs and we'll figure out how to help — no commitment required.
             </p>
             <a
               href="/contact"

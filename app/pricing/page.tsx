@@ -226,7 +226,7 @@ export default function Pricing() {
               className="text-lg mt-6 max-w-2xl"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.7' }}
             >
-             A professional, custom-built website and a full brand — the kind of work that usually costs thousands upfront. With us, it&apos;s one flat monthly price. Pick the plan that fits.
+             A professional, custom-built website and a full brand — the kind of work that usually costs thousands upfront, and that you&apos;d otherwise have to manage yourself. With us, it&apos;s one flat monthly price, built and handled for you. Each plan covers the package below; anything custom on top is quoted separately, so you always know the cost. Pick the plan that fits.
             </p>
           </div>
 

@@ -6,28 +6,28 @@ const capabilities = [
     title: 'Get online',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'A custom website built from scratch, redesigns, branding, business email, and Google Business — a presence that looks like the real deal.',
+    body: 'When people search for you and come up empty — or the site they find undersells how good you really are. A custom site, branding, business email, and Google Business that put your best foot forward.',
     items: ['Custom websites', 'Website redesigns', 'Branding & logo', 'Business email', 'Google Business'],
   },
   {
     title: 'Sell & book',
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
-    body: 'Take payments, run an online store, and let customers book you around the clock — wired straight into your site.',
+    body: 'When every order or booking means a phone call, a text, or waiting until morning. Let customers browse, buy, pay, and book on their own — right from your site, any time of day.',
     items: ['Online payments', 'Ecommerce', 'Booking & scheduling', 'Contact & intake forms'],
   },
   {
     title: 'Work smarter',
     accent: 'var(--honey-gold)',
     tint: 'rgba(240, 185, 73, 0.16)',
-    body: 'Custom software, web apps, and automation that take the busywork off your plate and connect the tools you already use.',
+    body: 'When you are retyping the same information, doing everything by hand, or juggling tools that refuse to talk to each other. Custom software and automation that take the busywork off your plate.',
     items: ['Custom software', 'Web applications', 'Business automation', 'Integrations', 'Internal tools'],
   },
   {
     title: 'And a hand with the rest',
     accent: 'var(--ember-orange)',
     tint: 'rgba(234, 88, 12, 0.12)',
-    body: 'Ongoing updates, technical help, and whatever else comes up — a real person on call for the tech side of your business.',
+    body: 'When something breaks, needs an update, or you just do not know who to call. A real person who knows your business and handles the tech side as things come up.',
     items: ['Website updates', 'Tech support', 'Software setup & training', 'Wi-Fi & networking'],
   },
 ];
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="md:col-span-7">
               <span className="badge badge-tilt mb-6 fade-in-up">
                 <span className="badge-dot" />
-                Digital & tech for small business
+                Your small-business tech partner
               </span>
 
               <h1
@@ -93,14 +93,14 @@ export default function Home() {
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
                 <span className="block text-4xl md:text-6xl leading-[1.05]">
-                  The digital tools your business needs,
+                  Something in your business getting in the way?
                 </span>
                 <span
                   className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    built custom
+                    We&apos;ll fix it.
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"
@@ -126,9 +126,10 @@ export default function Home() {
                 className="text-lg md:text-xl max-w-xl mb-8 fade-in-up stagger-2"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
               >
-                Kindling Digital builds professional, custom websites, software, and
-                technology for small businesses — the kind of work that usually costs a
-                fortune, priced for a small-business budget.
+                You don&apos;t need to know whether the answer is a website, an app, some
+                automation, or a custom system that doesn&apos;t exist yet. Tell us what&apos;s not
+                working in your business — we figure out the technology and build it, at a
+                price a small business can actually afford.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 fade-in-up stagger-3">
@@ -137,7 +138,7 @@ export default function Home() {
                   className="btn-fun group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
                   style={{ backgroundColor: 'var(--ember-deep)', color: 'var(--bone)' }}
                 >
-                  Get in Touch
+                  Tell Us What You Need
                   <svg
                     width="20" height="20" viewBox="0 0 20 20" fill="none"
                     className="transition-transform group-hover:translate-x-1"
@@ -211,12 +212,14 @@ export default function Home() {
               What We Do
             </span>
             <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-              Whatever your business needs to run online.
+              Whatever&apos;s getting in the way, there&apos;s probably a fix.
             </h2>
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-              Most people find us for a website — but that&apos;s just the start. If it&apos;s
-              digital, there&apos;s a good chance we can build it, and stick around to keep it
-              running. One team for the whole tech side of your business.
+              Most people find us for a website — but that&apos;s just where it starts.
+              Customers who can&apos;t find you. Orders taken by hand. The same question
+              answered five times a day. Tools that won&apos;t talk to each other. If it&apos;s
+              digital and it&apos;s slowing you down, there&apos;s a good chance we can fix it — and
+              stick around to keep it running.
             </p>
           </div>
 
@@ -375,10 +378,12 @@ export default function Home() {
                 Professional and custom, without the big upfront bill.
               </h2>
               <p className="text-lg mb-8" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                A custom website and full branding usually means thousands of dollars
-                before you&apos;re even live. We do it as one flat monthly price — so a
-                professional presence is something an ordinary small business can
-                actually afford. Prefer to own it outright? You can buy it out, too.
+                A custom website and full branding usually means one of two things:
+                thousands of dollars up front at an agency, or piecing it together
+                yourself on a DIY builder. We do it a third way — one flat monthly price,
+                built and handled for you, so a professional presence is something an
+                ordinary small business can actually afford. Prefer to own it outright?
+                You can buy it out, too.
               </p>
               <a
                 href="/pricing"
@@ -434,8 +439,9 @@ export default function Home() {
             <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
               A lot of clients start with a website and come back when they need
               something more — online payments, a booking system, a tool to save them
-              time, a hand with the computer at the shop. You don&apos;t have to go find a
-              new company every time. We&apos;re here for whatever comes next.
+              time, a hand with the computer at the shop. You don&apos;t have to hire anyone
+              or track down a new company every time. We already know your business, and
+              we&apos;re here for whatever comes next.
             </p>
           </div>
         </div>

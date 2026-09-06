@@ -172,10 +172,12 @@ export default function Portfolio() {
               <p className="text-lg mb-8" style={{ color: 'var(--charcoal)', opacity: 0.8, lineHeight: '1.75' }}>
                 Soady Poppers is a family-run soda pop shop in Fairview, Michigan —
                 hand-crafted dirty sodas, fresh-squeezed lemonade, energy refreshers
-                and Big Poppa&apos;s gourmet kettle corn. We built the whole site from
-                scratch and wired it up to take orders online, then matched the branding
-                to the counter: bright, playful, a little loud. From the menu to
-                checkout, it&apos;s all one shop.
+                and Big Poppa&apos;s gourmet kettle corn. They needed an easier way for
+                customers to see the menu and order without it all running through the
+                counter. We built the whole site from scratch, wired it up to take orders
+                online, and matched the branding to the shop: bright, playful, a little
+                loud. Now customers can browse the full menu and order online, and it
+                looks like one shop from the first click to checkout.
               </p>
 
               <div className="flex flex-wrap gap-2.5 mb-10">
@@ -234,11 +236,12 @@ export default function Portfolio() {
               </h2>
               <p className="text-lg mb-8" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.75' }}>
                 Particular Notions is a handmade craft vendor — beaded charms and
-                keychains, each one made by hand. It needed a site that felt as
-                personal as the work. We built the whole thing from scratch and put
-                the branding together to match: the sage-and-gold palette, the fox
-                logo, the fonts. From the homepage to the last product card, it all looks
-                like one business.
+                keychains, each one made by hand. The work needed a real online home:
+                a place for customers to browse and buy that felt as personal as the
+                pieces themselves. We built the whole thing from scratch and put the
+                branding together to match: the sage-and-gold palette, the fox logo, the
+                fonts. Now there&apos;s a dedicated storefront where customers can see
+                everything and order, and every page looks like the same business.
               </p>
 
               <div className="flex flex-wrap gap-2.5 mb-10">

@@ -31,7 +31,7 @@ export default function Contact() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Let's give your brand</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Let's give your business</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}

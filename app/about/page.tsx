@@ -246,17 +246,19 @@ export default function About() {
 
             <div className="space-y-6 text-lg" style={{ color: 'var(--bone)', opacity: 0.8, lineHeight: '1.75' }}>
               <p>
-                For a long time, getting professional, custom technology meant one of
-                two things: pay a big company a small fortune, or piece it together
-                yourself and hope for the best. For most small businesses, neither is a
-                real option.
+                For a long time, a small business had three options for technology, and
+                none of them quite fit. Hire an agency and pay a small fortune for a
+                one-off project. Piece it together yourself on a DIY platform and become
+                your own IT department. Or find a freelancer for one job and start over
+                when the next thing comes up.
               </p>
               <p>
-                We think that&apos;s backwards. The tools that help a business grow
-                shouldn&apos;t be reserved for the big players. So we make real,
-                custom-built work — the kind that&apos;d normally run thousands — something
-                an ordinary small business can actually afford. Best of all, we do all
-                of the work for you, so you can focus on what you do best.
+                We built Kindling to be the option in the middle: real, custom-built
+                work — the kind that&apos;d normally run thousands — made around how your
+                business actually runs, at a small-business monthly price. And an actual
+                person you can call when something changes or breaks. Not a project that
+                ends at launch, but a partner who sticks around. You focus on what you do
+                best; we handle the tech.
               </p>
             </div>
           </div>
