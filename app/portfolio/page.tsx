@@ -9,6 +9,27 @@ const built = [
   'Works on any device',
 ];
 
+// Soady Poppers is a full custom platform — these are the real features we built.
+const soadyBuilt = [
+  'Custom drink wizard',
+  'Online ordering & cart',
+  'Card checkout',
+  'Pickup & delivery',
+  'Owner dashboard',
+  'Built from scratch',
+];
+
+// Particular Notions grew from handmade charms into a sourdough bakery with
+// online ordering — the site grew right along with the business.
+const pnBuilt = [
+  'Online bakery ordering',
+  'Cart & checkout',
+  'Card checkout',
+  'Next-day pickup & delivery',
+  'Logo & branding',
+  'Built from scratch',
+];
+
 export default function Portfolio() {
   return (
     <main className="min-h-screen overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
@@ -164,24 +185,28 @@ export default function Portfolio() {
                 Soady Poppers
               </span>
               <h2
-                className="text-4xl md:text-5xl mb-6 leading-[1.05]"
+                className="text-4xl md:text-5xl mb-5 leading-[1.05]"
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
                 A soda shop as fun as its sodas.
               </h2>
+              <p
+                className="text-xl md:text-2xl mb-6 leading-snug"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                Customers build their own soda, step by step, priced as they go — the
+                kind of feature you&apos;d expect from a big chain&apos;s app,{' '}
+                <span style={{ color: 'var(--ember-deep)' }}>built for a family soda shop.</span>
+              </p>
               <p className="text-lg mb-8" style={{ color: 'var(--charcoal)', opacity: 0.8, lineHeight: '1.75' }}>
-                Soady Poppers is a family-run soda pop shop in Fairview, Michigan —
-                hand-crafted dirty sodas, fresh-squeezed lemonade, energy refreshers
-                and Big Poppa&apos;s gourmet kettle corn. They needed an easier way for
-                customers to see the menu and order without it all running through the
-                counter. We built the whole site from scratch, wired it up to take orders
-                online, and matched the branding to the shop: bright, playful, a little
-                loud. Now customers can browse the full menu and order online, and it
-                looks like one shop from the first click to checkout.
+                Soady Poppers is a family-run spot in Fairview, Michigan — hand-crafted
+                dirty sodas, fresh-squeezed lemonade and Big Poppa&apos;s gourmet kettle
+                corn. They needed the whole counter online, so we built the platform from
+                scratch and matched the branding to the shop: bright, playful, a little loud.
               </p>
 
               <div className="flex flex-wrap gap-2.5 mb-10">
-                {built.map((item) => (
+                {soadyBuilt.map((item) => (
                   <span
                     key={item}
                     className="chip-fun inline-flex items-center gap-2 text-sm px-4 py-2"
@@ -229,23 +254,28 @@ export default function Portfolio() {
                 Particular Notions
               </span>
               <h2
-                className="text-4xl md:text-5xl mb-6 leading-[1.05]"
+                className="text-4xl md:text-5xl mb-5 leading-[1.05]"
                 style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
               >
                 Handmade charms, a brand to match.
               </h2>
+              <p
+                className="text-xl md:text-2xl mb-6 leading-snug"
+                style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+              >
+                Started with handmade charms, then added a sourdough bakery — so{' '}
+                <span style={{ color: 'var(--honey-gold)' }}>we grew the site right along with them,</span>{' '}
+                fresh bakes now ordered online for next-day pickup or local delivery.
+              </p>
               <p className="text-lg mb-8" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.75' }}>
-                Particular Notions is a handmade craft vendor — beaded charms and
-                keychains, each one made by hand. The work needed a real online home:
-                a place for customers to browse and buy that felt as personal as the
-                pieces themselves. We built the whole thing from scratch and put the
-                branding together to match: the sage-and-gold palette, the fox logo, the
-                fonts. Now there&apos;s a dedicated storefront where customers can see
-                everything and order, and every page looks like the same business.
+                Particular Notions is a Fairview, Michigan maker — beaded charms and
+                keychains, each one made by hand. We built the whole storefront from
+                scratch and put the branding together to match: the sage-and-gold
+                palette, the fox logo, the fonts.
               </p>
 
               <div className="flex flex-wrap gap-2.5 mb-10">
-                {built.map((item) => (
+                {pnBuilt.map((item) => (
                   <span
                     key={item}
                     className="chip-fun chip-fun-dark inline-flex items-center gap-2 text-sm px-4 py-2"

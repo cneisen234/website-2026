@@ -143,7 +143,7 @@ export default function About() {
             <div className="md:col-span-7">
               <span className="badge badge-on-dark badge-tilt mb-4">
                 <span className="badge-dot" />
-                Development &amp; Tech
+                Development &amp; Design
               </span>
               <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
                 Hi, I&apos;m Chris.
@@ -187,7 +187,7 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}>
                 <p>
-                  I&apos;m the graphic designer and content editor of Kindling Digital.
+                  I&apos;m the co-designer and content editor of Kindling Digital.
                    I&apos;m passionate about giving small businesses a look
                   that actually holds together. I love bringing art into my everyday 
                   life and that passion is poured into everything I design. 
@@ -211,7 +211,7 @@ export default function About() {
                   <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
                     <Image
                       src="/megan.webp"
-                      alt="Megan, designer and content editor at Kindling Digital"
+                      alt="Megan, co-designer and content editor at Kindling Digital"
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover"
