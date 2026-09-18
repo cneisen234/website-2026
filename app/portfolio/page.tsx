@@ -19,6 +19,18 @@ const soadyBuilt = [
   'Built from scratch',
 ];
 
+// Fitness Inspired Training — Ashley's coaching business. We built the site from
+// scratch and the whole back office behind it: she sells training plans online and
+// runs everything herself (blog, reviews, pricing) from one dashboard.
+const fiBuilt = [
+  'Buy training plans online',
+  'Branded on-site checkout',
+  'Blog & articles',
+  'Customer reviews',
+  'Owner dashboard',
+  'Built from scratch',
+];
+
 // Particular Notions grew from handmade charms into a sourdough bakery with
 // online ordering — the site grew right along with the business.
 const pnBuilt = [
@@ -230,6 +242,124 @@ export default function Portfolio() {
                   <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fitness Inspired — LIGHT case study */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--warm-cream)' }}>
+        <div
+          className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full opacity-30 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--honey-gold) 0%, transparent 70%)', transform: 'translate(-30%, 0)' }}
+        />
+        <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-16 md:gap-12 items-center">
+            {/* Text */}
+            <div className="md:col-span-5">
+              <span
+                className="badge badge-tilt mb-4"
+                style={{ color: 'var(--honey-deep)', backgroundColor: 'rgba(240, 185, 73, 0.18)' }}
+              >
+                <span className="badge-dot" />
+                Fitness Inspired
+              </span>
+              <h2
+                className="text-4xl md:text-5xl mb-5 leading-[1.05]"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                Her whole training business, run from one dashboard.
+              </h2>
+              <p
+                className="text-xl md:text-2xl mb-6 leading-snug"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+              >
+                Clients pick a plan and pay right on the site —{' '}
+                <span style={{ color: 'var(--honey-deep)' }}>then Ashley runs the rest herself,</span>{' '}
+                from blog posts to reviews to pricing, all in one place.
+              </p>
+              <p className="text-lg mb-8" style={{ color: 'var(--charcoal)', opacity: 0.8, lineHeight: '1.75' }}>
+                Fitness Inspired Training is Ashley&apos;s coaching business — in person, online,
+                or a hybrid of both. We built the site from scratch and styled it to her brand:
+                the sky-and-coral palette, the heartbeat mark, the bold rounded type. Then we
+                wired up everything behind it — a branded checkout for her training plans, a
+                blog, a review system, and an owner dashboard — so she can run the whole thing
+                on her own.
+              </p>
+
+              <div className="flex flex-wrap gap-2.5 mb-10">
+                {fiBuilt.map((item) => (
+                  <span
+                    key={item}
+                    className="chip-fun inline-flex items-center gap-2 text-sm px-4 py-2"
+                    style={{ backgroundColor: 'rgba(240, 185, 73, 0.12)', color: 'var(--charcoal)' }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--honey-deep)' }} />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://www.fitnessinspiredpersonaltraining.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-fun group inline-flex items-center gap-2 px-8 py-4 text-lg"
+                style={{ backgroundColor: 'var(--honey-gold)', color: 'var(--charcoal)' }}
+              >
+                Visit the site
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Screenshots */}
+            <div className="md:col-span-7">
+              <div className="relative mx-auto max-w-xl md:mr-0">
+                {/* Desktop in a browser frame */}
+                <div
+                  className="rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '12px 14px 0 rgba(240, 185, 73, 0.85)',
+                    transform: 'rotate(-1.5deg)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#d98b6a' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#e8c069' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
+                  </div>
+                  <Image
+                    src="/fitnessinspireddesktop.webp"
+                    alt="The Fitness Inspired Training website on desktop"
+                    width={1675}
+                    height={934}
+                    className="w-full h-auto"
+                  />
+                </div>
+
+                {/* Mobile overlapping */}
+                <div
+                  className="absolute -bottom-8 left-2 md:-bottom-10 md:-left-6 w-24 sm:w-28 md:w-40 rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '6px 8px 0 rgba(242, 118, 92, 0.9)',
+                    transform: 'rotate(5deg)',
+                  }}
+                >
+                  <Image
+                    src="/inspiredfitnessmobile.webp"
+                    alt="The Fitness Inspired Training website on mobile"
+                    width={330}
+                    height={719}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

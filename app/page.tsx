@@ -44,13 +44,23 @@ const work = [
     href: 'https://www.soadypoppers.com/',
   },
   {
+    name: 'Fitness Inspired',
+    tag: 'Personal training · online plans',
+    image: '/fitnessinspireddesktop.webp',
+    width: 1675,
+    height: 934,
+    shadow: 'rgba(240, 185, 73, 0.85)',
+    tilt: '-1deg',
+    href: 'https://www.fitnessinspiredpersonaltraining.com/',
+  },
+  {
     name: 'Particular Notions',
     tag: 'Handmade goods · storefront',
     image: '/particularnotions2.webp',
     width: 1720,
     height: 892,
     shadow: 'rgba(95, 167, 119, 0.8)',
-    tilt: '-1.5deg',
+    tilt: '1.5deg',
     href: 'https://www.particularnotions.com/',
   },
 ];
@@ -190,7 +200,7 @@ export default function Home() {
                   style={{ backgroundColor: 'white', border: '2px solid var(--charcoal)', color: 'var(--ember-deep)' }}
                 >
                   <span className="badge-dot" />
-                  Recent build
+                  Featured build
                 </span>
               </div>
             </div>
@@ -276,24 +286,37 @@ export default function Home() {
         />
 
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mb-16">
-            <span className="badge badge-on-dark badge-tilt mb-4">
-              <span className="badge-dot" />
-              The Work
-            </span>
-            <h2
-              className="text-4xl md:text-6xl mb-6 leading-[1.05]"
-              style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+            <div className="max-w-2xl">
+              <span className="badge badge-on-dark badge-tilt mb-4">
+                <span className="badge-dot" />
+                The Work
+              </span>
+              <h2
+                className="text-4xl md:text-6xl mb-6 leading-[1.05]"
+                style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+              >
+                Take a look for yourself.
+              </h2>
+              <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
+                Every site is built by hand and made to match the business behind it. These
+                are real, live businesses we&apos;ve worked with.
+              </p>
+            </div>
+
+            <a
+              href="/portfolio"
+              className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg shrink-0 self-start md:self-auto"
+              style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
             >
-              Take a look for yourself.
-            </h2>
-            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
-              Every site is built by hand and made to match the business behind it. These
-              are real, live businesses we&apos;ve worked with.
-            </p>
+              See the full portfolio
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 md:gap-10 max-w-6xl mb-14">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-12">
             {work.map((project) => (
               <a
                 key={project.name}
@@ -323,39 +346,22 @@ export default function Home() {
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="mt-8 flex items-baseline justify-between gap-4">
-                  <div>
+                <div className="mt-6">
+                  <div className="flex items-center gap-2">
                     <h3 className="text-2xl" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
                       {project.name}
                     </h3>
-                    <p className="text-sm mt-1" style={{ color: 'var(--bone)', opacity: 0.55 }}>
-                      {project.tag}
-                    </p>
-                  </div>
-                  <span
-                    className="inline-flex items-center gap-1.5 text-sm shrink-0"
-                    style={{ color: 'var(--ember-orange)' }}
-                  >
-                    Visit
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" style={{ color: 'var(--ember-orange)' }}>
                       <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                  </span>
+                  </div>
+                  <p className="text-sm mt-1" style={{ color: 'var(--bone)', opacity: 0.55 }}>
+                    {project.tag}
+                  </p>
                 </div>
               </a>
             ))}
           </div>
-
-          <a
-            href="/portfolio"
-            className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
-            style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--midnight)' }}
-          >
-            See the full portfolio
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
-              <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
         </div>
       </section>
 

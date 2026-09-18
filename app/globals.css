@@ -23,6 +23,7 @@
   /* Supporting accents (kept from your palette) */
   --forest-green: #5FA777;
   --honey-gold: #F0B949;
+  --honey-deep: #A16207;        /* readable gold for text/accents on light backgrounds */
 }
 
 @theme inline {
