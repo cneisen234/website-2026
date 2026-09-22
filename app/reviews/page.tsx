@@ -22,6 +22,13 @@ const reviews: Review[] = [
       "We've had a great experience working with Kindling Digital on our business website! He is extremely knowledgeable and clearly knows his stuff when it comes to web design and development. He has taken the time to explain the process, answer our questions, and help bring our ideas for the site to life. We're especially excited about the functionality he's been able to build into it and are very happy with how everything is coming together. We're looking forward to continuing to work with him as our website grows!",
   },
   {
+    name: 'Ashley Wojciechowski',
+    company: 'Owner of Fitness Inspired Training',
+    rating: 5,
+    body:
+      'Chris did an amazing job! He did everything in such a timely manner. The process was easy and smooth. Highly, highly recommend him!!!',
+  },
+  {
     name: 'Alex Warner',
     company: 'Founder and CEO of Work Odyssey',
     rating: 5,
