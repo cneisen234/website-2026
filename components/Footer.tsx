@@ -177,7 +177,7 @@ export default function Footer() {
                 color: 'var(--midnight)',
               }}
             >
-              Let's Talk
+              Let&apos;s Talk
               <svg
                 width="16"
                 height="16"
@@ -208,12 +208,18 @@ export default function Footer() {
           >
             © {new Date().getFullYear()} Kindling Digital. All rights reserved.
           </p>
-          <p
-            className="text-sm"
-            style={{ color: 'var(--bone)', opacity: 0.5 }}
-          >
-            Built locally, with care.
-          </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            {[
+              { label: 'Privacy', href: '/privacy' },
+              { label: 'Terms', href: '/terms' },
+              { label: 'Client Data Agreement', href: '/client-data-agreement' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="hover:underline" style={{ color: 'var(--bone)', opacity: 0.6 }}>
+                {link.label}
+              </Link>
+            ))}
+            <span style={{ color: 'var(--bone)', opacity: 0.5 }}>Built locally, with care.</span>
+          </div>
         </div>
       </div>
     </footer>
