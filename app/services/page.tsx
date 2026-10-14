@@ -14,7 +14,7 @@ const pieces = [
       'Custom design that matches your brand',
       'Fast, and works on any device',
       'Redesigns of an existing site',
-      'Business email & Google Business setup',
+      'Business email & Google Business Profile, as Pilot Light add-ons',
       'Built so you can add to it later',
     ],
   },
@@ -26,12 +26,11 @@ const pieces = [
     accent: 'var(--forest-green)',
     tint: 'rgba(95, 167, 119, 0.14)',
     heading: 'A brand that holds together.',
-    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you. You get a brand guide that spells it all out, so your website, business cards, and anything else all look like the same business.",
+    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you, so your website, your print pieces, and anything else all look like the same business.",
     included: [
       'Logo design',
       'Brand colors & fonts',
-      'A brand guide document',
-      'Business cards & email signature design',
+      'Brand packaging for print & the web',
       'Custom graphics, flyers & branded swag',
     ],
   },
@@ -79,11 +78,28 @@ const pieces = [
     heading: 'A tech guy in your back pocket.',
     body: "We don't disappear once you're live. We keep your site updated and we're around for whatever else comes up on the tech side — no employee to hire, no new company to track down every time. Just a real person who already knows your business, on call as your needs change.",
     included: [
-      'Ongoing website updates',
+      'Ongoing website updates (unlimited on Business in a Box)',
       'Computer & tech troubleshooting',
       'Wi-Fi & networking',
       'Software setup & training',
       'Email & account help',
+    ],
+  },
+  {
+    id: 'pilot-light',
+    num: '06',
+    eyebrow: 'Pilot Light',
+    dark: false,
+    accent: '#c2410c',
+    tint: 'rgba(251, 146, 60, 0.16)',
+    heading: 'Run your business by just asking.',
+    body: "Pilot Light is the command center we set up for your business: your website, orders, customers and tools in one place, with Lena, an AI assistant who prepares every change for you to approve. It comes with Business in a Box, along with two add-ons of your choice and unlimited updates and support.",
+    included: [
+      'Lena, your AI assistant',
+      'A dashboard & iPhone app',
+      'Every change waits for your OK',
+      'New orders straight to your phone',
+      '2 add-ons included; more at $400 + $30/month',
     ],
   },
 ];
@@ -94,6 +110,7 @@ const jumpLinks = [
   { label: 'Sell & Book', href: '#sell-and-book' },
   { label: 'Software', href: '#software' },
   { label: 'Support', href: '#support' },
+  { label: 'Pilot Light', href: '#pilot-light' },
 ];
 
 export default function Services() {

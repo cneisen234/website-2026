@@ -21,12 +21,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'Do you only build websites?',
         answer:
-          "No — a website is just where most people start. We also build online ordering and payments, booking systems, custom software, automations, and integrations, and we handle the everyday tech side once you're up and running. You don't even need a full website plan; smaller custom work and tech help are billed hourly at $75. Tell us what's not working and we'll figure out the fix.",
+          "No — a website is just where most people start. We also build online ordering and payments, booking systems, custom software, automations, and integrations, and we handle the everyday tech side once you're up and running. You don't even need a full website plan; smaller custom work and tech help are billed hourly at $100. Tell us what's not working and we'll figure out the fix.",
       },
       {
         question: 'How does the monthly price work?',
         answer:
-          "It's a flat monthly fee that covers everything in your plan — your website, branding, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside the plan is handled separately at $75 an hour.",
+          "It's a flat monthly fee that covers everything in your plan — your website, branding, and the recurring stuff that keeps it all running, like your domain and hosting. Instead of paying a few thousand upfront for a site, you pay monthly and we keep it going. Anything outside your plan is $100 an hour, and on Business in a Box new business features usually come as Pilot Light add-ons.",
       },
       {
         question: 'Is there a contract or minimum?',
@@ -47,12 +47,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What happens if I cancel?',
         answer:
-          "After your 3-month minimum you can cancel anytime. Your brand packet — the logo, colors, fonts, and brand guide — is yours to keep forever, and so is your domain, as long as you cover the renewal fees from there on. The website and the other services come down at the end of your last billing cycle, the same way any subscription works.",
+          "After your 3-month minimum you can cancel anytime. Your brand packet — the logo, colors, and fonts — is yours to keep forever, and so is your domain, as long as you cover the renewal fees from there on. The website and the other services come down at the end of your last billing cycle, the same way any subscription works.",
       },
       {
         question: 'Can I keep my website if I stop?',
         answer:
-          "Yes, there is an option to buyout. The cost depends on how big the site is and how many features and integrations were built into it. Once it's bought out, the site is yours.",
+          "Yes. There's a one-time buyout: $6,000 for a 10-page site and your brand, handed over to you. Once it's bought out, the site is yours. A buyout doesn't include Pilot Light or ongoing support, and changes after handoff are $100 an hour.",
       },
       {
         question: 'Do I own my logo and branding?',
@@ -87,9 +87,9 @@ const faqGroups: FaqGroup[] = [
     title: "Once you're up",
     items: [
       {
-        question: 'What counts as one of my monthly changes?',
+        question: 'What counts as an update?',
         answer:
-          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Once you've used up the changes in your plan, each additional minor update is just $15. Anything bigger, like new features or integrations, is separate at $75 an hour.",
+          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Brand in a Box includes 10 of those a week. Business in a Box covers unlimited updates and support for everything you already have, including your Pilot Light add-ons. Anything new, like a new feature or integration, is $100 an hour or a Pilot Light add-on.",
       },
       {
         question: 'How does content and branded design work?',
@@ -105,6 +105,37 @@ const faqGroups: FaqGroup[] = [
         question: "What if I'm not sure what I need?",
         answer:
           "That's part of the process — you don't need to arrive with a technical spec. Tell us what you're trying to do and we'll be straight with you about what makes sense: which plan fits, whether it's a bit of hourly work, or a larger custom build we'd scope and quote up front.",
+      },
+    ],
+  },
+  {
+    label: '05',
+    title: 'Pilot Light',
+    items: [
+      {
+        question: 'What is Pilot Light?',
+        answer:
+          "It's the command center for your business that comes with Business in a Box: your website, orders, customers and tools in one place, with Lena, an AI assistant who knows your business. You ask her questions or tell her what to change, and she prepares it for you to approve. There's a dashboard and an iPhone app.",
+      },
+      {
+        question: 'Will Lena change things without asking me?',
+        answer:
+          "No. Every change shows up as a card with exactly what will change, and nothing happens until you tap Allow. Pilot Light also checks each change before it runs and verifies it afterward.",
+      },
+      {
+        question: 'What are add-ons, and what do they cost?',
+        answer:
+          "Add-ons are what Pilot Light runs for you — things like online orders, bookings, business email with Google Workspace, reviews, events, or your Google Business Profile. Business in a Box includes two of your choice. Each one after that is $400 to set up and $30 a month.",
+      },
+      {
+        question: 'Is there a limit on how much I can use Lena?',
+        answer:
+          "Lena comes with a generous monthly allowance that covers normal use. If your business needs more, there are higher levels at +$20 or +$70 a month, and we'll let you know well before you get close.",
+      },
+      {
+        question: 'Does it work on my phone?',
+        answer:
+          "Yes. There's an iPhone app with notifications for new orders, customers who are waiting, and reviews. On Android, Pilot Light works in your phone's browser, with notifications by email.",
       },
     ],
   },
@@ -201,7 +232,7 @@ export default function FAQ() {
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         {/* Floating spark doodle */}
-        <svg className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--honey-gold)" />
         </svg>
 
@@ -281,7 +312,7 @@ export default function FAQ() {
                     <span
                       className="text-6xl md:text-7xl leading-none block mb-4"
                       style={{
-                        color: ['var(--ember-deep)', 'var(--forest-green)', 'var(--honey-gold)', 'var(--ember-deep)'][gi],
+                        color: ['var(--ember-deep)', 'var(--forest-green)', 'var(--honey-gold)', 'var(--ember-deep)', '#fb923c'][gi],
                         opacity: 0.6,
                         fontFamily: 'var(--font-heading)',
                       }}
@@ -337,13 +368,13 @@ export default function FAQ() {
               className="text-5xl md:text-7xl mb-8 leading-[1.05] tracking-tight"
               style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
             >
-              Didn't see your question?
+              Didn&apos;t see your question?
             </h2>
             <p
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              Just reach out — we're happy to answer anything else you're wondering
+              Just reach out — we&apos;re happy to answer anything else you&apos;re wondering
               about, no commitment required.
             </p>
             <a

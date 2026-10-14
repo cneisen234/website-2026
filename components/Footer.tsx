@@ -118,6 +118,7 @@ export default function Footer() {
                 { label: 'Home', href: '/' },
                 { label: 'About', href: '/about' },
                 { label: 'Services', href: '/services' },
+                { label: 'Pilot Light', href: '/pilot-light' },
                 { label: 'Portfolio', href: '/portfolio' },
                 { label: 'Reviews', href: '/reviews' },
                 { label: 'Pricing', href: '/pricing' },

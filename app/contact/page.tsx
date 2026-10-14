@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         {/* Floating spark doodle */}
-        <svg className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--ember-orange)" />
         </svg>
 
@@ -31,7 +31,7 @@ export default function Contact() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Let's give your business</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Let&apos;s give your business</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}

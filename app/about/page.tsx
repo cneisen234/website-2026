@@ -32,7 +32,7 @@ export default function About() {
         />
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
-        <svg className="floaty-slow absolute top-28 right-[14%] hidden lg:block pointer-events-none" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="absolute top-28 right-[14%] hidden lg:block pointer-events-none" width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--forest-green)" />
         </svg>
 
@@ -191,7 +191,7 @@ export default function About() {
                    I&apos;m passionate about giving small businesses a look
                   that actually holds together. I love bringing art into my everyday 
                   life and that passion is poured into everything I design. 
-                  Your brand is your identity and I'm going to help you bring that out in center stage.
+                  Your brand is your identity and I&apos;m going to help you bring that out in center stage.
                 </p>
               </div>
             </div>

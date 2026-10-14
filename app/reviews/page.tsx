@@ -107,7 +107,7 @@ export default function Reviews() {
 
         {/* Floating spark doodle */}
         <svg
-          className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none"
+          className="absolute top-24 right-[12%] hidden lg:block pointer-events-none"
           width="40"
           height="40"
           viewBox="0 0 24 24"
@@ -259,7 +259,7 @@ export default function Reviews() {
               className="text-xl mb-12 max-w-2xl mx-auto"
               style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}
             >
-              Tell us what your business needs and we'll figure out how to help — no commitment required.
+              Tell us what your business needs and we&apos;ll figure out how to help — no commitment required.
             </p>
             <a
               href="/contact"

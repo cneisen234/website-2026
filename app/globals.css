@@ -183,14 +183,6 @@ em {
   background-size: 26px 26px;
 }
 
-/* Gentle continuous float for decorative spark/doodle bits */
-@keyframes floaty {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(4deg); }
-}
-.floaty { animation: floaty 5s ease-in-out infinite; }
-.floaty-slow { animation: floaty 7s ease-in-out infinite; }
-
 /* Hand-drawn accent stroke that draws itself in */
 @keyframes drawStroke {
   from { stroke-dashoffset: 1; }

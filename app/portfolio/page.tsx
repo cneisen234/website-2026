@@ -1,13 +1,4 @@
-import type { CSSProperties } from 'react';
 import Image from 'next/image';
-
-const built = [
-  'Custom website',
-  'Online store & checkout',
-  'Logo & branding',
-  'Built from scratch',
-  'Works on any device',
-];
 
 // Soady Poppers is a full custom platform — these are the real features we built.
 const soadyBuilt = [
@@ -56,7 +47,7 @@ export default function Portfolio() {
         />
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
-        <svg className="floaty absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="absolute top-24 right-[12%] hidden lg:block pointer-events-none" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--honey-gold)" />
         </svg>
 
@@ -68,7 +59,7 @@ export default function Portfolio() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Sparks we've given</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Sparks we&apos;ve given</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}

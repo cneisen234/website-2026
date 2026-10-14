@@ -3,22 +3,63 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const navLinks = [
+// The menu follows Pilot Light's navigation convention: up to 6 items; past that, a category is a button that
+// opens its links (never a link itself). About groups the pages about Kindling.
+type NavLink = { label: string; href: string };
+type NavItem = NavLink | { label: string; children: NavLink[] };
+
+const navItems: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Reviews', href: '/reviews' },
+  { label: 'Pilot Light', href: '/pilot-light' },
   { label: 'Pricing', href: '/pricing' },
-  { label: 'FAQ', href: '/faq' },
+  {
+    label: 'About',
+    children: [
+      { label: 'About us', href: '/about' },
+      { label: 'Portfolio', href: '/portfolio' },
+      { label: 'Reviews', href: '/reviews' },
+      { label: 'FAQ', href: '/faq' },
+    ],
+  },
 ];
+
+const isGroup = (item: NavItem): item is { label: string; children: NavLink[] } => 'children' in item;
+
+/** Pilot Light's own orange flame, beside its menu item. */
+function PilotFlame({ size = 14 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" className="inline-block shrink-0">
+      <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill="#fb923c" />
+      <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill="#f0b949" />
+    </svg>
+  );
+}
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [mobileGroup, setMobileGroup] = useState<string | null>(null);
+  const menuRef = useRef<HTMLUListElement>(null);
   const pathname = usePathname();
+
+  // A category's links close on a click elsewhere or Escape.
+  useEffect(() => {
+    if (!openGroup) return;
+    const onClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setOpenGroup(null);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpenGroup(null);
+    document.addEventListener('mousedown', onClick);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onClick);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [openGroup]);
 
   // Detect scroll to add a subtle backdrop blur when scrolled
   useEffect(() => {
@@ -79,30 +120,71 @@ export default function Navigation() {
             </Link>
 
             {/* Desktop nav links */}
-            <ul className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+            <ul ref={menuRef} className="hidden md:flex items-center gap-1">
+              {navItems.map((item) => {
+                if (isGroup(item)) {
+                  const isActive = item.children.some((c) => c.href === pathname);
+                  const isOpenGroup = openGroup === item.label;
+                  return (
+                    <li key={item.label} className="relative">
+                      <button
+                        type="button"
+                        aria-expanded={isOpenGroup}
+                        onClick={() => setOpenGroup(isOpenGroup ? null : item.label)}
+                        className="relative inline-flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors cursor-pointer"
+                        style={{ color: isActive ? 'var(--ember-deep)' : 'var(--charcoal)' }}
+                      >
+                        {item.label}
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="transition-transform" style={{ transform: isOpenGroup ? 'rotate(180deg)' : 'none' }}>
+                          <path d="M3 4.5l3 3 3-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </button>
+                      {isOpenGroup ? (
+                        <ul
+                          className="absolute right-0 top-full mt-2 min-w-[180px] rounded-2xl py-2"
+                          style={{ backgroundColor: 'white', border: '2px solid var(--charcoal)', boxShadow: '6px 7px 0 rgba(194, 65, 12, 0.85)' }}
+                        >
+                          {item.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                onClick={() => setOpenGroup(null)}
+                                className="block px-5 py-2.5 text-sm font-medium transition-colors hover:bg-[rgba(194,65,12,0.08)]"
+                                style={{ color: pathname === child.href ? 'var(--ember-deep)' : 'var(--charcoal)' }}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                }
+                const isActive = pathname === item.href;
+                const pilot = item.href === '/pilot-light';
                 return (
-                  <li key={link.href}>
+                  <li key={item.href}>
                     <Link
-                      href={link.href}
-                      className="relative px-4 py-2 text-sm font-medium transition-colors group"
+                      href={item.href}
+                      className="relative inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors group"
                       style={{
-                        color: isActive ? 'var(--ember-deep)' : 'var(--charcoal)',
+                        color: isActive ? (pilot ? '#c2410c' : 'var(--ember-deep)') : 'var(--charcoal)',
                       }}
                     >
-                      {link.label}
+                      {pilot ? <PilotFlame /> : null}
+                      {item.label}
                       <span
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1 h-1 rounded-full transition-opacity"
                         style={{
-                          backgroundColor: 'var(--ember-deep)',
+                          backgroundColor: pilot ? 'var(--ember-orange)' : 'var(--ember-deep)',
                           opacity: isActive ? 1 : 0,
                         }}
                       />
                       <span
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1 h-1 rounded-full opacity-0 group-hover:opacity-50 transition-opacity"
                         style={{
-                          backgroundColor: 'var(--ember-deep)',
+                          backgroundColor: pilot ? 'var(--ember-orange)' : 'var(--ember-deep)',
                         }}
                       />
                     </Link>
@@ -120,7 +202,7 @@ export default function Navigation() {
                 color: 'var(--bone)',
               }}
             >
-              Let's Talk
+              Let&apos;s Talk
               <svg
                 width="14"
                 height="14"
@@ -210,19 +292,64 @@ export default function Navigation() {
           {/* Mobile nav links */}
           <nav className="flex-1 flex flex-col justify-center">
             <ul className="space-y-2">
-              {navLinks.map((link, idx) => {
-                const isActive = pathname === link.href;
+              {navItems.map((item, idx) => {
+                if (isGroup(item)) {
+                  const expanded = mobileGroup === item.label;
+                  const isActive = item.children.some((c) => c.href === pathname);
+                  return (
+                    <li key={item.label} className={isOpen ? 'fade-in-up' : ''} style={{ animationDelay: `${idx * 60}ms` }}>
+                      <button
+                        type="button"
+                        aria-expanded={expanded}
+                        onClick={() => setMobileGroup(expanded ? null : item.label)}
+                        className="flex items-center gap-3 py-3 cursor-pointer"
+                      >
+                        <span
+                          className="text-4xl tracking-tight transition-colors"
+                          style={{ color: isActive ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', fontStyle: isActive ? 'italic' : 'normal' }}
+                        >
+                          {item.label}
+                        </span>
+                        <svg width="22" height="22" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="transition-transform" style={{ color: 'var(--bone)', transform: expanded ? 'rotate(180deg)' : 'none' }}>
+                          <path d="M3 4.5l3 3 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </button>
+                      {expanded ? (
+                        <ul className="pl-5 pb-2 space-y-1" style={{ borderLeft: '2px solid rgba(251, 146, 60, 0.35)' }}>
+                          {item.children.map((child) => (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setMobileGroup(null);
+                                }}
+                                className="block py-2 text-2xl tracking-tight"
+                                style={{ color: pathname === child.href ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', opacity: pathname === child.href ? 1 : 0.85 }}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                }
+                const isActive = pathname === item.href;
+                const pilot = item.href === '/pilot-light';
                 return (
                   <li
-                    key={link.href}
+                    key={item.href}
                     className={isOpen ? 'fade-in-up' : ''}
                     style={{ animationDelay: `${idx * 60}ms` }}
                   >
                     <Link
-                      href={link.href}
+                      href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="group flex items-baseline gap-4 py-3"
+                      className="group flex items-center gap-3 py-3"
                     >
+                      {pilot ? <PilotFlame size={28} /> : null}
                       <span
                         className="text-4xl tracking-tight transition-colors"
                         style={{
@@ -231,7 +358,7 @@ export default function Navigation() {
                           fontStyle: isActive ? 'italic' : 'normal',
                         }}
                       >
-                        {link.label}
+                        {item.label}
                       </span>
                     </Link>
                   </li>
@@ -251,7 +378,7 @@ export default function Navigation() {
                 color: 'var(--midnight)',
               }}
             >
-              Let's Talk
+              Let&apos;s Talk
               <svg
                 width="20"
                 height="20"

@@ -6,8 +6,8 @@ const capabilities = [
     title: 'Get online',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'When people search for you and come up empty — or the site they find undersells how good you really are. A custom site, branding, business email, and Google Business that put your best foot forward.',
-    items: ['Custom websites', 'Website redesigns', 'Branding & logo', 'Business email', 'Google Business'],
+    body: 'When people search for you and come up empty — or the site they find undersells how good you really are. A custom site and a full brand that put your best foot forward.',
+    items: ['Custom websites', 'Website redesigns', 'Branding & logo', 'Custom domains'],
   },
   {
     title: 'Sell & book',
@@ -86,7 +86,7 @@ export default function Home() {
         />
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
-        <svg className="floaty absolute top-24 right-[10%] hidden lg:block pointer-events-none" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg className="absolute top-24 right-[10%] hidden lg:block pointer-events-none" width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2z" fill="var(--honey-gold)" />
         </svg>
 
@@ -202,6 +202,77 @@ export default function Home() {
                   <span className="badge-dot" />
                   Featured build
                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pilot Light — DARK, ORANGE GLOW */}
+      <section className="py-20 md:py-28 relative overflow-hidden" style={{ backgroundColor: 'var(--midnight)' }}>
+        <div
+          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-35 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, #fb923c 0%, transparent 65%)', transform: 'translate(25%, -30%)' }}
+        />
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-12 items-center max-w-6xl">
+            <div className="md:col-span-7">
+              <div className="flex items-center gap-3 mb-8">
+                <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill="#fb923c" />
+                  <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill="#f0b949" />
+                </svg>
+                <div>
+                  <div className="text-2xl leading-none" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+                    Pilot Light
+                  </div>
+                  <div className="mt-1.5 text-[11px] font-medium uppercase" style={{ color: 'var(--bone)', opacity: 0.6, letterSpacing: '0.3em' }}>
+                    by Kindling Digital
+                  </div>
+                </div>
+              </div>
+              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+                Run your business by{' '}
+                <em className="italic" style={{ color: '#fb923c' }}>
+                  just asking.
+                </em>
+              </h2>
+              <p className="text-lg mb-8 max-w-xl" style={{ color: 'var(--bone)', opacity: 0.78, lineHeight: '1.7' }}>
+                Pilot Light puts your website, orders, customers and tools in one place, with Lena, an assistant who knows your
+                business. Ask how the month is going, tell her what to change, and approve it with a tap, from your dashboard or
+                the iPhone app. It comes with Business in a Box.
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-3 mb-10 max-w-xl">
+                {['Lena prepares every change for you', 'Nothing changes until you tap Allow', 'New orders straight to your phone', 'Unlimited updates & support'].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5" style={{ color: 'var(--bone)' }}>
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="mt-0.5 shrink-0">
+                      <path d="M3 8l3 3 7-7" stroke="#fb923c" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span style={{ opacity: 0.85 }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="/pilot-light"
+                className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
+                style={{ backgroundColor: '#fb923c', color: 'var(--midnight)' }}
+              >
+                Discover Pilot Light
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                  <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div className="md:col-span-5">
+              <div
+                className="relative mx-auto w-[72%] max-w-[300px] rounded-[2.6rem] p-2.5"
+                style={{ backgroundColor: '#1c2128', boxShadow: '0 0 0 2px #2b313a, 14px 16px 0 rgba(251, 146, 60, 0.85)', transform: 'rotate(3deg)' }}
+              >
+                <div className="relative overflow-hidden rounded-[2.1rem]" style={{ backgroundColor: '#f5f6ef' }}>
+                  <div className="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black" />
+                  <div className="h-9" />
+                  <Image src="/pilot-light/allow-card.webp" alt="Lena preparing a price change for the owner to allow, in the Pilot Light app" width={720} height={1468} className="block h-auto w-full" />
+                </div>
               </div>
             </div>
           </div>
@@ -405,8 +476,8 @@ export default function Home() {
 
             <div className="md:col-span-6 grid sm:grid-cols-2 gap-6 tilt-alt">
               {[
-                { name: 'Brand in a Box', price: '$100', accent: 'var(--ember-deep)', desc: 'Custom 5-page site, logo & branding, monthly updates.' },
-                { name: 'Business in a Box', price: '$250', accent: 'var(--forest-green)', desc: 'A 10-page site, branding, business email, Google Business & more.' },
+                { name: 'Brand in a Box', price: '$100', accent: 'var(--ember-deep)', desc: 'A custom 10-page site, logo & branding, and 10 text or photo updates a week.' },
+                { name: 'Business in a Box', price: '$300', accent: '#c2410c', desc: 'Everything in Brand in a Box, plus Pilot Light, 2 add-ons, and unlimited updates & support.' },
               ].map((plan) => (
                 <div
                   key={plan.name}

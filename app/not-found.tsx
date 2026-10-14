@@ -16,7 +16,7 @@ export default function NotFound() {
       <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
       <svg
-        className="floaty absolute top-24 right-[14%] hidden lg:block pointer-events-none"
+        className="absolute top-24 right-[14%] hidden lg:block pointer-events-none"
         width="34"
         height="34"
         viewBox="0 0 24 24"
