@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { footerColumns } from '@/lib/nav';
 
 export default function Footer() {
   return (
@@ -102,99 +103,87 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden md:block md:col-span-1" />
+          {/* Link columns: the header's links, by category (Pilot Light's navigation convention) */}
+          <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10">
+            {footerColumns.map((column) => (
+              <div key={column.title}>
+                <h3
+                  className="text-xs font-medium tracking-[0.2em] uppercase mb-5"
+                  style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
+                >
+                  {column.title}
+                </h3>
+                <ul className="space-y-3">
+                  {column.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="group inline-flex items-center gap-2 transition-all hover:translate-x-1"
+                        style={{ color: 'var(--bone)', opacity: 0.85 }}
+                      >
+                        <span
+                          className="inline-block w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                          style={{ backgroundColor: 'var(--ember-orange)' }}
+                        />
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
-          {/* Explore column */}
-          <div className="md:col-span-3">
-            <h3
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-5"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              Explore
-            </h3>
-            <ul className="space-y-3">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'About', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Pilot Light', href: '/pilot-light' },
-                { label: 'Portfolio', href: '/portfolio' },
-                { label: 'Reviews', href: '/reviews' },
-                { label: 'Pricing', href: '/pricing' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group inline-flex items-center gap-2 transition-all hover:translate-x-1"
-                    style={{ color: 'var(--bone)', opacity: 0.85 }}
-                  >
-                    <span
-                      className="inline-block w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Get in touch column */}
-          <div className="md:col-span-3">
-            <h3
-              className="text-xs font-medium tracking-[0.2em] uppercase mb-5"
-              style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
-            >
-              Get In Touch
-            </h3>
-            <ul className="space-y-3">
-              {[
-                { label: 'Contact', href: '/contact' },
-                { label: 'FAQ', href: '/faq' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group inline-flex items-center gap-2 transition-all hover:translate-x-1"
-                    style={{ color: 'var(--bone)', opacity: 0.85 }}
-                  >
-                    <span
-                      className="inline-block w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ backgroundColor: 'var(--ember-orange)' }}
-                    />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Mini CTA */}
-            <Link
-              href="/contact"
-              className="btn-fun btn-fun-dark group mt-8 inline-flex items-center gap-2 px-5 py-3 text-sm"
-              style={{
-                backgroundColor: 'var(--ember-orange)',
-                color: 'var(--midnight)',
-              }}
-            >
-              Let&apos;s Talk
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 20 20"
-                fill="none"
-                className="transition-transform group-hover:translate-x-1"
+            {/* Get in touch column */}
+            <div>
+              <h3
+                className="text-xs font-medium tracking-[0.2em] uppercase mb-5"
+                style={{ color: 'var(--ember-orange)', fontFamily: 'var(--font-body)' }}
               >
-                <path
-                  d="M4 10h12m0 0l-4-4m4 4l-4 4"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
+                Get In Touch
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center gap-2 transition-all hover:translate-x-1"
+                    style={{ color: 'var(--bone)', opacity: 0.85 }}
+                  >
+                    <span
+                      className="inline-block w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                      style={{ backgroundColor: 'var(--ember-orange)' }}
+                    />
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Mini CTA */}
+              <Link
+                href="/contact"
+                className="btn-fun btn-fun-dark group mt-8 inline-flex items-center gap-2 px-5 py-3 text-sm"
+                style={{
+                  backgroundColor: 'var(--ember-orange)',
+                  color: 'var(--midnight)',
+                }}
+              >
+                Let&apos;s Talk
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  className="transition-transform group-hover:translate-x-1"
+                >
+                  <path
+                    d="M4 10h12m0 0l-4-4m4 4l-4 4"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
 

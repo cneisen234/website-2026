@@ -4,34 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
-
-// The menu follows Pilot Light's navigation convention: up to 6 items; past that, a category is a button that
-// opens its links (never a link itself). About groups the pages about Kindling.
-type NavLink = { label: string; href: string };
-type NavItem = NavLink | { label: string; children: NavLink[] };
-
-const navItems: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Pilot Light', href: '/pilot-light' },
-  { label: 'Pricing', href: '/pricing' },
-  {
-    label: 'About',
-    children: [
-      { label: 'About us', href: '/about' },
-      { label: 'Portfolio', href: '/portfolio' },
-      { label: 'Reviews', href: '/reviews' },
-      { label: 'FAQ', href: '/faq' },
-    ],
-  },
-];
+import { navItems, isGroup } from '@/lib/nav';
 
 /** The phone menu's category steps, in milliseconds: the others fade, it slides, then its links appear. */
 const FADE_MS = 300;
 const SLIDE_MS = 380;
 const LINKS_MS = 240;
 
-const isGroup = (item: NavItem): item is { label: string; children: NavLink[] } => 'children' in item;
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
