@@ -26,6 +26,11 @@ const navItems: NavItem[] = [
   },
 ];
 
+/** The phone menu's category steps, in milliseconds: the others fade, it slides, then its links appear. */
+const FADE_MS = 300;
+const SLIDE_MS = 380;
+const LINKS_MS = 240;
+
 const isGroup = (item: NavItem): item is { label: string; children: NavLink[] } => 'children' in item;
 
 export default function Navigation() {
@@ -33,14 +38,42 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileGroup, setMobileGroup] = useState<string | null>(null);
+  // The phone menu's category runs in steps, each after the last has finished (navigation convention,
+  // docs/site-conventions.md §4): 1 the other items fade away, 2 it slides to the top, 3 its links appear.
+  // Closing runs 3, 2, 1 backward.
+  const [step, setStep] = useState(0);
   // How far the chosen category slides up to reach the top of the phone menu.
   const [shift, setShift] = useState(0);
   const itemRefs = useRef<Record<string, HTMLLIElement | null>>({});
   const menuRef = useRef<HTMLUListElement>(null);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const run = (steps: [number, () => void][]) => {
+    timers.current.forEach(clearTimeout);
+    timers.current = steps.map(([at, fn]) => setTimeout(fn, at));
+  };
 
   const openMobileGroup = (label: string | null) => {
-    if (label) setShift(itemRefs.current[label]?.offsetTop ?? 0);
-    setMobileGroup(label);
+    if (label) {
+      setShift(itemRefs.current[label]?.offsetTop ?? 0);
+      setMobileGroup(label);
+      setStep(1);
+      run([
+        [FADE_MS, () => setStep(2)],
+        [FADE_MS + SLIDE_MS, () => setStep(3)],
+      ]);
+    } else {
+      setStep(2);
+      run([
+        [LINKS_MS, () => setStep(1)],
+        [LINKS_MS + SLIDE_MS, () => setStep(0)],
+        [LINKS_MS + SLIDE_MS + FADE_MS, () => setMobileGroup(null)],
+      ]);
+    }
+  };
+  const resetMobileGroup = () => {
+    timers.current.forEach(clearTimeout);
+    setStep(0);
+    setMobileGroup(null);
   };
   const pathname = usePathname();
 
@@ -226,7 +259,7 @@ export default function Navigation() {
               }}
               onClick={() => {
                 setIsOpen(!isOpen);
-                setMobileGroup(null);
+                resetMobileGroup();
               }}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
@@ -296,11 +329,16 @@ export default function Navigation() {
             */}
             <ul className="relative space-y-2">
               {navItems.map((item, idx) => {
-                const opening = mobileGroup !== null;
                 const chosen = isGroup(item) && mobileGroup === item.label;
-                const faded = opening && !chosen;
-                // Fade first on the way in, last on the way out.
-                const fade = { opacity: faded ? 0 : 1, pointerEvents: faded ? ('none' as const) : undefined, transition: `opacity 200ms ease ${opening ? 0 : 500}ms` };
+                const shown = chosen && step >= 3;
+                // The others fade away with a slight drift down, so it reads as a fade, not a cut.
+                const faded = mobileGroup !== null && !chosen && step >= 1;
+                const fade = {
+                  opacity: faded ? 0 : 1,
+                  transform: faded ? 'translateY(10px)' : 'none',
+                  pointerEvents: faded ? ('none' as const) : undefined,
+                  transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease`,
+                };
                 if (isGroup(item)) {
                   const isActive = item.children.some((c) => c.href === pathname);
                   return (
@@ -312,8 +350,8 @@ export default function Navigation() {
                       className="relative"
                       style={{
                         ...fade,
-                        transform: chosen ? `translateY(-${shift}px)` : 'none',
-                        transition: `${fade.transition}, transform 320ms cubic-bezier(.2,.8,.2,1) 180ms`,
+                        transform: chosen && step >= 2 ? `translateY(-${shift}px)` : fade.transform,
+                        transition: chosen ? `transform ${SLIDE_MS}ms cubic-bezier(.2,.8,.2,1)` : fade.transition,
                       }}
                     >
                       {/* The menu's entrance animation sits on a wrapper: an animation would override this item's own fade and slide. */}
@@ -336,28 +374,25 @@ export default function Navigation() {
                       </button>
                       </div>
                       <ul
-                        aria-hidden={!chosen}
+                        aria-hidden={!shown}
                         className="absolute left-0 top-full w-full pl-5 space-y-1"
                         style={{
                           borderLeft: '2px solid rgba(251, 146, 60, 0.35)',
-                          opacity: chosen ? 1 : 0,
-                          transform: chosen ? 'translateY(0)' : 'translateY(-8px)',
-                          visibility: chosen ? 'visible' : 'hidden',
-                          pointerEvents: chosen ? 'auto' : 'none',
-                          // Last on the way in (after the slide), first on the way out.
-                          transition: chosen
-                            ? 'opacity 240ms ease 500ms, transform 240ms ease 500ms, visibility 0ms linear 500ms'
-                            : 'opacity 160ms ease 0ms, transform 160ms ease 0ms, visibility 0ms linear 160ms',
+                          opacity: shown ? 1 : 0,
+                          transform: shown ? 'translateY(0)' : 'translateY(-8px)',
+                          visibility: shown ? 'visible' : 'hidden',
+                          pointerEvents: shown ? 'auto' : 'none',
+                          transition: `opacity ${LINKS_MS}ms ease, transform ${LINKS_MS}ms ease, visibility 0ms linear ${shown ? 0 : LINKS_MS}ms`,
                         }}
                       >
                         {item.children.map((child) => (
                           <li key={child.href}>
                             <Link
                               href={child.href}
-                              tabIndex={chosen ? 0 : -1}
+                              tabIndex={shown ? 0 : -1}
                               onClick={() => {
                                 setIsOpen(false);
-                                setMobileGroup(null);
+                                resetMobileGroup();
                               }}
                               className="block py-2 text-2xl tracking-tight"
                               style={{ color: pathname === child.href ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', opacity: pathname === child.href ? 1 : 0.85 }}
