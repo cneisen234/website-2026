@@ -28,22 +28,20 @@ const navItems: NavItem[] = [
 
 const isGroup = (item: NavItem): item is { label: string; children: NavLink[] } => 'children' in item;
 
-/** Pilot Light's own orange flame, beside its menu item. */
-function PilotFlame({ size = 14 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" className="inline-block shrink-0">
-      <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill="#fb923c" />
-      <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill="#f0b949" />
-    </svg>
-  );
-}
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileGroup, setMobileGroup] = useState<string | null>(null);
+  // How far the chosen category slides up to reach the top of the phone menu.
+  const [shift, setShift] = useState(0);
+  const itemRefs = useRef<Record<string, HTMLLIElement | null>>({});
   const menuRef = useRef<HTMLUListElement>(null);
+
+  const openMobileGroup = (label: string | null) => {
+    if (label) setShift(itemRefs.current[label]?.offsetTop ?? 0);
+    setMobileGroup(label);
+  };
   const pathname = usePathname();
 
   // A category's links close on a click elsewhere or Escape.
@@ -162,29 +160,27 @@ export default function Navigation() {
                   );
                 }
                 const isActive = pathname === item.href;
-                const pilot = item.href === '/pilot-light';
                 return (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="relative inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors group"
+                      className="relative px-4 py-2 text-sm font-medium transition-colors group"
                       style={{
-                        color: isActive ? (pilot ? '#c2410c' : 'var(--ember-deep)') : 'var(--charcoal)',
+                        color: isActive ? 'var(--ember-deep)' : 'var(--charcoal)',
                       }}
                     >
-                      {pilot ? <PilotFlame /> : null}
                       {item.label}
                       <span
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1 h-1 rounded-full transition-opacity"
                         style={{
-                          backgroundColor: pilot ? 'var(--ember-orange)' : 'var(--ember-deep)',
+                          backgroundColor: 'var(--ember-deep)',
                           opacity: isActive ? 1 : 0,
                         }}
                       />
                       <span
                         className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1 h-1 rounded-full opacity-0 group-hover:opacity-50 transition-opacity"
                         style={{
-                          backgroundColor: pilot ? 'var(--ember-orange)' : 'var(--ember-deep)',
+                          backgroundColor: 'var(--ember-deep)',
                         }}
                       />
                     </Link>
@@ -228,7 +224,10 @@ export default function Navigation() {
                   ? 'var(--charcoal)'
                   : 'rgba(194, 65, 12, 0.1)',
               }}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setMobileGroup(null);
+              }}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               <div className="relative w-5 h-4 flex flex-col justify-between">
@@ -291,65 +290,96 @@ export default function Navigation() {
         <div className="relative h-full flex flex-col pt-24 pb-12 px-6">
           {/* Mobile nav links */}
           <nav className="flex-1 flex flex-col justify-center">
-            <ul className="space-y-2">
+            {/*
+              A category (navigation convention, docs/site-conventions.md §4): opening it fades the other items, slides
+              it to the top, then shows its links under it; closing runs the same steps backward. Nothing below moves.
+            */}
+            <ul className="relative space-y-2">
               {navItems.map((item, idx) => {
+                const opening = mobileGroup !== null;
+                const chosen = isGroup(item) && mobileGroup === item.label;
+                const faded = opening && !chosen;
+                // Fade first on the way in, last on the way out.
+                const fade = { opacity: faded ? 0 : 1, pointerEvents: faded ? ('none' as const) : undefined, transition: `opacity 200ms ease ${opening ? 0 : 500}ms` };
                 if (isGroup(item)) {
-                  const expanded = mobileGroup === item.label;
                   const isActive = item.children.some((c) => c.href === pathname);
                   return (
-                    <li key={item.label} className={isOpen ? 'fade-in-up' : ''} style={{ animationDelay: `${idx * 60}ms` }}>
+                    <li
+                      key={item.label}
+                      ref={(el) => {
+                        itemRefs.current[item.label] = el;
+                      }}
+                      className="relative"
+                      style={{
+                        ...fade,
+                        transform: chosen ? `translateY(-${shift}px)` : 'none',
+                        transition: `${fade.transition}, transform 320ms cubic-bezier(.2,.8,.2,1) 180ms`,
+                      }}
+                    >
+                      {/* The menu's entrance animation sits on a wrapper: an animation would override this item's own fade and slide. */}
+                      <div className={isOpen ? 'fade-in-up' : ''} style={{ animationDelay: `${idx * 60}ms` }}>
                       <button
                         type="button"
-                        aria-expanded={expanded}
-                        onClick={() => setMobileGroup(expanded ? null : item.label)}
+                        aria-expanded={chosen}
+                        onClick={() => openMobileGroup(chosen ? null : item.label)}
                         className="flex items-center gap-3 py-3 cursor-pointer"
                       >
                         <span
                           className="text-4xl tracking-tight transition-colors"
-                          style={{ color: isActive ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', fontStyle: isActive ? 'italic' : 'normal' }}
+                          style={{ color: isActive || chosen ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', fontStyle: isActive ? 'italic' : 'normal' }}
                         >
                           {item.label}
                         </span>
-                        <svg width="22" height="22" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="transition-transform" style={{ color: 'var(--bone)', transform: expanded ? 'rotate(180deg)' : 'none' }}>
+                        <svg width="22" height="22" viewBox="0 0 12 12" fill="none" aria-hidden="true" className="transition-transform duration-300" style={{ color: 'var(--bone)', transform: chosen ? 'rotate(180deg)' : 'none' }}>
                           <path d="M3 4.5l3 3 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </button>
-                      {expanded ? (
-                        <ul className="pl-5 pb-2 space-y-1" style={{ borderLeft: '2px solid rgba(251, 146, 60, 0.35)' }}>
-                          {item.children.map((child) => (
-                            <li key={child.href}>
-                              <Link
-                                href={child.href}
-                                onClick={() => {
-                                  setIsOpen(false);
-                                  setMobileGroup(null);
-                                }}
-                                className="block py-2 text-2xl tracking-tight"
-                                style={{ color: pathname === child.href ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', opacity: pathname === child.href ? 1 : 0.85 }}
-                              >
-                                {child.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
+                      </div>
+                      <ul
+                        aria-hidden={!chosen}
+                        className="absolute left-0 top-full w-full pl-5 space-y-1"
+                        style={{
+                          borderLeft: '2px solid rgba(251, 146, 60, 0.35)',
+                          opacity: chosen ? 1 : 0,
+                          transform: chosen ? 'translateY(0)' : 'translateY(-8px)',
+                          visibility: chosen ? 'visible' : 'hidden',
+                          pointerEvents: chosen ? 'auto' : 'none',
+                          // Last on the way in (after the slide), first on the way out.
+                          transition: chosen
+                            ? 'opacity 240ms ease 500ms, transform 240ms ease 500ms, visibility 0ms linear 500ms'
+                            : 'opacity 160ms ease 0ms, transform 160ms ease 0ms, visibility 0ms linear 160ms',
+                        }}
+                      >
+                        {item.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              tabIndex={chosen ? 0 : -1}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setMobileGroup(null);
+                              }}
+                              className="block py-2 text-2xl tracking-tight"
+                              style={{ color: pathname === child.href ? 'var(--ember-orange)' : 'var(--bone)', fontFamily: 'var(--font-heading)', opacity: pathname === child.href ? 1 : 0.85 }}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
                   );
                 }
                 const isActive = pathname === item.href;
-                const pilot = item.href === '/pilot-light';
                 return (
-                  <li
-                    key={item.href}
-                    className={isOpen ? 'fade-in-up' : ''}
-                    style={{ animationDelay: `${idx * 60}ms` }}
-                  >
+                  <li key={item.href} style={fade}>
+                    <div className={isOpen ? 'fade-in-up' : ''} style={{ animationDelay: `${idx * 60}ms` }}>
                     <Link
                       href={item.href}
+                      tabIndex={faded ? -1 : 0}
                       onClick={() => setIsOpen(false)}
                       className="group flex items-center gap-3 py-3"
                     >
-                      {pilot ? <PilotFlame size={28} /> : null}
                       <span
                         className="text-4xl tracking-tight transition-colors"
                         style={{
@@ -361,6 +391,7 @@ export default function Navigation() {
                         {item.label}
                       </span>
                     </Link>
+                    </div>
                   </li>
                 );
               })}
