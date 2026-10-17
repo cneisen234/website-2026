@@ -8,6 +8,7 @@
 // fail loudly with a clear message rather than pretending the message sent.
 
 import { buildContactHtml, buildContactText } from '@/lib/contactEmail';
+import { siteEmailHeaders } from '@/lib/pilot-light';
 
 type Payload = {
   name?: string;
@@ -78,6 +79,8 @@ async function sendViaSendGrid(opts: {
       personalizations: [{ to: [{ email: to }] }],
       from: { email: from, name: 'Kindling Digital' },
       ...(opts.replyTo ? { reply_to: opts.replyTo } : {}),
+      // Names the email's kind, so Pilot Light's reader takes the visitor (the Reply-To) as the customer.
+      headers: siteEmailHeaders('contact_form'),
       subject: opts.subject,
       // SendGrid requires content parts in increasing preference: text first, HTML last.
       content: [

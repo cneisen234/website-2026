@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Fredoka, Inter_Tight } from "next/font/google";
+import { connection } from "next/server";
+import { LenaForCustomers } from "@/lib/pilot-light";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -42,17 +44,21 @@ export const viewport: Viewport = {
   themeColor: "#F5F1EB",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Every page renders on request (docs/site-conventions.md §6, in Pilot Light), so Lena's chat follows
+  // her add-on being on or off at once, not at the next deploy.
+  await connection();
   return (
     <html lang="en">
       <body className={`${interTight.variable} ${fraunces.variable} ${fredoka.variable} flex flex-col min-h-screen`}>
         <Navigation />
         {children}
         <Footer />
+        <LenaForCustomers />
       </body>
     </html>
   );
