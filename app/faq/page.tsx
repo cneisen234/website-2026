@@ -125,12 +125,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What are add-ons, and what do they cost?',
         answer:
-          "Add-ons are what Pilot Light runs for you — things like online orders, bookings, business email with Google Workspace, reviews, events, or your Google Business Profile. Business in a Box includes two of your choice. Each one after that is $400 to set up and $30 a month.",
+          "Add-ons are what Pilot Light runs for you — things like online orders, bookings, business email with Google Workspace, reviews, events, or your Google Business Profile. Business in a Box includes two of your choice. Each one after that is $500 to set up and $50 a month. Prices can vary by add-on, depending on how much you use it and whether it needs another add-on to work.",
       },
       {
         question: 'Is there a limit on how much I can use Lena?',
         answer:
-          "Lena comes with a generous monthly allowance that covers normal use. If your business needs more, there are higher levels at +$20 or +$70 a month, and we'll let you know well before you get close.",
+          "Lena comes with a generous monthly allowance that covers normal use. If your business needs more, there are higher levels at +$20 or +$50 a month, and we'll let you know well before you get close.",
       },
       {
         question: 'Does it work on my phone?',

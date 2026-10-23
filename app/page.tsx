@@ -32,6 +32,24 @@ const capabilities = [
   },
 ];
 
+const solved = [
+  {
+    problem: 'Off-the-shelf ordering doesn’t fit how you sell?',
+    fix: 'We build it around your menu.',
+    accent: 'var(--ember-deep)',
+  },
+  {
+    problem: 'Paying for five apps that don’t talk to each other?',
+    fix: 'We build one place to run it all.',
+    accent: 'var(--forest-green)',
+  },
+  {
+    problem: 'Your business grew but your website didn’t?',
+    fix: 'We grow it right along with you.',
+    accent: 'var(--honey-gold)',
+  },
+];
+
 const work = [
   {
     name: 'Soady Poppers',
@@ -100,17 +118,17 @@ export default function Home() {
 
               <h1
                 className="mb-6 fade-in-up stagger-1"
-                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}
               >
-                <span className="block text-4xl md:text-6xl leading-[1.05]">
-                  Got a technology problem?
+                <span className="block text-[2.6rem] md:text-6xl lg:text-7xl leading-[1]">
+                  Tired of fighting
                 </span>
                 <span
-                  className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
+                  className="block italic text-[2.6rem] md:text-6xl lg:text-7xl leading-[1] mt-1"
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    We&apos;re on it!
+                    your tech?
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"
@@ -136,10 +154,8 @@ export default function Home() {
                 className="text-lg md:text-xl max-w-xl mb-8 fade-in-up stagger-2"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
               >
-                Websites, online ordering, payments, booking, automation, custom
-                software, and more — built around how your business actually works.
-                No big agency bill. No need to become a technology expert. Just tell us
-                what you need.
+                We build your website, connect your tools, and we&apos;re the people you
+                call when something breaks.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 fade-in-up stagger-3">
@@ -232,9 +248,9 @@ export default function Home() {
                 </div>
               </div>
               <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                Run your business by{' '}
+                Your whole business, connected.{' '}
                 <em className="italic" style={{ color: '#fb923c' }}>
-                  just asking.
+                  Ask. Approve. Done.
                 </em>
               </h2>
               <p className="text-lg mb-8 max-w-xl" style={{ color: 'var(--bone)', opacity: 0.78, lineHeight: '1.7' }}>
@@ -345,6 +361,33 @@ export default function Home() {
                 <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
+          </div>
+
+          {/* Problems we've solved */}
+          <div className="mt-20 max-w-6xl">
+            <h3 className="text-3xl md:text-4xl mb-8" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+              Problems we&apos;ve solved
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {solved.map((s) => (
+                <div
+                  key={s.problem}
+                  className="card-fun tilt-none p-7"
+                  style={{ backgroundColor: 'white', ['--shadow-color' as string]: s.accent } as CSSProperties}
+                >
+                  <p className="text-lg mb-2" style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>{s.problem}</p>
+                  <p className="text-xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)', lineHeight: '1.3' }}>{s.fix}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10">
+              <a href="/portfolio" className="group inline-flex items-center gap-2 font-medium text-lg transition-all" style={{ color: 'var(--ember-deep)' }}>
+                See our work
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                  <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -477,7 +520,7 @@ export default function Home() {
             <div className="md:col-span-6 grid sm:grid-cols-2 gap-6 tilt-alt">
               {[
                 { name: 'Brand in a Box', price: '$100', accent: 'var(--ember-deep)', desc: 'A custom 10-page site, logo & branding, and 10 text or photo updates a week.' },
-                { name: 'Business in a Box', price: '$300', accent: '#c2410c', desc: 'Everything in Brand in a Box, plus Pilot Light, 2 add-ons, and unlimited updates & support.' },
+                { name: 'Business in a Box', price: '$300', accent: 'var(--forest-green)', desc: 'Everything in Brand in a Box, plus Pilot Light, 2 add-ons, and unlimited updates & support.' },
               ].map((plan) => (
                 <div
                   key={plan.name}

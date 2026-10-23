@@ -92,14 +92,14 @@ const pieces = [
     dark: false,
     accent: '#c2410c',
     tint: 'rgba(251, 146, 60, 0.16)',
-    heading: 'Run your business by just asking.',
+    heading: 'Your whole business, connected. Ask. Approve. Done.',
     body: "Pilot Light is the command center we set up for your business: your website, orders, customers and tools in one place, with Lena, an AI assistant who prepares every change for you to approve. It comes with Business in a Box, along with two add-ons of your choice and unlimited updates and support.",
     included: [
       'Lena, your AI assistant',
       'A dashboard & iPhone app',
       'Every change waits for your OK',
       'New orders straight to your phone',
-      '2 add-ons included; more at $400 + $30/month',
+      '2 add-ons included; more at $500 + $50/month',
     ],
   },
 ];

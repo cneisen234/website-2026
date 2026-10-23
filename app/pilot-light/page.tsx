@@ -6,7 +6,7 @@ import Image from 'next/image';
 // so this page runs warmer and darker than the rest of the site while using the same type and shapes.
 
 export const metadata: Metadata = {
-  title: 'Pilot Light — Run your business by just asking | Kindling Digital',
+  title: 'Pilot Light — Your whole business, connected. Ask. Approve. Done. | Kindling Digital',
   description:
     'Pilot Light is the command center for your business: your website, orders and customers in one place, with Lena, an AI assistant who prepares every change for you to approve. Included with Business in a Box.',
 };
@@ -147,11 +147,10 @@ export default function PilotLightPage() {
               </div>
 
               <h1 className="mb-8 fade-in-up stagger-1" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                <span className="block text-5xl md:text-7xl leading-[1.02] lg:whitespace-nowrap">Run your business</span>
+                <span className="block text-5xl md:text-7xl leading-[1.02]">Your whole business, connected.</span>
                 <span className="block text-5xl md:text-7xl leading-[1.02] mt-1">
-                  by{' '}
                   <em className="italic" style={{ color: ORANGE }}>
-                    just asking.
+                    Ask. Approve. Done.
                   </em>
                 </span>
               </h1>
@@ -371,13 +370,13 @@ export default function PilotLightPage() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="card-fun tilt-none p-8 md:p-10" style={{ backgroundColor: 'white', ['--shadow-color' as string]: GLOW } as CSSProperties}>
+              <div className="card-fun tilt-none p-8 md:p-10" style={{ backgroundColor: 'white', ['--shadow-color' as string]: 'var(--forest-green)' } as CSSProperties}>
                 <div className="flex flex-wrap items-baseline justify-between gap-4 mb-8">
                   <h3 className="text-2xl md:text-3xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
                     Business in a Box
                   </h3>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-6xl leading-none" style={{ color: '#c2410c', fontFamily: 'var(--font-heading)' }}>
+                    <span className="text-6xl leading-none" style={{ color: 'var(--forest-green)', fontFamily: 'var(--font-heading)' }}>
                       $300
                     </span>
                     <span className="text-lg font-rounded" style={{ color: 'var(--stone)' }}>
@@ -394,7 +393,7 @@ export default function PilotLightPage() {
                     ['A custom website & full branding', 'Up to 10 pages, your domain, logo and brand packaging'],
                   ].map(([label, note]) => (
                     <li key={label} className="flex items-start gap-3">
-                      <Check color="#c2410c" />
+                      <Check color="var(--forest-green)" />
                       <span className="flex flex-col">
                         <span style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>{label}</span>
                         <span className="text-sm mt-0.5" style={{ color: 'var(--stone)', lineHeight: '1.4' }}>
@@ -407,7 +406,7 @@ export default function PilotLightPage() {
                 <a
                   href="/contact"
                   className="btn-fun group inline-flex w-full items-center justify-center gap-2 px-8 py-4 text-lg"
-                  style={{ backgroundColor: '#c2410c', color: 'white' }}
+                  style={{ backgroundColor: 'var(--forest-green)', color: 'white' }}
                 >
                   Get Started
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
@@ -452,13 +451,14 @@ export default function PilotLightPage() {
                 </div>
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-4xl" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                    $400
+                    $500
                   </span>
-                  <span style={{ color: 'var(--bone)', opacity: 0.7 }}>setup + $30/month each</span>
+                  <span style={{ color: 'var(--bone)', opacity: 0.7 }}>setup + $50/month each</span>
                 </div>
                 <p className="text-sm" style={{ color: 'var(--bone)', opacity: 0.72, lineHeight: '1.6' }}>
                   Every add-on after your first two, set up by us and run through Pilot Light. Ask us about anything you don&apos;t
-                  see here.
+                  see here. Prices can vary by add-on, depending on how much you use it and whether it needs another add-on
+                  to work.
                 </p>
               </div>
               <div className="rounded-3xl p-7" style={{ backgroundColor: 'rgba(240, 185, 73, 0.1)', border: '1.5px solid rgba(240, 185, 73, 0.4)' }}>
@@ -476,7 +476,7 @@ export default function PilotLightPage() {
                   </li>
                   <li className="flex justify-between gap-4">
                     <span>Pro</span>
-                    <span style={{ opacity: 0.8 }}>+$70/month</span>
+                    <span style={{ opacity: 0.8 }}>+$50/month</span>
                   </li>
                 </ul>
                 <p className="mt-3 text-xs" style={{ color: 'var(--bone)', opacity: 0.6, lineHeight: '1.5' }}>

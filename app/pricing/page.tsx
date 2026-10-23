@@ -8,7 +8,6 @@ const plans = [
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
     tagline: 'A custom website and a full brand, kept up to date for you.',
-    highlight: null as null | { label: string; href: string },
     features: [
       { label: 'Up to a 10-page custom-built website' },
       { label: 'Custom domain registration or transfer' },
@@ -25,13 +24,12 @@ const plans = [
     name: 'Business in a Box',
     price: '$300',
     cadence: '/month',
-    accent: '#c2410c',
-    tint: 'rgba(251, 146, 60, 0.16)',
+    accent: 'var(--forest-green)',
+    tint: 'rgba(95, 167, 119, 0.14)',
     tagline: 'Everything in Brand in a Box, run from Pilot Light.',
-    highlight: { label: 'Includes Pilot Light', href: '/pilot-light' },
     features: [
       { label: 'Pilot Light, set up for your business', note: 'A custom integration with your website and tools, Lena, and the iPhone app' },
-      { label: '2 Pilot Light add-ons of your choice', note: 'More add-ons are $400 setup + $30/month each' },
+      { label: '2 Pilot Light add-ons of your choice', note: 'More add-ons are $500 setup + $50/month each' },
       { label: 'Unlimited updates & support', note: 'For everything you already have, including your add-ons' },
       { label: 'Up to a 10-page custom-built website' },
       { label: 'Custom domain, logo design & brand packaging' },
@@ -203,16 +201,6 @@ export default function Pricing() {
                 className="card-fun tilt-none flex flex-col p-8 md:p-10"
                 style={{ backgroundColor: 'white', ['--shadow-color' as string]: plan.accent } as CSSProperties}
               >
-                {plan.highlight ? (
-                  <a
-                    href={plan.highlight.href}
-                    className="self-start inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 text-sm font-medium"
-                    style={{ backgroundColor: 'rgba(251, 146, 60, 0.16)', color: '#c2410c' }}
-                  >
-                    {pilotFlame(16)}
-                    {plan.highlight.label}
-                  </a>
-                ) : null}
                 <h3
                   className="text-2xl md:text-3xl mb-2"
                   style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
@@ -322,7 +310,7 @@ export default function Pricing() {
               </h2>
               <p className="text-lg mb-6" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
                 Add-ons are what Pilot Light runs for your business: online orders, bookings, business email, reviews and
-                more. Pick two to start; every add-on after that is <strong style={{ color: 'var(--bone)' }}>$400 to set up and $30 a month</strong>.
+                more. Pick two to start; every add-on after that is <strong style={{ color: 'var(--bone)' }}>$500 to set up and $50 a month</strong>.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {['E-commerce', 'Google Workspace & email', 'Lena on your website', 'Reviews', 'Bookings', 'Events', 'Google Business Profile', 'Text notifications'].map((a) => (
@@ -342,18 +330,19 @@ export default function Pricing() {
               <div className="rounded-3xl p-8" style={{ backgroundColor: 'rgba(251, 146, 60, 0.1)', border: '1.5px solid rgba(251, 146, 60, 0.45)' }}>
                 <div className="flex items-baseline gap-2">
                   <span className="text-6xl leading-none" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                    $400
+                    $500
                   </span>
                   <span className="text-lg font-rounded" style={{ color: 'var(--bone)', opacity: 0.7 }}>
                     setup
                   </span>
                 </div>
                 <div className="mt-2 text-2xl" style={{ color: '#fb923c', fontFamily: 'var(--font-heading)' }}>
-                  + $30/month each
+                  + $50/month each
                 </div>
                 <p className="mt-4 text-sm" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}>
                   For each add-on beyond the two included with Business in a Box. Busier add-ons, and Lena herself, have clear
-                  monthly limits with higher levels available.
+                  monthly limits with higher levels available. Prices can vary by add-on, depending on how much you use it and
+                  whether it needs another add-on to work.
                 </p>
               </div>
             </div>
