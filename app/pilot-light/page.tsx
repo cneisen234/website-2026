@@ -34,7 +34,7 @@ function Phone({ src, alt, tilt = 0, className = '' }: { src: string; alt: strin
       <div className="relative overflow-hidden rounded-[2.1rem]" style={{ backgroundColor: '#f5f6ef' }}>
         <div className="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black" />
         <div className="h-9" />
-        <Image src={src} alt={alt} width={720} height={1468} className="block h-auto w-full" />
+        <Image src={src} alt={alt} width={720} height={1468} sizes="(min-width: 768px) 300px, 70vw" quality={90} className="block h-auto w-full" />
       </div>
     </div>
   );
@@ -289,7 +289,7 @@ export default function PilotLightPage() {
                   className="flex items-start gap-4 rounded-3xl px-5 py-4"
                   style={{ backgroundColor: 'rgba(245, 241, 235, 0.1)', border: '1px solid rgba(245, 241, 235, 0.14)', backdropFilter: 'blur(12px)', transform: `translateX(${i * 14}px)` }}
                 >
-                  <Image src="/pilot-light/app-icon.webp" alt="" width={44} height={44} className="rounded-xl shrink-0" />
+                  <Image src="/pilot-light/app-icon.webp" alt="" width={44} height={44} sizes="44px" className="rounded-xl shrink-0" />
                   <div className="min-w-0 flex-1">
                     <div className="flex justify-between text-xs" style={{ color: 'var(--bone)', opacity: 0.6 }}>
                       <span>Pilot Light</span>

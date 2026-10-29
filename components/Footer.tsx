@@ -34,6 +34,7 @@ export default function Footer() {
             <div className="mb-6">
               <Image
                 src="/transparent_logo.webp"
+                sizes="80px"
                 alt="Kindling Digital"
                 width={1024}
                 height={1536}

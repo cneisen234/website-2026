@@ -112,6 +112,7 @@ export default function Navigation() {
             >
               <Image
                 src="/transparent_logo.webp"
+                sizes="48px"
                 alt="Kindling Digital"
                 width={1024}
                 height={1536}

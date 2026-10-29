@@ -151,6 +151,7 @@ export default function Portfolio() {
                   </div>
                   <Image
                     src="/soadypopperdesktop.webp"
+                    sizes="(min-width: 768px) 576px, 100vw"
                     alt="The Soady Poppers website on desktop"
                     width={1703}
                     height={853}
@@ -169,6 +170,7 @@ export default function Portfolio() {
                 >
                   <Image
                     src="/soadypoppermobile.webp"
+                    sizes="(min-width: 768px) 160px, 112px"
                     alt="The Soady Poppers website on mobile"
                     width={386}
                     height={838}
@@ -326,6 +328,7 @@ export default function Portfolio() {
                   </div>
                   <Image
                     src="/fitnessinspireddesktop.webp"
+                    sizes="(min-width: 768px) 576px, 100vw"
                     alt="The Fitness Inspired Training website on desktop"
                     width={1675}
                     height={934}
@@ -344,6 +347,7 @@ export default function Portfolio() {
                 >
                   <Image
                     src="/inspiredfitnessmobile.webp"
+                    sizes="(min-width: 768px) 160px, 112px"
                     alt="The Fitness Inspired Training website on mobile"
                     width={330}
                     height={719}
@@ -440,6 +444,7 @@ export default function Portfolio() {
                   </div>
                   <Image
                     src="/meganssourdough-desktop.webp"
+                    sizes="(min-width: 768px) 576px, 100vw"
                     alt="The Megan’s Sourdough website on desktop"
                     width={1720}
                     height={892}
@@ -458,6 +463,7 @@ export default function Portfolio() {
                 >
                   <Image
                     src="/meganssourdough-mobile.webp"
+                    sizes="(min-width: 768px) 160px, 112px"
                     alt="The Megan’s Sourdough website on mobile"
                     width={375}
                     height={812}

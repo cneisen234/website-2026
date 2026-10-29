@@ -208,6 +208,7 @@ export default function Home() {
                     alt="A recent custom website built by Kindling Digital"
                     width={1703}
                     height={853}
+                    sizes="(min-width: 768px) 448px, 92vw"
                     className="w-full h-auto"
                     priority
                   />
@@ -222,6 +223,8 @@ export default function Home() {
                       alt="Soady Poppers run from the Pilot Light app, with a change waiting for Allow"
                       width={720}
                       height={1468}
+                      sizes="(min-width: 768px) 126px, 26vw"
+                      quality={90}
                       className="block h-auto w-full"
                       priority
                     />
@@ -303,7 +306,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-[2.1rem]" style={{ backgroundColor: '#f5f6ef' }}>
                   <div className="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black" />
                   <div className="h-9" />
-                  <Image src="/pilot-light/allow-card.webp" alt="Lena preparing a price change for the owner to allow, in the Pilot Light app" width={720} height={1468} className="block h-auto w-full" />
+                  <Image src="/pilot-light/allow-card.webp" alt="Lena preparing a price change for the owner to allow, in the Pilot Light app" width={720} height={1468} sizes="(min-width: 768px) 300px, 72vw" quality={90} className="block h-auto w-full" />
                 </div>
               </div>
             </div>
@@ -473,6 +476,7 @@ export default function Home() {
                     alt={`The ${project.name} website built by Kindling Digital`}
                     width={project.width}
                     height={project.height}
+                    sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="w-full h-auto"
                   />
                 </div>
