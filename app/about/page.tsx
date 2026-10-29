@@ -43,13 +43,13 @@ export default function About() {
               className="md:col-span-7  mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="md:block text-4xl md:text-6xl leading-[1.05]">It takes two to make</span>
+              <span className="md:block text-4xl md:text-6xl leading-[1.05]">The person behind</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}
               >
                 <span className="relative inline-block">
-                a spark
+                Kindling
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
                     height="14"
@@ -158,66 +158,6 @@ export default function About() {
                   everyday small business owner who needs them most? That&apos;s where I come
                   in. Whatever the digital or tech problem, reach out — I&apos;m here to help.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Megan — CREAM with photo */}
-      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
-        <div
-          className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, var(--forest-green) 0%, transparent 70%)', transform: 'translate(-30%, 0)' }}
-        />
-
-        <div className="container mx-auto px-4 relative">
-          <div className="grid md:grid-cols-12 gap-12 items-center">
-            {/* Bio */}
-            <div className="md:col-span-7">
-              <span
-                className="badge badge-tilt mb-4"
-                style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.14)' }}
-              >
-                <span className="badge-dot" />
-                Design &amp; Content
-              </span>
-              <h2 className="text-4xl md:text-6xl mb-6 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
-                Hi, I&apos;m Megan.
-              </h2>
-              <div className="space-y-6 text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.75' }}>
-                <p>
-                  I&apos;m the co-designer and content editor of Kindling Digital.
-                   I&apos;m passionate about giving small businesses a look
-                  that actually holds together. I love bringing art into my everyday 
-                  life and that passion is poured into everything I design. 
-                  Your brand is your identity and I&apos;m going to help you bring that out in center stage.
-                </p>
-              </div>
-            </div>
-
-            {/* Photo — a tilted, taped polaroid */}
-            <div className="md:col-span-5">
-              <div className="relative mx-auto max-w-sm" style={{ transform: 'rotate(2.5deg)' }}>
-                <div
-                  className="absolute left-1/2 -top-4 z-10 h-8 w-28 -translate-x-1/2 rotate-[4deg]"
-                  style={{ backgroundColor: 'rgba(95, 167, 119, 0.5)', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)' }}
-                  aria-hidden="true"
-                />
-                <div
-                  className="rounded-2xl bg-white p-3 pb-6 transition-transform duration-300 hover:rotate-0"
-                  style={{ border: '2px solid var(--charcoal)', boxShadow: '10px 12px 0 rgba(95, 167, 119, 0.85)' }}
-                >
-                  <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
-                    <Image
-                      src="/megan.webp"
-                      alt="Megan, co-designer and content editor at Kindling Digital"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
