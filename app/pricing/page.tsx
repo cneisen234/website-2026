@@ -340,10 +340,30 @@ export default function Pricing() {
                   + $50/month each
                 </div>
                 <p className="mt-4 text-sm" style={{ color: 'var(--bone)', opacity: 0.7, lineHeight: '1.6' }}>
-                  For each add-on beyond the two included with Business in a Box. Busier add-ons, and Lena herself, have clear
-                  monthly limits with higher levels available. Prices can vary by add-on, depending on how much you use it and
-                  whether it needs another add-on to work.
+                  For each add-on beyond the two included with Business in a Box. Prices can vary by add-on, depending on how
+                  much you use it and whether it needs another add-on to work.
                 </p>
+                <div className="mt-6 pt-5" style={{ borderTop: '1px solid rgba(251, 146, 60, 0.3)' }}>
+                  <div className="text-sm font-rounded uppercase tracking-wide mb-3" style={{ color: '#f0b949' }}>
+                    Lena&apos;s monthly usage
+                  </div>
+                  <ul className="space-y-2 text-sm" style={{ color: 'var(--bone)' }}>
+                    {[
+                      ['Standard', 'Included'],
+                      ['Plus', '+$20/month'],
+                      ['Pro', '+$50/month'],
+                    ].map(([level, price]) => (
+                      <li key={level} className="flex justify-between gap-4">
+                        <span>{level}</span>
+                        <span style={{ opacity: 0.8 }}>{price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-xs" style={{ color: 'var(--bone)', opacity: 0.6, lineHeight: '1.5' }}>
+                    Each level has a clear monthly limit, and we&apos;ll let you know well before you get close. Busier add-ons,
+                    like email and texting, come in the same three levels.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

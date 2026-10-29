@@ -93,9 +93,9 @@ const pieces = [
     accent: '#c2410c',
     tint: 'rgba(251, 146, 60, 0.16)',
     heading: 'Your whole business, connected. Ask. Approve. Done.',
-    body: "Pilot Light is the command center we set up for your business: your website, orders, customers and tools in one place, with Lena, an AI assistant who prepares every change for you to approve. It comes with Business in a Box, along with two add-ons of your choice and unlimited updates and support.",
+    body: "Pilot Light is built into the custom website we make for you, so your website, orders, customers and tools run from one place. Ask Lena for anything in plain words, tap Allow, and it's live. It comes with Business in a Box, along with two add-ons of your choice and unlimited updates and support.",
     included: [
-      'Lena, your AI assistant',
+      'Lena: ask for anything in plain words',
       'A dashboard & iPhone app',
       'Every change waits for your OK',
       'New orders straight to your phone',

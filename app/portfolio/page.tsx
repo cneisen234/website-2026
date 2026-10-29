@@ -22,8 +22,8 @@ const fiBuilt = [
   'Built from scratch',
 ];
 
-// Particular Notions grew from handmade charms into a sourdough bakery with
-// online ordering — the site grew right along with the business.
+// Megan's Sourdough started as Particular Notions, a handmade charm shop, and
+// became a sourdough bakery with online ordering — the site grew right along with it.
 const pnBuilt = [
   'Online bakery ordering',
   'Cart & checkout',
@@ -356,7 +356,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Particular Notions — DARK case study */}
+      {/* Megan's Sourdough — DARK case study */}
       <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--midnight)' }}>
         <div
           className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
@@ -372,27 +372,26 @@ export default function Portfolio() {
                 style={{ color: 'var(--forest-green)', backgroundColor: 'rgba(95, 167, 119, 0.16)' }}
               >
                 <span className="badge-dot" />
-                Particular Notions
+                Megan&apos;s Sourdough
               </span>
               <h2
                 className="text-4xl md:text-5xl mb-5 leading-[1.05]"
                 style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
               >
-                Handmade charms, a brand to match.
+                Fresh sourdough, ordered online.
               </h2>
               <p
                 className="text-xl md:text-2xl mb-6 leading-snug"
                 style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
               >
-                Started with handmade charms, then added a sourdough bakery — so{' '}
-                <span style={{ color: 'var(--honey-gold)' }}>we grew the site right along with them,</span>{' '}
+                Started as Particular Notions, a handmade charm shop, then became a sourdough bakery — so{' '}
+                <span style={{ color: 'var(--honey-gold)' }}>we grew the site right along with it,</span>{' '}
                 fresh bakes now ordered online for next-day pickup or local delivery.
               </p>
               <p className="text-lg mb-8" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.75' }}>
-                Particular Notions is a Fairview, Michigan maker — beaded charms and
-                keychains, each one made by hand. We built the whole storefront from
-                scratch and put the branding together to match: the sage-and-gold
-                palette, the fox logo, the fonts.
+                Megan&apos;s Sourdough bakes naturally leavened loaves, scones and cookies by
+                hand in small batches. We built the whole site from scratch and carried the
+                brand through the change: the sage-and-gold palette, the fox logo, the fonts.
               </p>
 
               <div className="flex flex-wrap gap-2.5 mb-10">
@@ -409,7 +408,7 @@ export default function Portfolio() {
               </div>
 
               <a
-                href="https://www.particularnotions.com/"
+                href="https://www.megans-sourdough.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
@@ -440,8 +439,8 @@ export default function Portfolio() {
                     <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
                   </div>
                   <Image
-                    src="/particularnotions2.webp"
-                    alt="The Particular Notions website on desktop"
+                    src="/meganssourdough-desktop.webp"
+                    alt="The Megan’s Sourdough website on desktop"
                     width={1720}
                     height={892}
                     className="w-full h-auto"
@@ -458,10 +457,10 @@ export default function Portfolio() {
                   }}
                 >
                   <Image
-                    src="/particularnotions1.webp"
-                    alt="The Particular Notions website on mobile"
-                    width={373}
-                    height={810}
+                    src="/meganssourdough-mobile.webp"
+                    alt="The Megan’s Sourdough website on mobile"
+                    width={375}
+                    height={812}
                     className="w-full h-auto"
                   />
                 </div>

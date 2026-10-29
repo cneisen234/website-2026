@@ -115,7 +115,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What is Pilot Light?',
         answer:
-          "It's the command center for your business that comes with Business in a Box: your website, orders, customers and tools in one place, with Lena, an AI assistant who knows your business. You ask her questions or tell her what to change, and she prepares it for you to approve. There's a dashboard and an iPhone app.",
+          "It's the software built into your custom website with Business in a Box, so your website, orders, customers and tools run from one place. You ask Lena questions or tell her what to change in plain words, and she prepares it for you to approve. There's a dashboard and an iPhone app.",
       },
       {
         question: 'Will Lena change things without asking me?',

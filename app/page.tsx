@@ -72,14 +72,14 @@ const work = [
     href: 'https://www.fitnessinspiredpersonaltraining.com/',
   },
   {
-    name: 'Particular Notions',
-    tag: 'Handmade goods · storefront',
-    image: '/particularnotions2.webp',
+    name: 'Megan’s Sourdough',
+    tag: 'Sourdough bakery · pickup & delivery',
+    image: '/meganssourdough-desktop.webp',
     width: 1720,
     height: 892,
     shadow: 'rgba(95, 167, 119, 0.8)',
     tilt: '1.5deg',
-    href: 'https://www.particularnotions.com/',
+    href: 'https://www.megans-sourdough.com/',
   },
 ];
 
@@ -120,15 +120,15 @@ export default function Home() {
                 className="mb-6 fade-in-up stagger-1"
                 style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)', fontWeight: 600 }}
               >
-                <span className="block text-[2.6rem] md:text-6xl lg:text-7xl leading-[1]">
-                  Tired of fighting
+                <span className="block text-[2.4rem] md:text-5xl lg:text-6xl leading-[1.05]">
+                  We build and run the technology behind
                 </span>
                 <span
-                  className="block italic text-[2.6rem] md:text-6xl lg:text-7xl leading-[1] mt-1"
+                  className="block italic text-[2.4rem] md:text-5xl lg:text-6xl leading-[1.05] mt-1"
                   style={{ color: 'var(--ember-deep)' }}
                 >
                   <span className="relative inline-block">
-                    your tech?
+                    small businesses.
                     <svg
                       className="absolute -bottom-1 left-0 w-full"
                       height="14"
@@ -154,8 +154,8 @@ export default function Home() {
                 className="text-lg md:text-xl max-w-xl mb-8 fade-in-up stagger-2"
                 style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}
               >
-                We build your website, connect your tools, and we&apos;re the people you
-                call when something breaks.
+                A custom website built around how your business runs, the software to run
+                it from, and Chris, who keeps it all working.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 fade-in-up stagger-3">
@@ -182,19 +182,20 @@ export default function Home() {
               </div>
 
               <p className="mt-5 text-sm fade-in-up stagger-4" style={{ color: 'var(--stone)' }}>
-                Websites &amp; branding from <strong style={{ color: 'var(--ember-deep)' }}>$100/month</strong>. No big upfront bill.
+                Built by hand for businesses like <strong style={{ color: 'var(--ember-deep)' }}>Soady Poppers</strong> and{' '}
+                <strong style={{ color: 'var(--ember-deep)' }}>Fitness Inspired Training</strong>.
               </p>
             </div>
 
             {/* Snapshot of a recent build */}
             <div className="md:col-span-5 w-full fade-in-up stagger-3">
-              <div className="relative mx-auto max-w-md">
+              <div className="relative mx-auto max-w-md pb-16 sm:pb-12">
                 <div
                   className="rounded-2xl overflow-hidden bg-white"
                   style={{
                     border: '2px solid var(--charcoal)',
                     boxShadow: '10px 12px 0 rgba(214, 106, 60, 0.85)',
-                    transform: 'rotate(1.8deg)',
+                    transform: 'rotate(-1.5deg)',
                   }}
                 >
                   <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
@@ -211,8 +212,23 @@ export default function Home() {
                     priority
                   />
                 </div>
+                <div
+                  className="absolute right-0 bottom-0 w-[28%] rounded-[1.4rem] p-1.5"
+                  style={{ backgroundColor: '#1c2128', boxShadow: '0 0 0 2px #2b313a, 8px 10px 0 rgba(240, 185, 73, 0.9)', transform: 'rotate(3deg)' }}
+                >
+                  <div className="overflow-hidden rounded-[1.25rem]" style={{ backgroundColor: '#f5f6ef' }}>
+                    <Image
+                      src="/pilot-light/allow-card-soady.webp"
+                      alt="Soady Poppers run from the Pilot Light app, with a change waiting for Allow"
+                      width={720}
+                      height={1468}
+                      className="block h-auto w-full"
+                      priority
+                    />
+                  </div>
+                </div>
                 <span
-                  className="absolute -bottom-4 -left-3 badge badge-tilt"
+                  className="absolute bottom-6 -left-3 badge badge-tilt"
                   style={{ backgroundColor: 'white', border: '2px solid var(--charcoal)', color: 'var(--ember-deep)' }}
                 >
                   <span className="badge-dot" />
@@ -254,12 +270,12 @@ export default function Home() {
                 </em>
               </h2>
               <p className="text-lg mb-8 max-w-xl" style={{ color: 'var(--bone)', opacity: 0.78, lineHeight: '1.7' }}>
-                Pilot Light puts your website, orders, customers and tools in one place, with Lena, an assistant who knows your
-                business. Ask how the month is going, tell her what to change, and approve it with a tap, from your dashboard or
-                the iPhone app. It comes with Business in a Box.
+                We record how your business runs in a custom website, then build Pilot Light into it, so everything runs from
+                one place. Ask Lena for anything in plain words, tap Allow, and it&apos;s live, from your dashboard or the iPhone
+                app. It comes with Business in a Box.
               </p>
               <ul className="grid sm:grid-cols-2 gap-3 mb-10 max-w-xl">
-                {['Lena prepares every change for you', 'Nothing changes until you tap Allow', 'New orders straight to your phone', 'Unlimited updates & support'].map((item) => (
+                {['Everything connected, nothing entered twice', 'Routine work handled automatically', 'Nothing changes until you tap Allow', 'Unlimited updates & support'].map((item) => (
                   <li key={item} className="flex items-start gap-2.5" style={{ color: 'var(--bone)' }}>
                     <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="mt-0.5 shrink-0">
                       <path d="M3 8l3 3 7-7" stroke="#fb923c" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />

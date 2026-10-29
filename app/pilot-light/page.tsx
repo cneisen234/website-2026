@@ -8,7 +8,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Pilot Light — Your whole business, connected. Ask. Approve. Done. | Kindling Digital',
   description:
-    'Pilot Light is the command center for your business: your website, orders and customers in one place, with Lena, an AI assistant who prepares every change for you to approve. Included with Business in a Box.',
+    'Pilot Light is built into the custom website Kindling makes for you, so your website, orders and customers run from one place. Ask Lena in plain words, tap Allow, and it’s live. Included with Business in a Box.',
 };
 
 const ORANGE = '#fb923c';
@@ -98,12 +98,12 @@ const steps: { kicker: string; title: ReactNode; body: string; image: string; al
 ];
 
 const advantages = [
-  { title: 'Everything in one place', body: 'Your website, orders, customers, payments and email side by side, instead of five logins and a sticky note.' },
-  { title: 'Unlimited updates & support', body: 'Because your whole business runs through Pilot Light, we keep everything you have running and up to date, with no counting changes.' },
-  { title: 'Changes in minutes', body: 'No more emailing someone and waiting days for a price or a photo to change. Ask, allow, and it’s live.' },
-  { title: 'Lena knows your business', body: 'She answers from your real data and asks you when she isn’t sure, instead of guessing.' },
-  { title: 'Nothing changes without you', body: 'Every change waits for your OK, and you can see the history of everything that happened.' },
-  { title: 'Built around your business', body: 'We connect Pilot Light to your site and tools by hand, so it fits the way your business actually works.' },
+  { title: 'Built around your business', body: 'Your custom website records how your business runs: what you sell, your prices, your rules. Pilot Light works from that, so it fits the way you already work.' },
+  { title: 'Everything connected', body: 'Your website, orders, payments and email share one picture of your business. Change a price once and it changes everywhere.' },
+  { title: 'Routine work handled', body: 'New orders reach your phone, payments are matched to their orders, and scheduled changes go live on time, with nothing copied by hand.' },
+  { title: 'Changes in minutes, not weekends', body: 'No more waiting for a free weekend to change a price or a photo. Ask, allow, and it’s live.' },
+  { title: 'Safe by design', body: 'Every change waits for your OK, is checked before it runs and confirmed on your site after. If anything doesn’t match, it’s put back.' },
+  { title: 'Chris keeps it all running', body: 'Unlimited updates and support for everything you have, from someone who already knows your business.' },
 ];
 
 const addOnExamples = [
@@ -156,9 +156,9 @@ export default function PilotLightPage() {
               </h1>
 
               <p className="text-lg md:text-xl max-w-xl mb-10 fade-in-up stagger-2" style={{ color: 'var(--bone)', opacity: 0.78, lineHeight: '1.7' }}>
-                Pilot Light is the command center for your business: your website, orders, customers and tools in one place,
-                with <strong style={{ color: 'var(--bone)' }}>Lena</strong>, an assistant who knows your business inside and out.
-                Ask her anything, tell her what to change, and approve it with a tap.
+                Pilot Light is built into the custom website we make for you, so your website, orders, customers and tools run
+                from one place. Ask <strong style={{ color: 'var(--bone)' }}>Lena</strong> for anything in plain words, tap Allow,
+                and it&apos;s live.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-10 fade-in-up stagger-3">
@@ -178,7 +178,7 @@ export default function PilotLightPage() {
               </div>
 
               <div className="flex flex-wrap gap-3 fade-in-up stagger-4">
-                {['Included with Business in a Box', 'iPhone app', 'Lena, your AI assistant'].map((chip) => (
+                {['Built into your website', 'Included with Business in a Box', 'iPhone app'].map((chip) => (
                   <span key={chip} className="chip-fun chip-fun-dark flex items-center gap-2 text-sm px-4 py-2" style={{ color: 'var(--bone)' }}>
                     <Flame size={14} />
                     {chip}
@@ -218,9 +218,13 @@ export default function PilotLightPage() {
               <span className="badge-dot" />
               How it works
             </span>
-            <h2 className="text-4xl md:text-6xl leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+            <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
               Your whole business, one conversation away.
             </h2>
+            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+              Right now you&apos;re the one connecting your website, orders, payments and inbox by hand. With Pilot Light, you
+              just ask.
+            </p>
           </div>
 
           <div className="space-y-20 md:space-y-32 max-w-6xl">
@@ -324,8 +328,9 @@ export default function PilotLightPage() {
               </em>
             </h2>
             <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-              Most small businesses juggle a website, a payment system, an inbox and a pile of logins, and every change means a
-              call, an email, or a weekend. Pilot Light puts it all in one place and lets you run it in plain words.
+              In most small businesses, the owner is the system. Nothing talks to anything else, so every order, payment and
+              change goes through you, and the business can only grow as far as you can stretch. Pilot Light takes you out of
+              the middle.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 tilt-alt">
@@ -387,7 +392,7 @@ export default function PilotLightPage() {
                 <ul className="space-y-4 mb-8">
                   {[
                     ['Pilot Light, set up for your business', 'A custom integration with your website and tools, and your invite to sign in'],
-                    ['Lena, your AI assistant', 'On your dashboard and in the iPhone app'],
+                    ['Lena', 'Ask for anything in plain words, on your dashboard or the iPhone app'],
                     ['2 add-ons of your choice', 'Pick from the add-ons below'],
                     ['Unlimited updates & support', 'For everything you already have, including your add-ons'],
                     ['A custom website & full branding', 'Up to 10 pages, your domain, logo and brand packaging'],
@@ -444,47 +449,12 @@ export default function PilotLightPage() {
               ))}
             </div>
 
-            <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-5xl">
-              <div className="rounded-3xl p-7" style={{ backgroundColor: 'rgba(251, 146, 60, 0.12)', border: '1.5px solid rgba(251, 146, 60, 0.45)' }}>
-                <div className="text-sm font-rounded uppercase tracking-wide mb-2" style={{ color: ORANGE }}>
-                  More add-ons
-                </div>
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-4xl" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
-                    $500
-                  </span>
-                  <span style={{ color: 'var(--bone)', opacity: 0.7 }}>setup + $50/month each</span>
-                </div>
-                <p className="text-sm" style={{ color: 'var(--bone)', opacity: 0.72, lineHeight: '1.6' }}>
-                  Every add-on after your first two, set up by us and run through Pilot Light. Ask us about anything you don&apos;t
-                  see here. Prices can vary by add-on, depending on how much you use it and whether it needs another add-on
-                  to work.
-                </p>
-              </div>
-              <div className="rounded-3xl p-7" style={{ backgroundColor: 'rgba(240, 185, 73, 0.1)', border: '1.5px solid rgba(240, 185, 73, 0.4)' }}>
-                <div className="text-sm font-rounded uppercase tracking-wide mb-3" style={{ color: GOLD }}>
-                  Lena&apos;s monthly usage
-                </div>
-                <ul className="space-y-2 text-sm" style={{ color: 'var(--bone)' }}>
-                  <li className="flex justify-between gap-4">
-                    <span>Standard</span>
-                    <span style={{ opacity: 0.8 }}>Included</span>
-                  </li>
-                  <li className="flex justify-between gap-4">
-                    <span>Plus</span>
-                    <span style={{ opacity: 0.8 }}>+$20/month</span>
-                  </li>
-                  <li className="flex justify-between gap-4">
-                    <span>Pro</span>
-                    <span style={{ opacity: 0.8 }}>+$50/month</span>
-                  </li>
-                </ul>
-                <p className="mt-3 text-xs" style={{ color: 'var(--bone)', opacity: 0.6, lineHeight: '1.5' }}>
-                  Each level has a clear monthly limit, and we&apos;ll let you know well before you get close. Busier add-ons, like
-                  email and texting, come in the same three levels.
-                </p>
-              </div>
-            </div>
+            <p className="mt-10 text-lg" style={{ color: 'var(--bone)', opacity: 0.85 }}>
+              Every add-on after your first two is <strong style={{ color: ORANGE }}>$500 to set up and $50 a month</strong>.{' '}
+              <a href="/pricing" className="underline underline-offset-4" style={{ color: 'var(--bone)' }}>
+                See pricing
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -504,7 +474,7 @@ export default function PilotLightPage() {
               Ready to light it up?
             </h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>
-              Tell us about your business and we&apos;ll show you what Pilot Light would look like for you.
+              Tell Chris how your business runs, and he&apos;ll show you what it looks like run from one place.
             </p>
             <a
               href="/contact"
