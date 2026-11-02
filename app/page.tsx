@@ -1,5 +1,7 @@
 import type { CSSProperties } from 'react';
 import Image from 'next/image';
+import PilotFlame from '@/components/PilotFlame';
+import PresentationVideo from '@/components/PresentationVideo';
 
 const capabilities = [
   {
@@ -253,10 +255,7 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-12 items-center max-w-6xl">
             <div className="md:col-span-7">
               <div className="flex items-center gap-3 mb-8">
-                <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill="#fb923c" />
-                  <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill="#f0b949" />
-                </svg>
+                <PilotFlame size={40} />
                 <div>
                   <div className="text-2xl leading-none" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
                     Pilot Light
@@ -299,15 +298,21 @@ export default function Home() {
               </a>
             </div>
             <div className="md:col-span-5">
-              <div
-                className="relative mx-auto w-[72%] max-w-[300px] rounded-[2.6rem] p-2.5"
-                style={{ backgroundColor: '#1c2128', boxShadow: '0 0 0 2px #2b313a, 14px 16px 0 rgba(251, 146, 60, 0.85)', transform: 'rotate(3deg)' }}
-              >
-                <div className="relative overflow-hidden rounded-[2.1rem]" style={{ backgroundColor: '#f5f6ef' }}>
-                  <div className="absolute left-1/2 top-2 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-black" />
-                  <div className="h-9" />
-                  <Image src="/pilot-light/allow-card.webp" alt="Lena preparing a price change for the owner to allow, in the Pilot Light app" width={720} height={1468} sizes="(min-width: 768px) 300px, 72vw" quality={90} className="block h-auto w-full" />
-                </div>
+              <div className="mx-auto w-[72%] max-w-[300px]">
+                <PresentationVideo
+                  src="/pilot-light/promo.mp4"
+                  poster="/pilot-light/promo-poster.webp"
+                  title="Pilot Light promo"
+                  aspectRatio="1080 / 1620"
+                  labelAt="top"
+                  sizes="(min-width: 768px) 300px, 72vw"
+                  label={
+                    <>
+                      <PilotFlame size={14} />
+                      Pilot Light · 2 min
+                    </>
+                  }
+                />
               </div>
             </div>
           </div>

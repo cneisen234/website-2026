@@ -1,6 +1,8 @@
 import type { CSSProperties, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import PilotFlame from '@/components/PilotFlame';
+import PresentationVideo from '@/components/PresentationVideo';
 
 // Pilot Light's page. Its brand is Kindling's sibling: Kindling's flame is red, Pilot Light's is orange and gold,
 // so this page runs warmer and darker than the rest of the site while using the same type and shapes.
@@ -14,15 +16,6 @@ export const metadata: Metadata = {
 const ORANGE = '#fb923c';
 const GOLD = '#f0b949';
 const GLOW = 'rgba(251, 146, 60, 0.85)';
-
-function Flame({ size = 24 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" className="shrink-0">
-      <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill={ORANGE} />
-      <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill={GOLD} />
-    </svg>
-  );
-}
 
 /** One of the app's real screens in a phone frame. */
 function Phone({ src, alt, tilt = 0, className = '' }: { src: string; alt: string; tilt?: number; className?: string }) {
@@ -135,7 +128,7 @@ export default function PilotLightPage() {
           <div className="grid lg:grid-cols-12 gap-14 items-center">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-4 mb-10 fade-in-up">
-                <Flame size={52} />
+                <PilotFlame size={52} />
                 <div>
                   <div className="text-3xl md:text-4xl leading-none tracking-tight" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
                     Pilot Light
@@ -175,12 +168,15 @@ export default function PilotLightPage() {
                 <a href="#included" className="inline-flex items-center gap-2 px-2 py-4 text-lg font-medium underline underline-offset-4" style={{ color: 'var(--bone)' }}>
                   What&apos;s included
                 </a>
+                <a href="#overview" className="inline-flex items-center gap-2 px-2 py-4 text-lg font-medium underline underline-offset-4" style={{ color: 'var(--bone)' }}>
+                  Watch the overview
+                </a>
               </div>
 
               <div className="flex flex-wrap gap-3 fade-in-up stagger-4">
                 {['Built into your website', 'Included with Business in a Box', 'iPhone app'].map((chip) => (
                   <span key={chip} className="chip-fun chip-fun-dark flex items-center gap-2 text-sm px-4 py-2" style={{ color: 'var(--bone)' }}>
-                    <Flame size={14} />
+                    <PilotFlame size={14} />
                     {chip}
                   </span>
                 ))}
@@ -206,6 +202,44 @@ export default function PilotLightPage() {
           <a href="/pricing" className="text-sm font-medium underline underline-offset-4" style={{ color: 'var(--midnight)' }}>
             See the plans
           </a>
+        </div>
+      </section>
+
+      {/* OVERVIEW VIDEO — DARK */}
+      <section id="overview" className="py-20 md:py-28 relative overflow-hidden scroll-mt-24" style={{ backgroundColor: 'var(--midnight)' }}>
+        <div
+          className="absolute top-1/2 left-1/2 w-[900px] h-[900px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ background: `radial-gradient(circle, ${ORANGE} 0%, transparent 70%)`, transform: 'translate(-50%, -50%)' }}
+        />
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <span className="badge badge-on-dark badge-tilt mb-4">
+              <span className="badge-dot" />
+              Watch the overview
+            </span>
+            <h2 className="text-4xl md:text-6xl leading-[1.05] mb-6" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
+              See what Pilot Light{' '}
+              <em className="italic" style={{ color: ORANGE }}>
+                takes off your plate.
+              </em>
+            </h2>
+            <p className="text-lg" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.7' }}>
+              A walkthrough of the everyday problems that slow small businesses down, and how Pilot Light solves them.
+            </p>
+          </div>
+          <div className="max-w-5xl">
+            <PresentationVideo
+              src="/pilot-light/presentation.mp4"
+              poster="/pilot-light/presentation-poster.webp"
+              title="Pilot Light overview"
+              label={
+                <>
+                  <PilotFlame size={16} />
+                  Pilot Light overview · 14 min
+                </>
+              }
+            />
+          </div>
         </div>
       </section>
 
@@ -246,6 +280,37 @@ export default function PilotLightPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Demo walkthrough */}
+          <div className="mt-24 md:mt-36 max-w-6xl">
+            <div className="max-w-3xl mb-12">
+              <span className="text-sm font-rounded uppercase tracking-wide" style={{ color: '#c2410c' }}>
+                See it in action
+              </span>
+              <h3 className="mt-3 mb-5 text-3xl md:text-5xl leading-[1.08]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                Watch it work, <em className="italic" style={{ color: '#c2410c' }}>start to finish.</em>
+              </h3>
+              <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+                A walkthrough of Pilot Light running Fuel &amp; Flex, our demo business: the dashboard, making and scheduling
+                changes with Lena, and how each one shows up on the website.
+              </p>
+            </div>
+            {/* The frame hides the black bars and the browser's bookmarks bar at the top of the recording. */}
+            <PresentationVideo
+              src="/pilot-light/demo.mp4"
+              poster="/pilot-light/demo-poster.webp"
+              title="Pilot Light demo with Fuel & Flex"
+              aspectRatio="1920 / 927"
+              objectPosition="50% 54.9%"
+              onLight
+              label={
+                <>
+                  <PilotFlame size={16} />
+                  Fuel &amp; Flex demo · 11 min
+                </>
+              }
+            />
           </div>
         </div>
       </section>
@@ -337,7 +402,7 @@ export default function PilotLightPage() {
             {advantages.map((a) => (
               <div key={a.title} className="card-fun p-8" style={{ backgroundColor: 'white', ['--shadow-color' as string]: GLOW } as CSSProperties}>
                 <div className="mb-4">
-                  <Flame size={30} />
+                  <PilotFlame size={30} />
                 </div>
                 <h3 className="text-2xl mb-3" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
                   {a.title}
@@ -437,7 +502,7 @@ export default function PilotLightPage() {
               {addOnExamples.map((a) => (
                 <div key={a.title} className="rounded-3xl p-6" style={{ backgroundColor: 'rgba(245, 241, 235, 0.06)', border: '1.5px solid rgba(251, 146, 60, 0.3)' }}>
                   <div className="flex items-center gap-2 mb-3">
-                    <Flame size={18} />
+                    <PilotFlame size={18} />
                     <h4 className="text-lg" style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}>
                       {a.title}
                     </h4>
@@ -468,7 +533,7 @@ export default function PilotLightPage() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <Flame size={64} />
+              <PilotFlame size={64} />
             </div>
             <h2 className="text-5xl md:text-7xl mb-6 leading-[1.05]" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
               Ready to light it up?

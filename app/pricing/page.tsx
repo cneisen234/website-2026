@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import PilotFlame from '@/components/PilotFlame';
 
 const plans = [
   {
@@ -70,13 +71,6 @@ const addOns = [
       'Custom-designed graphics, flyers, tees, mugs, posters & more — $50 to design each piece, plus whatever it costs to print and ship any physical items.',
   },
 ];
-
-const pilotFlame = (size: number) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" className="shrink-0">
-    <path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.3 1-4 2.5-5.5C9.8 9.5 10.5 11 12 11.5 11.2 8 12 4.5 12 2Z" fill="#fb923c" />
-    <path d="M12 12.5c1 1.3 2 2.2 2 3.7a2 2 0 0 1-4 0c0-1.3.9-2.4 2-3.7Z" fill="#f0b949" />
-  </svg>
-);
 
 export default function Pricing() {
   return (
@@ -297,7 +291,7 @@ export default function Pricing() {
           <div className="grid lg:grid-cols-12 gap-10 items-center max-w-6xl">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-3 mb-4">
-                {pilotFlame(28)}
+                <PilotFlame size={28} />
                 <span className="text-sm font-rounded uppercase tracking-wide" style={{ color: '#fb923c' }}>
                   Pilot Light add-ons
                 </span>
