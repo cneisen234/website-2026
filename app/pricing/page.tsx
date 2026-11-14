@@ -307,7 +307,7 @@ export default function Pricing() {
                 more. Pick two to start; every add-on after that is <strong style={{ color: 'var(--bone)' }}>$500 to set up and $50 a month</strong>.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {['E-commerce', 'Google Workspace & email', 'Lena on your website', 'Reviews', 'Bookings', 'Events', 'Google Business Profile', 'Text notifications'].map((a) => (
+                {['E-commerce', 'Google Workspace & email', 'Lena on your website', 'Reviews', 'Bookings', 'Events', 'Google Business Profile', 'Text notifications', 'Smart Scanner'].map((a) => (
                   <span key={a} className="text-sm px-4 py-2 rounded-full font-rounded" style={{ color: 'var(--bone)', border: '1.5px solid rgba(251, 146, 60, 0.4)' }}>
                     {a}
                   </span>

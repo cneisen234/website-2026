@@ -107,7 +107,7 @@ const addOnExamples = [
   { title: 'Bookings & scheduling', body: 'Appointments and bookings, with reminders and your calendar kept in step.' },
   { title: 'Events', body: 'Tickets, capacity, attendee lists and check-in for your events and classes.' },
   { title: 'Google Business Profile', body: 'Your Google listing kept current with your hours, photos and updates.' },
-  { title: 'Text notifications', body: 'Automatic texts to customers for order updates, reminders and confirmations.' },
+  { title: 'Smart Scanner', body: 'Snap a vendor invoice and Lena prices every item by your margins, flags what went up, and prints new shelf tags.' },
 ];
 
 export default function PilotLightPage() {
