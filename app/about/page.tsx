@@ -156,7 +156,8 @@ export default function About() {
                   them access to the kind of technology that&apos;s long been out of their
                   reach. Why should the big guys have all the good tools when it&apos;s the
                   everyday small business owner who needs them most? That&apos;s where I come
-                  in. Whatever the digital or tech problem, reach out — I&apos;m here to help.
+                  in. I&apos;m based in Fairview, Michigan, and I work with small businesses
+                  wherever they are. Whatever the digital or tech problem, reach out — I&apos;m here to help.
                 </p>
               </div>
             </div>

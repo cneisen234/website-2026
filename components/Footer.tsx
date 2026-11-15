@@ -209,7 +209,7 @@ export default function Footer() {
                 {link.label}
               </Link>
             ))}
-            <span style={{ color: 'var(--bone)', opacity: 0.5 }}>Built locally, with care.</span>
+            <span style={{ color: 'var(--bone)', opacity: 0.5 }}>Based in Fairview, Michigan. Working with businesses anywhere.</span>
           </div>
         </div>
       </div>

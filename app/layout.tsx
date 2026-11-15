@@ -38,6 +38,26 @@ export const metadata: Metadata = {
   },
 };
 
+// Business details for Google (not shown on the page). The home base is Fairview, Michigan;
+// areaServed says we work with businesses anywhere in the US, so we aren't read as local-only.
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Kindling Digital",
+  url: "https://www.kindlingdigital.org",
+  logo: "https://www.kindlingdigital.org/transparent_logo.webp",
+  email: "chris@kindlingdigital.org",
+  telephone: "+1-701-429-4837",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Fairview",
+    addressRegion: "MI",
+    postalCode: "48621",
+    addressCountry: "US",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+};
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -55,6 +75,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${interTight.variable} ${fraunces.variable} ${fredoka.variable} flex flex-col min-h-screen`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
         <Navigation />
         {children}
         <Footer />
