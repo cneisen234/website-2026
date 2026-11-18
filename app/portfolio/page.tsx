@@ -22,6 +22,16 @@ const fiBuilt = [
   'Built from scratch',
 ];
 
+// Oscoda County Chamber — the volunteer-run chamber of commerce in Mio, Michigan.
+const chamberBuilt = [
+  'Events calendar',
+  'Member directory',
+  'County guide',
+  'Volunteer recruiting',
+  'Branded from their seal',
+  'Built from scratch',
+];
+
 // Megan's Sourdough started as Particular Notions, a handmade charm shop, and
 // became a sourdough bakery with online ordering — the site grew right along with it.
 const pnBuilt = [
@@ -235,6 +245,123 @@ export default function Portfolio() {
                   <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Oscoda County Chamber — DARK case study */}
+      <section className="py-20 md:py-32 relative" style={{ backgroundColor: 'var(--midnight)' }}>
+        <div
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, var(--ember-orange) 0%, transparent 70%)', transform: 'translate(30%, 0)' }}
+        />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-12 gap-16 md:gap-12 items-center">
+            {/* Text */}
+            <div className="md:col-span-5">
+              <span
+                className="badge badge-on-dark badge-tilt mb-4"
+                style={{ color: 'var(--ember-orange)', backgroundColor: 'rgba(251, 146, 60, 0.16)' }}
+              >
+                <span className="badge-dot" />
+                Oscoda County Chamber
+              </span>
+              <h2
+                className="text-4xl md:text-5xl mb-5 leading-[1.05]"
+                style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+              >
+                Mio&apos;s events and businesses, all in one place.
+              </h2>
+              <p
+                className="text-xl md:text-2xl mb-6 leading-snug"
+                style={{ color: 'var(--bone)', fontFamily: 'var(--font-heading)' }}
+              >
+                Upcoming events, a directory of local businesses linked to their own sites, and a
+                guide to the river, trails and birding —{' '}
+                <span style={{ color: 'var(--honey-gold)' }}>built for a volunteer-run chamber.</span>
+              </p>
+              <p className="text-lg mb-8" style={{ color: 'var(--bone)', opacity: 0.75, lineHeight: '1.75' }}>
+                The Chamber of Commerce for Oscoda County is a volunteer-run nonprofit in Mio,
+                Michigan that promotes the county&apos;s businesses and events. We built the site
+                from scratch around their seal — the AuSable River, the trails, the Kirtland&apos;s
+                Warbler and the north woods — and styled the events after their own flyers.
+              </p>
+
+              <div className="flex flex-wrap gap-2.5 mb-10">
+                {chamberBuilt.map((item) => (
+                  <span
+                    key={item}
+                    className="chip-fun chip-fun-dark inline-flex items-center gap-2 text-sm px-4 py-2"
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', color: 'var(--bone)' }}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: 'var(--ember-orange)' }} />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://oscodacountychamber.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-fun btn-fun-dark group inline-flex items-center gap-2 px-8 py-4 text-lg"
+                style={{ backgroundColor: 'var(--ember-orange)', color: 'var(--charcoal)' }}
+              >
+                Visit the site
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Screenshots */}
+            <div className="md:col-span-7">
+              <div className="relative mx-auto max-w-xl md:mr-0">
+                {/* Desktop in a browser frame */}
+                <div
+                  className="rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '12px 14px 0 rgba(251, 146, 60, 0.8)',
+                    transform: 'rotate(-1.5deg)',
+                  }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ backgroundColor: '#ece7db' }}>
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#d98b6a' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#e8c069' }} />
+                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9cb5a3' }} />
+                  </div>
+                  <Image
+                    src="/oscodachamber-desktop.webp"
+                    sizes="(min-width: 768px) 576px, 100vw"
+                    alt="The Oscoda County Chamber of Commerce website on desktop"
+                    width={1720}
+                    height={892}
+                    className="w-full h-auto"
+                  />
+                </div>
+
+                {/* Mobile overlapping */}
+                <div
+                  className="absolute -bottom-8 left-2 md:-bottom-10 md:-left-6 w-24 sm:w-28 md:w-40 rounded-2xl overflow-hidden bg-white"
+                  style={{
+                    border: '2px solid var(--charcoal)',
+                    boxShadow: '6px 8px 0 rgba(240, 185, 73, 0.85)',
+                    transform: 'rotate(5deg)',
+                  }}
+                >
+                  <Image
+                    src="/oscodachamber-mobile.webp"
+                    sizes="(min-width: 768px) 160px, 112px"
+                    alt="The Oscoda County Chamber of Commerce website on mobile"
+                    width={375}
+                    height={812}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

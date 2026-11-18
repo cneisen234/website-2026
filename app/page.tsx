@@ -74,14 +74,14 @@ const work = [
     href: 'https://www.fitnessinspiredpersonaltraining.com/',
   },
   {
-    name: 'Megan’s Sourdough',
-    tag: 'Sourdough bakery · pickup & delivery',
-    image: '/meganssourdough-desktop.webp',
+    name: 'Oscoda County Chamber',
+    tag: 'Chamber of commerce · events & directory',
+    image: '/oscodachamber-desktop.webp',
     width: 1720,
     height: 892,
     shadow: 'rgba(95, 167, 119, 0.8)',
     tilt: '1.5deg',
-    href: 'https://www.megans-sourdough.com/',
+    href: 'https://oscodacountychamber.com/',
   },
 ];
 
