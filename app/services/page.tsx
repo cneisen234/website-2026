@@ -1,17 +1,26 @@
 import type { CSSProperties } from 'react';
+import type { Metadata } from 'next';
+import { integrationPrice, integrations } from '@/lib/integrations';
+
+export const metadata: Metadata = {
+  title: 'Services | Kindling Digital',
+  description:
+    "Custom websites, online ordering, booking, software, integrations, tech help and Pilot Light for small businesses.",
+};
 
 const pieces = [
   {
     id: 'website',
     num: '01',
     eyebrow: 'Websites',
-    dark: true,
-    accent: 'var(--ember-orange)',
-    tint: 'rgba(251, 146, 60, 0.14)',
+    dark: false,
+    accent: 'var(--ember-deep)',
+    tint: 'rgba(194, 65, 12, 0.1)',
     heading: 'Your site, built from scratch.',
     body: "Maybe you don't have a site yet, or the one you've got doesn't look like the quality of your work. We build every site by hand — no templates — made to match your brand, quick to load, and working on any device. Because it's custom, it can keep growing with your business.",
     included: [
       'Custom design that matches your brand',
+      'Logo, colors & fonts to match',
       'Fast, and works on any device',
       'Redesigns of an existing site',
       'Business email & Google Business Profile, as Pilot Light add-ons',
@@ -19,24 +28,8 @@ const pieces = [
     ],
   },
   {
-    id: 'the-brand',
-    num: '02',
-    eyebrow: 'Branding',
-    dark: false,
-    accent: 'var(--forest-green)',
-    tint: 'rgba(95, 167, 119, 0.14)',
-    heading: 'A brand that holds together.',
-    body: "If you don't have colors, fonts, or a logo yet, we'll put them together for you, so your website, your print pieces, and anything else all look like the same business.",
-    included: [
-      'Logo design',
-      'Brand colors & fonts',
-      'Brand packaging for print & the web',
-      'Custom graphics, flyers & branded swag',
-    ],
-  },
-  {
     id: 'sell-and-book',
-    num: '03',
+    num: '02',
     eyebrow: 'Sell & Book',
     dark: true,
     accent: 'var(--honey-gold)',
@@ -53,7 +46,7 @@ const pieces = [
   },
   {
     id: 'software',
-    num: '04',
+    num: '03',
     eyebrow: 'Software & Automation',
     dark: false,
     accent: 'var(--ember-deep)',
@@ -70,7 +63,7 @@ const pieces = [
   },
   {
     id: 'support',
-    num: '05',
+    num: '04',
     eyebrow: 'Ongoing Support',
     dark: true,
     accent: 'var(--forest-green)',
@@ -87,7 +80,7 @@ const pieces = [
   },
   {
     id: 'pilot-light',
-    num: '06',
+    num: '05',
     eyebrow: 'Pilot Light',
     dark: false,
     accent: '#c2410c',
@@ -102,15 +95,26 @@ const pieces = [
       '2 add-ons included; more at $500 + $50/month',
     ],
   },
+  {
+    id: 'integrations',
+    num: '06',
+    eyebrow: 'Integrations',
+    dark: true,
+    accent: 'var(--honey-gold)',
+    tint: 'rgba(240, 185, 73, 0.16)',
+    heading: 'Your site, connected to the services you already use.',
+    body: "Not on Pilot Light? We can still connect your custom website to the other services your business uses, from payments and bookkeeping to newsletters and shipping. Each connection is $500 to set up and $50 a month.",
+    included: [...integrations, `${integrationPrice}, for sites without Pilot Light`],
+  },
 ];
 
 const jumpLinks = [
   { label: 'Websites', href: '#website' },
-  { label: 'Branding', href: '#the-brand' },
   { label: 'Sell & Book', href: '#sell-and-book' },
   { label: 'Software', href: '#software' },
   { label: 'Support', href: '#support' },
   { label: 'Pilot Light', href: '#pilot-light' },
+  { label: 'Integrations', href: '#integrations' },
 ];
 
 export default function Services() {

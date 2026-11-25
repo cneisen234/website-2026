@@ -8,8 +8,8 @@ const capabilities = [
     title: 'Get online',
     accent: 'var(--ember-deep)',
     tint: 'rgba(194, 65, 12, 0.1)',
-    body: 'When people search for you and come up empty — or the site they find undersells how good you really are. A custom site and a full brand that put your best foot forward.',
-    items: ['Custom websites', 'Website redesigns', 'Branding & logo', 'Custom domains'],
+    body: 'When people search for you and come up empty — or the site they find undersells how good you really are. A custom site that puts your best foot forward.',
+    items: ['Custom websites', 'Website redesigns', 'Connect your other services', 'Custom domains'],
   },
   {
     title: 'Sell & book',
@@ -523,12 +523,11 @@ export default function Home() {
                 Professional and custom, without the big upfront bill.
               </h2>
               <p className="text-lg mb-8" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-                A custom website and full branding usually means one of two things:
-                thousands of dollars up front at an agency, or piecing it together
-                yourself on a DIY builder. We do it a third way — one flat monthly price,
-                built and handled for you, so a professional presence is something an
-                ordinary small business can actually afford. Prefer to own it outright?
-                You can buy it out, too.
+                A custom website usually means one of two things: thousands of dollars
+                up front at an agency, or piecing it together yourself on a DIY builder.
+                We do it a third way: one flat monthly price, built and handled for you.
+                Want your whole business run from it? Business in a Box adds Pilot Light.
+                Prefer to own it outright? You can buy it out, too.
               </p>
               <a
                 href="/pricing"

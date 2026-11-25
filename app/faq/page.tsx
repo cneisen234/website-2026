@@ -52,7 +52,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'Can I keep my website if I stop?',
         answer:
-          "Yes. There's a one-time buyout: $6,000 for a 10-page site and your brand, handed over to you. Once it's bought out, the site is yours. A buyout doesn't include Pilot Light or ongoing support, and changes after handoff are $100 an hour.",
+          "Yes. There's a one-time buyout: $6,000 for a 10-page site, handed over to you. Once it's bought out, the site is yours. A buyout doesn't include Pilot Light or ongoing support, and changes after handoff are $100 an hour.",
       },
       {
         question: 'Do I own my logo and branding?',
@@ -89,12 +89,12 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What counts as an update?',
         answer:
-          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Brand in a Box includes 10 of those a week. Business in a Box covers unlimited updates and support for everything you already have, including your Pilot Light add-ons. Anything new, like a new feature or integration, is $100 an hour or a Pilot Light add-on.",
+          "Text and photo updates on your site — swapping wording, switching out images, that kind of thing. Brand in a Box includes 10 of those a week. Business in a Box covers unlimited updates and support for everything you already have, including your Pilot Light add-ons. Anything new, like a new feature, is $100 an hour or a Pilot Light add-on.",
       },
       {
-        question: 'How does content and branded design work?',
+        question: 'Can you connect my site to the other services I use?',
         answer:
-          "It's à la carte, so you add pieces whenever you want them and only pay for what you use. For subscribers, written content — captions, copy, blurbs, and the like — is a flat $25 a piece. Custom branded content and swag — graphics, flyers, tees, mugs, and posters designed from scratch — is $50 a piece, plus whatever it costs to print and ship any physical items.",
+          "Yes. If you're not on Pilot Light, we can connect your custom website to the services you already use, like your payment system, bookkeeping or email newsletter. Each connection is $500 to set up and $50 a month. On Business in a Box, Pilot Light handles these through its add-ons.",
       },
       {
         question: 'Can you help with computer or tech problems too?',

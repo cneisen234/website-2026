@@ -1,5 +1,13 @@
 import type { CSSProperties } from 'react';
+import type { Metadata } from 'next';
 import PilotFlame from '@/components/PilotFlame';
+import { integrationPrice, integrations } from '@/lib/integrations';
+
+export const metadata: Metadata = {
+  title: 'Pricing | Kindling Digital',
+  description:
+    "Custom websites from $100 a month. Business in a Box with Pilot Light is $300 a month.",
+};
 
 const plans = [
   {
@@ -15,10 +23,7 @@ const plans = [
       { label: 'Logo design' },
       { label: 'Brand packaging' },
       { label: '10 updates a week', note: 'Text & photo updates only. Anything else is $100 an hour.' },
-      {
-        label: 'Member rates on extras',
-        note: 'Written content $25, branded content & swag $50, extra pages $15/month',
-      },
+      { label: 'Integrations with your other services', note: integrationPrice },
     ],
   },
   {
@@ -34,41 +39,7 @@ const plans = [
       { label: 'Unlimited updates & support', note: 'For everything you already have, including your add-ons' },
       { label: 'Up to a 10-page custom-built website' },
       { label: 'Custom domain, logo design & brand packaging' },
-      {
-        label: 'Member rates on extras',
-        note: 'Written content $25, branded content & swag $50, extra pages $15/month',
-      },
     ],
-  },
-];
-
-const addOns = [
-  {
-    price: '$15',
-    unit: '/ page a month',
-    title: 'Extra page',
-    accent: 'var(--ember-orange)',
-    tint: 'rgba(234, 88, 12, 0.12)',
-    description:
-      "Need more room than your plan's 10 pages? Add another custom-built page for a flat $15 a month.",
-  },
-  {
-    price: '$25',
-    unit: '/ piece',
-    title: 'Content creation',
-    accent: 'var(--forest-green)',
-    tint: 'rgba(95, 167, 119, 0.14)',
-    description:
-      'Written content — captions, copy, blurbs, and the like. Tell us what you need and we write it up, ready to use.',
-  },
-  {
-    price: '$50',
-    unit: '/ item + cost',
-    title: 'Branded content & swag',
-    accent: 'var(--honey-gold)',
-    tint: 'rgba(240, 185, 73, 0.16)',
-    description:
-      'Custom-designed graphics, flyers, tees, mugs, posters & more — $50 to design each piece, plus whatever it costs to print and ship any physical items.',
   },
 ];
 
@@ -94,13 +65,14 @@ export default function Pricing() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Your brand,</span>
+              <span className="block text-4xl md:text-6xl leading-[1.05]">Your website,</span>
               <span
                 className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
                 style={{ color: 'var(--ember-deep)' }}
               >
+                one monthly{' '}
                 <span className="relative inline-block">
-                  one price
+                  price
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
                     height="14"
@@ -126,7 +98,6 @@ export default function Pricing() {
           <div className="flex flex-wrap flex-col gap-3 fade-in-up stagger-3">
               {[
                 'Custom built from scratch',
-                'Branding included',
                 'One flat monthly price',
               ].map((item) => (
                 <div
@@ -364,8 +335,8 @@ export default function Pricing() {
         </div>
       </section>
 
-            {/* ADD-ONS — FOR SUBSCRIBERS — CREAM */}
-            <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
+      {/* THIRD-PARTY INTEGRATIONS — FOR SITES WITHOUT PILOT LIGHT — CREAM */}
+      <section className="py-20 md:py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--warm-cream)' }}>
         <div
           className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{
@@ -376,67 +347,79 @@ export default function Pricing() {
         <div className="dot-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mb-16">
-            <span className="badge badge-tilt mb-4">
-              <span className="badge-dot" />
-              Extras for members
-            </span>
-            <h2
-              className="text-4xl md:text-6xl leading-[1.05] mb-6"
-              style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
-            >
-              Need a little{' '}
-              <em className="italic" style={{ color: 'var(--ember-deep)' }}>
-                extra?
-              </em>
-            </h2>
-            <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
-              These flat-rate extras are available to anyone on a monthly plan — content creation,
-              branded content &amp; swag, and extra pages. Not a subscriber yet? No problem, these are
-              billed at the hourly rate below.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {addOns.map((addOn) => (
-              <div
-                key={addOn.title}
-                className="card-fun tilt-none flex flex-col p-8"
-                style={{ backgroundColor: 'white', ['--shadow-color' as string]: addOn.accent } as CSSProperties}
+          <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl">
+            <div className="lg:col-span-6">
+              <span className="badge badge-tilt mb-4">
+                <span className="badge-dot" />
+                Integrations
+              </span>
+              <h2
+                className="text-4xl md:text-6xl leading-[1.05] mb-6"
+                style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
               >
-                <span
-                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
-                  style={{ backgroundColor: addOn.tint }}
-                >
-                  <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M10 4v12M4 10h12"
-                      stroke={addOn.accent}
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-                <div className="flex items-baseline gap-2 mb-3">
-                  <span
-                    className="text-5xl leading-none"
-                    style={{ color: addOn.accent, fontFamily: 'var(--font-heading)' }}
-                  >
-                    {addOn.price}
+                Connect the services{' '}
+                <em className="italic" style={{ color: 'var(--ember-deep)' }}>
+                  you already use.
+                </em>
+              </h2>
+              <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
+                We connect your custom website to the other services your business uses, from payments and bookkeeping to
+                newsletters and shipping. Each connection is $500 to set up and $50 a month. On Business in a Box, Pilot
+                Light handles these through its add-ons instead.
+              </p>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div
+                className="card-fun tilt-none flex flex-col p-8 md:p-10"
+                style={{ backgroundColor: 'white', ['--shadow-color' as string]: 'var(--ember-deep)' } as CSSProperties}
+              >
+                <h3 className="text-2xl md:text-3xl mb-3" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                  Integration
+                </h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-6xl md:text-7xl leading-none" style={{ color: 'var(--ember-deep)', fontFamily: 'var(--font-heading)' }}>
+                    $500
                   </span>
-                  <span className="text-base font-rounded" style={{ color: 'var(--stone)' }}>
-                    {addOn.unit}
+                  <span className="text-lg font-rounded" style={{ color: 'var(--stone)' }}>
+                    setup
                   </span>
                 </div>
-                <h3
-                  className="text-xl mb-3"
-                  style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
+                <div className="mt-2 mb-8 text-2xl" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}>
+                  + $50/month each
+                </div>
+
+                <ul className="space-y-4 mb-6">
+                  {integrations.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        className="mt-0.5 shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: 'rgba(194, 65, 12, 0.1)' }}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                          <path d="M3 8l3 3 7-7" stroke="var(--ember-deep)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <span style={{ color: 'var(--ash-gray)', lineHeight: '1.5' }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm mb-8" style={{ color: 'var(--stone)', lineHeight: '1.5' }}>
+                  For custom websites without Pilot Light. Don&apos;t see yours? Ask about it.
+                </p>
+
+                <a
+                  href="/contact"
+                  className="btn-fun group mt-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-lg"
+                  style={{ backgroundColor: 'var(--ember-deep)', color: 'white' }}
                 >
-                  {addOn.title}
-                </h3>
-                <p style={{ color: 'var(--ash-gray)', lineHeight: '1.6' }}>{addOn.description}</p>
+                  Get in Touch
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="transition-transform group-hover:translate-x-1">
+                    <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -470,7 +453,7 @@ export default function Pricing() {
               </h2>
               <p className="text-lg" style={{ color: 'var(--ash-gray)', lineHeight: '1.7' }}>
                 Not everyone wants a monthly bill, and that&apos;s fair. Pay once and the site is yours: the custom-built
-                website, the full brand, and all the files, handed straight to you. It&apos;s a one-time build, separate from
+                website and all the files, handed straight to you. It&apos;s a one-time build, separate from
                 the monthly plans, so it doesn&apos;t include Pilot Light or ongoing support. After handoff, any changes are
                 $100 an hour, or take the wheel yourself.
               </p>
@@ -496,8 +479,7 @@ export default function Pricing() {
                 <ul className="space-y-4 mb-8">
                   {[
                     'Up to a 10-page custom-built website',
-                    'Logo design & brand packaging',
-                    'You own the site, brand & files outright',
+                    'You own the site & files outright',
                     'Custom features quoted separately',
                     'No Pilot Light and no ongoing support',
                     'Changes after handoff at $100 an hour',
@@ -586,7 +568,6 @@ export default function Pricing() {
                   'Contact & intake forms',
                   'Photo galleries',
                   'Email newsletter signup',
-                  'Integrations with your tools',
                   'Redesigns',
                 ],
               },

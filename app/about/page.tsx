@@ -1,4 +1,11 @@
 import Image from "next/image";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About | Kindling Digital',
+  description:
+    "Meet Chris, the software engineer behind Kindling Digital in Fairview, Michigan, building custom websites and software for small businesses.",
+};
 
 const steps = [
   {

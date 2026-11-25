@@ -1,4 +1,11 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Portfolio | Kindling Digital',
+  description:
+    "Custom websites Kindling Digital has built for real small businesses, from online ordering and checkout to event calendars and member directories.",
+};
 
 // Soady Poppers is a full custom platform — these are the real features we built.
 const soadyBuilt = [

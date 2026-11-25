@@ -1,5 +1,12 @@
 import type { CSSProperties } from 'react';
 import ContactForm from '@/components/ContactForm';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact | Kindling Digital',
+  description:
+    "Tell Chris what your business needs. Email, call or text and hear back within 24 hours, in person if you're local or by video call.",
+};
 
 export default function Contact() {
   return (

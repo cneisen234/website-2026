@@ -23,6 +23,7 @@ const INTERESTS = [
   'Branding & logo',
   'Online store / payments',
   'Booking system',
+  'Integrations',
   'Custom software / automation',
   'Tech help & support',
   'Something else / not sure',
