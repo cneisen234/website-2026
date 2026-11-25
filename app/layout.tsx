@@ -29,7 +29,7 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Kindling Digital — Your small business's tech partner",
   description:
-    "Custom-built websites for small businesses from $100 a month, plus Pilot Light to run your whole business from one place. Based in Fairview, Michigan.",
+    "Custom software, websites and tech help for small businesses, plus Pilot Light to run your whole business from one place. Based in Fairview, Michigan.",
   // Stop phones from auto-linking example emails/phone numbers into tappable links
   formatDetection: {
     email: false,

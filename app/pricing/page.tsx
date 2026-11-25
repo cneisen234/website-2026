@@ -6,7 +6,7 @@ import { integrationPrice, integrations } from '@/lib/integrations';
 export const metadata: Metadata = {
   title: 'Pricing | Kindling Digital',
   description:
-    "Custom websites from $100 a month. Business in a Box with Pilot Light is $300 a month.",
+    "Flat monthly plans from $100, Business in a Box with Pilot Light at $300, and $100 an hour for custom software and tech help.",
 };
 
 const plans = [
@@ -65,13 +65,9 @@ export default function Pricing() {
               className="mb-8 fade-in-up stagger-1"
               style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)' }}
             >
-              <span className="block text-4xl md:text-6xl leading-[1.05]">Your website,</span>
-              <span
-                className="block italic text-6xl md:text-8xl leading-[0.95] mt-1"
-                style={{ color: 'var(--ember-deep)' }}
-              >
-                one monthly{' '}
-                <span className="relative inline-block">
+              <span className="block text-6xl md:text-8xl leading-[0.95]">
+                One monthly{' '}
+                <span className="relative inline-block italic" style={{ color: 'var(--ember-deep)' }}>
                   price
                   <svg
                     className="absolute -bottom-1 left-0 w-full"
