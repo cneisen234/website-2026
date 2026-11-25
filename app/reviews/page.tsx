@@ -15,6 +15,13 @@ type Review = {
 
 const reviews: Review[] = [
   {
+    name: 'Alix Parrish',
+    company: 'Oscoda County Chamber of Commerce',
+    rating: 5,
+    body:
+      "We cannot say enough great things about Kindling Digital! The Chamber of Commerce for Oscoda County had been without a functioning website for quite some time, and Kindling Digital helped us take a HUGE step forward! They created a beautiful, modern, user-friendly website that not only represents our community but also helps us better support and promote our local businesses. We especially love that Kindling Digital is a new local business helping other local businesses succeed! We couldn't be happier with the results and would highly recommend them to anyone looking to create or refresh their website. Thank you, Kindling Digital, for bringing our vision to life!",
+  },
+  {
     name: 'Maelynn Watrous',
     company: 'Owner of Soady Poppers',
     rating: 5,
@@ -29,25 +36,11 @@ const reviews: Review[] = [
       'Chris did an amazing job! He did everything in such a timely manner. The process was easy and smooth. Highly, highly recommend him!!!',
   },
   {
-    name: 'Alex Warner',
-    company: 'Founder and CEO of Work Odyssey',
+    name: 'Barb Bills',
+    company: 'Tech Help Client',
     rating: 5,
     body:
-      "Christopher Neisen is a coding machine and a strong leader. I have gotten to know Chris well over the past year and it has been a pleasure to work with him. He is one of those rare guys who can lead a development team, help with any problems they may have, manage the project and do individual contributor work himself. He is both comfortable in a straight line engineering position or in the leader/manager role, for me he has done both jobs at once exceedingly well! One of Chris's superpowers is that he takes initiative and that initiative is always well thought out, NOT reckless, and it makes big impacts. I don't have to tell him what to do, he just knows what to do. When you have worked in startups and you have someone like this, they are like gold, totally invaluable. You got a million things to do and its nice to know someone has got your back. Chris is one of those guys who has your back, you can walk away from a project without worry. Finally and most importantly, Chris is a guy with high integrity and a great positive personality. If you don't know Chris! Get to know Chris! You won't regret it",
-  },
-  {
-    name: 'Jared Hineman',
-    company: 'CEO of WeClean',
-    rating: 5,
-    body:
-      "I had the pleasure of working closely with Chris at WeClean, and he consistently proved himself to be an exceptional full stack software engineer with outstanding skill and a strong work ethic. He possesses a deep understanding of software development principles and remarkable technical proficiency. His ability to grasp complex concepts quickly and apply them effectively to solve intricate problems was invaluable to our team's success. One of his greatest strengths is problem-solving; he approaches challenges with a logical, analytical mindset and examines every aspect of a problem to come up with an efficient solution that keeps the project moving forward. His attention to detail and commitment to delivering high-quality code were evident in everything he built for us.",
-  },
-  {
-    name: 'Jason Gibb',
-    company: 'COO at Nash Capital',
-    rating: 5,
-    body:
-      "We needed a full-stack developer to build a SaaS application from scratch. In less than three months Chris created the app from start to finish, with fully-functional front end, back end, and data model. Chris was a pleasure to work with on the project, providing excellent communication, asking great questions to understand customer needs, and bringing new ideas to the table at every standup. I would definitely hire him again.",
+      "Chris was professional and kind. He came to my home, which was nice, so I didn't have to release my computer. He was able to understand the issue I was having, dig behind the scenes to assess the situation and explain to me how to resolve it. To the novice it appeared as though my export of Google Photos to my hard drive was corrupted. Chris was able to explain what Google did and how I can now clean up the folders. I'd never have figured that out! I am not a small business, just a PC user who had a problem I couldn't sort out. Non-businesses can also benefit from Chris' skills.",
   },
 ];
 
