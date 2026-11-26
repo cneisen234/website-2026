@@ -78,7 +78,7 @@ const faqGroups: FaqGroup[] = [
       {
         question: 'What if I only need a couple pages?',
         answer:
-          "The page count is a ceiling, not a target. The price is flat whether you use two pages or all ten.",
+          "The page count is a ceiling, not a target. The price is flat whether you use two pages or all ten. Need more than ten? Each extra page is $10 a month.",
       },
     ],
   },

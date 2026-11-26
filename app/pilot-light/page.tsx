@@ -460,7 +460,7 @@ export default function PilotLightPage() {
                     ['Lena', 'Ask for anything in plain words, on your dashboard or the iPhone app'],
                     ['2 add-ons of your choice', 'Pick from the add-ons below'],
                     ['Unlimited updates & support', 'For everything you already have, including your add-ons'],
-                    ['A custom website & full branding', 'Up to 10 pages, your domain, logo and brand packaging'],
+                    ['A custom website & full branding', 'Up to 10 pages (extras are $10/month each), your domain, logo and brand packaging'],
                   ].map(([label, note]) => (
                     <li key={label} className="flex items-start gap-3">
                       <Check color="var(--forest-green)" />

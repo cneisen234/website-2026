@@ -18,7 +18,7 @@ const plans = [
     tint: 'rgba(194, 65, 12, 0.1)',
     tagline: 'A custom website and a full brand, kept up to date for you.',
     features: [
-      { label: 'Up to a 10-page custom-built website' },
+      { label: 'Up to a 10-page custom-built website', note: 'Extra pages are $10/month each' },
       { label: 'Custom domain registration or transfer' },
       { label: 'Logo design' },
       { label: 'Brand packaging' },
@@ -37,7 +37,7 @@ const plans = [
       { label: 'Pilot Light, set up for your business', note: 'A custom integration with your website and tools, Lena, and the iPhone app' },
       { label: '2 Pilot Light add-ons of your choice', note: 'More add-ons are $500 setup + $50/month each' },
       { label: 'Unlimited updates & support', note: 'For everything you already have, including your add-ons' },
-      { label: 'Up to a 10-page custom-built website' },
+      { label: 'Up to a 10-page custom-built website', note: 'Extra pages are $10/month each' },
       { label: 'Custom domain, logo design & brand packaging' },
     ],
   },
@@ -560,7 +560,7 @@ export default function Pricing() {
                 label: 'Custom work on your site',
                 accent: 'var(--ember-orange)',
                 items: [
-                  'New features & pages',
+                  'New features',
                   'Contact & intake forms',
                   'Photo galleries',
                   'Email newsletter signup',
